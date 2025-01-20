@@ -1,7 +1,7 @@
 import React from "react";
 
 const AdminPage = () => {
-  return <div>Admin</div>;
+  return <div className="relative">Overblik</div>;
 };
 
 export default AdminPage;

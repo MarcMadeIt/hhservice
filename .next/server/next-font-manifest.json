@@ -1,0 +1,22 @@
+{
+  "app": {
+    "[project]/src/app/(dashboard)/admin/page": [
+      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
+    ],
+    "[project]/src/app/(dashboard)/admin/settings/page": [
+      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
+    ],
+    "[project]/src/app/login/page": [
+      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
+    ],
+    "[project]/src/app/(dashboard)/admin/content/page": [
+      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
+    ],
+    "[project]/src/app/page": [
+      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
