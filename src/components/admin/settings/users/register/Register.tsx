@@ -1,13 +1,6 @@
 import { createMember } from "@/lib/server/actions";
 import React, { useState } from "react";
-import {
-  FaEnvelope,
-  FaInfo,
-  FaKey,
-  FaPerson,
-  FaShield,
-  FaSignature,
-} from "react-icons/fa6";
+import { FaEnvelope, FaKey, FaShield, FaSignature } from "react-icons/fa6";
 
 const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
   const [email, setEmail] = useState("");
@@ -90,9 +83,14 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
           </select>
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="name"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaSignature />
             <input
+              id="name"
+              autoComplete="name"
               name="name"
               type="text"
               className="grow"
@@ -104,10 +102,15 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
           </label>
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="email"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaEnvelope />
             <input
               name="email"
+              autoComplete="email"
+              id="email"
               type="text"
               className="grow"
               placeholder="Mail"
@@ -123,10 +126,15 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
           )}
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="password"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaKey />
             <input
+              id="password"
               name="password"
+              autoComplete="new-password"
               type="password"
               className="grow"
               placeholder="Kodeord"
@@ -142,10 +150,15 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
           )}
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="confirmPassword"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaShield />
             <input
+              id="confirmPassword"
               name="confirmPassword"
+              autoComplete="new-password"
               type="password"
               className="grow"
               placeholder="Gentag kodeord"

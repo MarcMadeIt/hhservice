@@ -59,10 +59,15 @@ const LoginPage = () => {
           <span className="text-sm">HH SERVICE</span>
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="email"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaEnvelope />
             <input
+              id="email"
               name="email"
+              autoComplete="email"
               type="text"
               className="grow"
               placeholder="Mail"
@@ -78,10 +83,15 @@ const LoginPage = () => {
           )}
         </div>
         <div className="flex flex-col gap-2 relative">
-          <label className="input input-bordered flex items-center gap-2">
+          <label
+            htmlFor="password"
+            className="input input-bordered flex items-center gap-2"
+          >
             <FaKey />
             <input
+              id="password"
               name="password"
+              autoComplete="current-password"
               type="password"
               className="grow"
               placeholder="Kodeord"

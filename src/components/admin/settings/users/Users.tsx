@@ -4,21 +4,9 @@ import React, { useState, useEffect } from "react";
 import UserList from "./UserList";
 import Register from "./register/Register";
 import { FaAngleLeft } from "react-icons/fa6";
-// import { getUserRole } from "@/lib/server/actions";
 const Users = () => {
   const [showRegister, setShowRegister] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  // // const [role, setRole] = useState<string | null>(null);
-
-  // // useEffect(() => {
-  // //   const fetchUserRole = async () => {
-  // //     const { role } = await getUserRole();
-  // //     console.log("Fetched user role:", role); // Debugging statement
-  // //     setRole(role);
-  // //   };
-
-  //   fetchUserRole();
-  // }, []);
 
   const handleUserCreated = () => {
     setShowRegister(false);
@@ -44,7 +32,7 @@ const Users = () => {
           <div>
             <button
               onClick={() => setShowRegister(true)}
-              className="btn btn-primary w-full sm:w-auto"
+              className="btn btn-primary "
             >
               Opret bruger
             </button>

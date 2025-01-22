@@ -6,7 +6,6 @@ import {
 } from "@/utils/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { useAuthStore } from "../store/authStore";
 
 //REGISTER
 
@@ -99,7 +98,27 @@ export async function getAllUsers() {
     throw new Error("Failed to fetch users: " + fetchError.message);
   }
 
-  return users || [];
+  const userIds = users.map((user) => user.id);
+  const { data: permissions, error: permissionsError } = await supabase
+    .from("permissions")
+    .select("member_id, role")
+    .in("member_id", userIds);
+
+  if (permissionsError) {
+    throw new Error("Failed to fetch permissions: " + permissionsError.message);
+  }
+
+  const usersWithRoles = users.map((user) => {
+    const userPermission = permissions.find(
+      (permission) => permission.member_id === user.id
+    );
+    return {
+      ...user,
+      role: userPermission ? userPermission.role : null,
+    };
+  });
+
+  return usersWithRoles || [];
 }
 
 // DELETE USER
@@ -166,5 +185,338 @@ export async function deleteUser(userId: string) {
   } catch (err) {
     console.error("Unexpected error during user deletion:", err);
     throw err;
+  }
+}
+
+export async function createNews(
+  title: string,
+  desc: string,
+  city: string,
+  formType: "normal" | "beforeAfter",
+  image?: File,
+  imageBefore?: File,
+  imageAfter?: File
+): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    let imageUrl: string | null = null;
+    let imageBeforeUrl: string | null = null;
+    let imageAfterUrl: string | null = null;
+
+    const uploadFile = async (file: File, folder: string) => {
+      const fileExt = file.name.split(".").pop();
+      const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
+
+      const { data: userData, error: userError } =
+        await supabase.auth.getUser();
+      if (userError || !userData?.user) {
+        throw new Error("User not authenticated for photo upload");
+      }
+
+      const filePath = `${folder}/${userData.user.id}/${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from("news-images")
+        .upload(filePath, file);
+
+      if (uploadError) {
+        throw new Error(`File upload failed: ${uploadError.message}`);
+      }
+
+      const { data } = await supabase.storage
+        .from("news-images")
+        .getPublicUrl(filePath);
+
+      if (!data || !data.publicUrl) {
+        throw new Error("Failed to retrieve public URL");
+      }
+
+      console.log("Generated Public URL:", data.publicUrl); // Debug log
+      return data.publicUrl;
+    };
+
+    if (formType === "normal" && image) {
+      imageUrl = await uploadFile(image, "normal");
+    }
+
+    if (formType === "beforeAfter") {
+      if (imageBefore) {
+        imageBeforeUrl = await uploadFile(imageBefore, "beforeAfter");
+      }
+      if (imageAfter) {
+        imageAfterUrl = await uploadFile(imageAfter, "beforeAfter");
+      }
+    }
+
+    const { data: userData } = await supabase.auth.getUser();
+    if (!userData?.user) {
+      throw new Error("User not authenticated");
+    }
+
+    const { error } = await supabase.from("news").insert([
+      {
+        title,
+        desc,
+        city,
+        formType,
+        image: imageUrl,
+        imageBefore: imageBeforeUrl,
+        imageAfter: imageAfterUrl,
+        creator_id: userData.user.id,
+      },
+    ]);
+
+    if (error) {
+      throw new Error(`Failed to create news: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in createNews:", error);
+    throw error;
+  }
+}
+
+export async function updateNews(
+  id: number,
+  title: string,
+  desc: string,
+  city: string,
+  formType: "normal" | "beforeAfter",
+  image?: File,
+  imageBefore?: File,
+  imageAfter?: File
+): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    let imageUrl: string | null = null;
+    let imageBeforeUrl: string | null = null;
+    let imageAfterUrl: string | null = null;
+
+    const uploadFile = async (file: File, folder: string) => {
+      const fileExt = file.name.split(".").pop();
+      const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
+
+      const { data: userData, error: userError } =
+        await supabase.auth.getUser();
+      if (userError || !userData?.user) {
+        throw new Error("User not authenticated for photo upload");
+      }
+
+      const filePath = `${folder}/${userData.user.id}/${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from("news-images")
+        .upload(filePath, file);
+
+      if (uploadError) {
+        throw new Error(`File upload failed: ${uploadError.message}`);
+      }
+
+      const { data } = await supabase.storage
+        .from("news-images")
+        .getPublicUrl(filePath);
+
+      if (!data || !data.publicUrl) {
+        throw new Error("Failed to retrieve public URL");
+      }
+
+      console.log("Generated Public URL:", data.publicUrl); // Debug log
+      return data.publicUrl;
+    };
+
+    if (formType === "normal" && image) {
+      imageUrl = await uploadFile(image, "normal");
+    } else {
+      const { data: existingNews } = await supabase
+        .from("news")
+        .select("image")
+        .eq("id", id)
+        .single();
+      imageUrl = existingNews?.image || null;
+    }
+
+    if (formType === "beforeAfter") {
+      if (imageBefore) {
+        imageBeforeUrl = await uploadFile(imageBefore, "beforeAfter");
+      } else {
+        const { data: existingNews } = await supabase
+          .from("news")
+          .select("imageBefore")
+          .eq("id", id)
+          .single();
+        imageBeforeUrl = existingNews?.imageBefore || null;
+      }
+      if (imageAfter) {
+        imageAfterUrl = await uploadFile(imageAfter, "beforeAfter");
+      } else {
+        const { data: existingNews } = await supabase
+          .from("news")
+          .select("imageAfter")
+          .eq("id", id)
+          .single();
+        imageAfterUrl = existingNews?.imageAfter || null;
+      }
+    }
+
+    const { data: userData } = await supabase.auth.getUser();
+    if (!userData?.user) {
+      throw new Error("User not authenticated");
+    }
+
+    const { error } = await supabase
+      .from("news")
+      .update({
+        title,
+        desc,
+        city,
+        formType,
+        image: imageUrl,
+        imageBefore: imageBeforeUrl,
+        imageAfter: imageAfterUrl,
+        creator_id: userData.user.id,
+      })
+      .eq("id", id);
+
+    if (error) {
+      throw new Error(`Failed to update news: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in updateNews:", error);
+    throw error;
+  }
+}
+
+export async function getAllNews(page: number = 1, limit: number = 6) {
+  const supabase = await createServerClientInstance();
+  const offset = (page - 1) * limit;
+
+  try {
+    const { data, count, error } = await supabase
+      .from("news")
+      .select("*", { count: "exact" }) // Sørg for at tælle det totale antal
+      .order("created_at", { ascending: false })
+      .range(offset, offset + limit - 1);
+
+    if (error) {
+      throw new Error(`Failed to fetch news: ${error.message}`);
+    }
+
+    return { news: data, total: count || 0 };
+  } catch (err) {
+    console.error("Unexpected error during fetching news:", err);
+    throw err;
+  }
+}
+
+export async function getNewsById(newsId: number) {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data, error } = await supabase
+      .from("news")
+      .select("*")
+      .eq("id", newsId)
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to fetch news by ID: ${error.message}`);
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Unexpected error during fetching news by ID:", err);
+    throw err;
+  }
+}
+
+export async function deleteNews(newsId: number): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase.from("news").delete().eq("id", newsId);
+
+    if (error) {
+      throw new Error(`Failed to delete news: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in deleteNews:", error);
+    throw error;
+  }
+}
+
+// CREATE REVIEW
+
+export async function createReview(
+  name: string,
+  city: string,
+  desc: string,
+  rate: number
+): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data: userData } = await supabase.auth.getUser();
+    if (!userData?.user) {
+      throw new Error("User not authenticated");
+    }
+
+    const { error } = await supabase.from("reviews").insert([
+      {
+        creator: userData.user.id,
+        name,
+        city,
+        desc,
+        rate,
+      },
+    ]);
+
+    if (error) {
+      throw new Error(`Failed to create review: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in createReview:", error);
+    throw error;
+  }
+}
+
+export async function getAllReviews(page: number = 1, limit: number = 6) {
+  const supabase = await createServerClientInstance();
+  const offset = (page - 1) * limit;
+
+  try {
+    const { data, count, error } = await supabase
+      .from("reviews")
+      .select("*", { count: "exact" })
+      .order("created_at", { ascending: false })
+      .range(offset, offset + limit - 1);
+
+    if (error) {
+      throw new Error(`Failed to fetch reviews: ${error.message}`);
+    }
+
+    return { reviews: data, total: count || 0 };
+  } catch (err) {
+    console.error("Unexpected error during fetching reviews:", err);
+    throw err;
+  }
+}
+
+// DELETE REVIEW
+export async function deleteReview(reviewId: number): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase
+      .from("reviews")
+      .delete()
+      .eq("id", reviewId);
+
+    if (error) {
+      throw new Error(`Failed to delete review: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in deleteReview:", error);
+    throw error;
   }
 }

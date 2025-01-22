@@ -14,25 +14,26 @@ const Topbar = () => {
   const pageTitles: PageTitleMapping = {
     "/admin": "Overblik",
     "/admin/content": "Indhold",
+    "/admin/messages": "Henvendelser",
     "/admin/settings": "Indstillinger",
   };
 
   const currentTitle = pageTitles[pathname] || "Unknown Page";
 
   return (
-    <div className="navbar bg-base-100 shadow-sm w-full rounded-md pl-5">
+    <div className="navbar bg-base-100 shadow-sm w-full rounded-md pl-5 h-14 flex items-center justify-between">
       <div className="flex-1">
-        <a className="text-lg">{currentTitle}</a>
+        <a className="text-2xl font-bold tracking-wide">{currentTitle}</a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-bottom dropdown-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-sm m-1">
             {" "}
             <FaEllipsis />
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-lg ring-1 ring-black ring-opacity-5"
           >
             <li>
               <button onClick={signOut}>Log ud</button>

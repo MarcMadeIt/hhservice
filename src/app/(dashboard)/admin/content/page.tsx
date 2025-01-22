@@ -1,11 +1,11 @@
 import React from "react";
-import { setNewNews } from "./actions";
+import NavContent from "@/components/admin/content/NavContent";
 
 const Content = () => {
   return (
-    <div>
-      <button onClick={setNewNews}>Add News</button>
-    </div>
+    <>
+      <NavContent />
+    </>
   );
 };
 

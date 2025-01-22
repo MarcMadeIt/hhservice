@@ -31,9 +31,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2
 ;
 ;
 async function updateSession(request) {
-    let supabaseResponse = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$spec$2d$extension$2f$response$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].next({
-        request
-    });
+    let supabaseResponse = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$spec$2d$extension$2f$response$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].next();
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createServerClient$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["createServerClient"])(("TURBOPACK compile-time value", "https://hgowigkexqhywarmkeor.supabase.co"), ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhnb3dpZ2tleHFoeXdhcm1rZW9yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzcxMjQyOTksImV4cCI6MjA1MjcwMDI5OX0.QF2g5oTLhnZsqTTYGeSwfwr4tTRHW0LYIUCNTAq65II"), {
         cookies: {
             getAll () {
@@ -41,9 +39,7 @@ async function updateSession(request) {
             },
             setAll (cookiesToSet) {
                 cookiesToSet.forEach(({ name, value, options })=>request.cookies.set(name, value));
-                supabaseResponse = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$spec$2d$extension$2f$response$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].next({
-                    request
-                });
+                supabaseResponse = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$spec$2d$extension$2f$response$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].next();
                 cookiesToSet.forEach(({ name, value, options })=>supabaseResponse.cookies.set(name, value, options));
             }
         }

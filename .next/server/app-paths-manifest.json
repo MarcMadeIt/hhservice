@@ -1,8 +1,10 @@
 {
-  "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/(dashboard)/admin/settings/page": "app/(dashboard)/admin/settings/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js",
+  "/page": "app/page.js",
   "/login/page": "app/login/page.js",
   "/(dashboard)/admin/content/page": "app/(dashboard)/admin/content/page.js",
-  "/page": "app/page.js"
+  "/(dashboard)/admin/messages/page": "app/(dashboard)/admin/messages/page.js",
+  "/kontakt/page": "app/kontakt/page.js"
 }

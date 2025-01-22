@@ -11,7 +11,10 @@ const NavSettings = () => {
   return (
     <div className="w-full">
       {/* Fanenavigation */}
-      <div role="tablist" className="tabs tabs-md w-full md:w-96 text-[15px]">
+      <div
+        role="tablist"
+        className="tabs sm:tabs-lg w-full md:w-96 text-[15px]"
+      >
         <button
           role="tab"
           className={`tab gap-2  ${

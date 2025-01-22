@@ -6,7 +6,7 @@
   "path": "static/chunks/src_app_(dashboard)_admin_settings_page_tsx_775f6c._.js",
   "chunks": [
     "static/chunks/node_modules_react-icons_fa_index_mjs_d2e2d7._.js",
-    "static/chunks/src_96c316._.js"
+    "static/chunks/src_613dd9._.js"
   ],
   "source": "dynamic"
 });

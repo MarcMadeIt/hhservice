@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FaTrash } from "react-icons/fa6";
+import { FaPen, FaTrash } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import { getAllUsers, deleteUser } from "@/lib/server/actions";
 
 interface User {
   id: string;
   email?: string;
+  role?: string;
 }
 
 const UserList = () => {
@@ -76,23 +77,34 @@ const UserList = () => {
           {/* Display error message */}
           <ul className="flex flex-col gap-3">
             {users.map((user) => (
-              <li
-                key={user.id}
-                className="py-3 px-3 md:px-5 flex justify-between items-center rounded-lg"
-              >
-                <div className="flex gap-3 items-center">
-                  <span className="font-semibold">{user.email}</span>
-                </div>
+              <React.Fragment key={user.id}>
+                <li
+                  key={user.id}
+                  className=" flex justify-between items-center rounded-lg"
+                >
+                  <div className="flex gap-3 items-center">
+                    <div className="w-20">
+                      <span className=" badge badge-primary badge-outline capitalize">
+                        {user.role === "editor" ? "Redaktør" : user.role}
+                      </span>
+                    </div>
+                    <span className="font-semibold text-xs">{user.email}</span>
+                  </div>
 
-                <div className="flex gap-8 items-center">
-                  <a href="">
-                    <FaEdit size={20} />
-                  </a>
-                  <button onClick={() => openModal(user)}>
-                    <FaTrash size={18} />
-                  </button>
-                </div>
-              </li>
+                  <div className="flex gap-5 items-center">
+                    <button className="btn btn-sm">
+                      <FaPen size={17} />
+                    </button>
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => openModal(user)}
+                    >
+                      <FaTrash size={16} />
+                    </button>
+                  </div>
+                </li>
+                <hr className="border-[1px] rounded-lg border-base-200" />
+              </React.Fragment>
             ))}
           </ul>
         </>
