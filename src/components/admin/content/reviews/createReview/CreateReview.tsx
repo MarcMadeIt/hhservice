@@ -46,7 +46,7 @@ const CreateReview = ({ onReviewCreated }: CreateReviewProps) => {
 
   return (
     <div className="flex flex-col gap-3 w-full p-3">
-      <span className="text-lg font-bold">Opret Anmeldese</span>
+      <span className="text-lg font-bold">Opret anmeldese</span>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-start gap-5 w-full"

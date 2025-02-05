@@ -23,7 +23,9 @@ const Topbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm w-full rounded-md pl-5 h-14 flex items-center justify-between">
       <div className="flex-1">
-        <a className="text-2xl font-bold tracking-wide">{currentTitle}</a>
+        <a className="text-lg md:text-xl font-semibold tracking-wide">
+          {currentTitle}
+        </a>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-bottom dropdown-end">

@@ -33,9 +33,11 @@ const ProtectSettingsRoute = ({ children }: { children: React.ReactNode }) => {
 
   if (accessDenied) {
     return (
-      <div className="flex items-center justify-center h-screen">
+      <div className="flex items-center justify-center h-60 md:h-screen">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Du har ikke adgang</h1>
+          <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            Du har ikke adgang
+          </h1>
           <p className="text-gray-600">
             Kontakt en administrator for at få adgang.
           </p>

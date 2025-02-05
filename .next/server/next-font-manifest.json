@@ -1,24 +1,15 @@
 {
   "app": {
-    "[project]/src/app/(dashboard)/admin/settings/page": [
+    "[project]/src/app/(client)/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
-    "[project]/src/app/(dashboard)/admin/page": [
-      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
-    ],
-    "[project]/src/app/page": [
+    "[project]/src/app/(client)/service/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
     "[project]/src/app/login/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ],
-    "[project]/src/app/(dashboard)/admin/content/page": [
-      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
-    ],
-    "[project]/src/app/(dashboard)/admin/messages/page": [
-      "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
-    ],
-    "[project]/src/app/kontakt/page": [
+    "[project]/src/app/(client)/service/[service]/page": [
       "static/media/1Ptug8zYS_SKggPNyC0IT4ttDfA-s.p.aacc4992.woff2"
     ]
   },

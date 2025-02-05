@@ -1,0 +1,127 @@
+"use client";
+
+import { NextSeo } from "next-seo";
+import Image from "next/image";
+import CallMeForm from "@/components/client/forms/CallMeForm";
+import Steps from "@/components/client/service/Steps";
+import Link from "next/link";
+import { byData } from "@/lib/client/servicesData";
+
+const ServiceClient = ({
+  serviceInfo,
+  serviceKey,
+  cityInfo,
+}: {
+  serviceInfo: { name: string; image1: string; image2: string; image3: string };
+  serviceKey: string;
+  cityInfo?: { name: string; region: string; postnummer: string };
+}) => {
+  return (
+    <>
+      <NextSeo
+        title={`${serviceInfo.name} i ${
+          cityInfo?.name || "Halsnæs"
+        } | Professionel Service`}
+        description={`Få professionel ${serviceInfo.name.toLowerCase()} i ${
+          cityInfo?.name || "Halsnæs"
+        }. Vi tilbyder kvalitetsservice i ${
+          cityInfo?.region || "Nordsjælland"
+        }.`}
+        canonical={`https://hhservice.dk/service/${serviceKey}${
+          cityInfo ? `/${cityInfo.name.toLowerCase()}` : ""
+        }`}
+        openGraph={{
+          url: `https://hhservice.dk/service/${serviceKey}${
+            cityInfo ? `/${cityInfo.name.toLowerCase()}` : ""
+          }`,
+          title: `${serviceInfo.name} i ${
+            cityInfo?.name || "Halsnæs"
+          } | Professionel Service`,
+          description: `Halsnæs Haveservice tilbyder professionel ${serviceInfo.name.toLowerCase()} i ${
+            cityInfo?.name || "Halsnæs"
+          }.`,
+        }}
+      />
+
+      <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-10 justify-center items-center">
+        <div className=" xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-16 lg:gap-4 max-w-7xl">
+          <div className="lg:w-2/3 p-4 py-8 lg:py-0 flex flex-col items-center justify-center bg-base-100 rounded-lg">
+            <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
+              <div>
+                <h1 className="mb-5 text-2xl md:text-4xl font-bold">
+                  {serviceInfo.name}
+                </h1>
+                <p className="text-base md:text-lg">
+                  Leder du efter en pålidelig løsning? <br />
+                  Vi tilbyder professionel {serviceInfo.name.toLowerCase()} i{" "}
+                  {cityInfo?.name || "Halsnæs"} og resten af{" "}
+                  {cityInfo?.region || "Nordsjælland"} – altid med fokus på
+                  kvalitet og omhyggeligt håndværk.
+                </p>
+                <br />
+                <h4 className="text-base md:text-lg font-semibold">
+                  Fast aftale – ingen bekymringer
+                </h4>
+                <p className="text-base md:text-lg">
+                  Med en fast aftale sikrer du dig en velplejet ejendom året
+                  rundt – uden at løfte en finger. Kontakt os i dag, og lad os
+                  tage hånd om det for dig!
+                </p>
+              </div>
+
+              {cityInfo && (
+                <p className="text-lg md:text-xl">
+                  <strong>Område:</strong> {cityInfo.region} <br />
+                  <strong>Postnummer:</strong> {cityInfo.postnummer}
+                </p>
+              )}
+              <div className="flex flex-col gap-3">
+                <h2 className="text-lg font-semibold">Vælg din by:</h2>
+                <ul className="flex gap-3 flex-wrap">
+                  {Object.entries(byData)
+                    .filter(([slug]) => slug !== cityInfo?.name.toLowerCase())
+                    .map(([slug, city]) => (
+                      <li key={slug}>
+                        <Link href={`/service/${serviceKey}/${slug}`}>
+                          {city.name}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+              <div className="flex gap-5 max-w-full sm:max-w-xl lg:max-w-2xl xl:max-w-3xl justify-center p-4">
+                <Image
+                  src={serviceInfo.image1}
+                  alt="service"
+                  width={200}
+                  height={200}
+                  className="rounded-md hidden sm:block object-cover w-[50%] sm:w-[33%]"
+                />
+                <Image
+                  src={serviceInfo.image2}
+                  alt="service"
+                  width={200}
+                  height={200}
+                  className="rounded-md object-cover w-[50%] sm:w-[33%]"
+                />
+                <Image
+                  src={serviceInfo.image3}
+                  alt="service"
+                  width={200}
+                  height={200}
+                  className="rounded-md object-cover w-[50%] sm:w-[33%]"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="lg:w-auto flex items-center justify-center">
+            <CallMeForm />
+          </div>
+        </div>
+        <Steps />
+      </div>
+    </>
+  );
+};
+
+export default ServiceClient;

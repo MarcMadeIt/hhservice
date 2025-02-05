@@ -10232,7 +10232,7 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
 __turbopack_esm__({
     "version": (()=>version)
 });
-const version = '2.47.16'; //# sourceMappingURL=version.js.map
+const version = '2.48.1'; //# sourceMappingURL=version.js.map
 }}),
 "[project]/node_modules/@supabase/supabase-js/dist/module/lib/constants.js [middleware] (ecmascript)": ((__turbopack_context__) => {
 "use strict";

@@ -86,8 +86,8 @@ const News = () => {
         </>
       )}
       {showToast && (
-        <div className="toast toast-end">
-          <div className="alert alert-success">
+        <div className="toast bottom-20 md:bottom-0 toast-end">
+          <div className="alert alert-success text-neutral-content">
             <span>Nyhed oprettet</span>
           </div>
         </div>

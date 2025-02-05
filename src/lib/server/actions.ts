@@ -84,7 +84,7 @@ export async function signOut() {
   redirect("/login");
 }
 
-// ADMIN GET ALL USERS
+//USERS
 
 export async function getAllUsers() {
   const supabase = await createAdmin();
@@ -108,20 +108,29 @@ export async function getAllUsers() {
     throw new Error("Failed to fetch permissions: " + permissionsError.message);
   }
 
-  const usersWithRoles = users.map((user) => {
+  const { data: members, error: membersError } = await supabase
+    .from("members")
+    .select("id, name")
+    .in("id", userIds);
+
+  if (membersError) {
+    throw new Error("Failed to fetch members: " + membersError.message);
+  }
+
+  const usersWithRolesAndNames = users.map((user) => {
     const userPermission = permissions.find(
       (permission) => permission.member_id === user.id
     );
+    const userName = members.find((member) => member.id === user.id)?.name;
     return {
       ...user,
       role: userPermission ? userPermission.role : null,
+      name: userName || null,
     };
   });
 
-  return usersWithRoles || [];
+  return usersWithRolesAndNames || [];
 }
-
-// DELETE USER
 
 export async function deleteUser(userId: string) {
   const supabase = await createAdmin();
@@ -187,6 +196,60 @@ export async function deleteUser(userId: string) {
     throw err;
   }
 }
+
+// UPDATE USER
+
+export async function updateUser(
+  userId: string,
+  data: { email?: string; password?: string; role?: string; name?: string }
+): Promise<void> {
+  const supabase = await createAdmin();
+
+  try {
+    // Update user in Supabase Auth
+    const { error: authError } = await supabase.auth.admin.updateUserById(
+      userId,
+      {
+        email: data.email,
+        password: data.password,
+      }
+    );
+
+    if (authError) {
+      throw new Error(`Failed to update user in auth: ${authError.message}`);
+    }
+
+    // Update user in members table
+    const { error: memberError } = await supabase
+      .from("members")
+      .update({ name: data.name })
+      .eq("id", userId);
+
+    if (memberError) {
+      throw new Error(
+        `Failed to update user in members: ${memberError.message}`
+      );
+    }
+
+    // Update user role in permissions table
+    if (data.role) {
+      const { error: permissionError } = await supabase
+        .from("permissions")
+        .update({ role: data.role })
+        .eq("member_id", userId);
+
+      if (permissionError) {
+        throw new Error(
+          `Failed to update user role: ${permissionError.message}`
+        );
+      }
+    }
+  } catch (error) {
+    console.error("Error in updateUser:", error);
+    throw error;
+  }
+}
+// NEWS
 
 export async function createNews(
   title: string,
@@ -445,7 +508,7 @@ export async function deleteNews(newsId: number): Promise<void> {
   }
 }
 
-// CREATE REVIEW
+// REVIEWS
 
 export async function createReview(
   name: string,
@@ -502,7 +565,6 @@ export async function getAllReviews(page: number = 1, limit: number = 6) {
   }
 }
 
-// DELETE REVIEW
 export async function deleteReview(reviewId: number): Promise<void> {
   const supabase = await createServerClientInstance();
 
@@ -517,6 +579,192 @@ export async function deleteReview(reviewId: number): Promise<void> {
     }
   } catch (error) {
     console.error("Error in deleteReview:", error);
+    throw error;
+  }
+}
+
+export async function getLatestReviews(limit: number = 10) {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data, error } = await supabase
+      .from("reviews")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (error) {
+      throw new Error(`Failed to fetch latest reviews: ${error.message}`);
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Unexpected error during fetching latest reviews:", err);
+    throw err;
+  }
+}
+
+// REQUESTS
+
+export async function getAllRequests(page: number = 1, limit: number = 6) {
+  const supabase = await createServerClientInstance();
+  const offset = (page - 1) * limit;
+
+  try {
+    const { data, count, error } = await supabase
+      .from("requests")
+      .select("*", { count: "exact" })
+      .order("created_at", { ascending: false })
+      .range(offset, offset + limit - 1);
+
+    if (error) {
+      throw new Error(`Failed to fetch requests: ${error.message}`);
+    }
+
+    return { requests: data, total: count || 0 };
+  } catch (err) {
+    console.error("Unexpected error during fetching requests:", err);
+    throw err;
+  }
+}
+
+export async function deleteRequest(requestId: string): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase
+      .from("requests")
+      .delete()
+      .eq("id", requestId);
+
+    if (error) {
+      throw new Error(`Failed to delete request: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in deleteRequest:", error);
+    throw error;
+  }
+}
+
+export async function updateRequest(
+  requestId: string,
+  data: {
+    name?: string;
+    category?: string;
+    mobile?: string;
+    mail?: string;
+    address?: string;
+    city?: string;
+  }
+): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase
+      .from("requests")
+      .update(data)
+      .eq("id", requestId);
+
+    if (error) {
+      throw new Error(`Failed to update request: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in updateRequest:", error);
+    throw error;
+  }
+}
+
+export async function getRequestById(requestId: string) {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data, error } = await supabase
+      .from("requests")
+      .select("*")
+      .eq("id", requestId)
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to fetch request by ID: ${error.message}`);
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Unexpected error during fetching request by ID:", err);
+    throw err;
+  }
+}
+
+// REQUEST NOTES
+
+export async function createRequestNote(
+  desc: string,
+  requestId: string
+): Promise<{ id: string; desc: string; created_at: string }> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    // Hent den autentificerede bruger
+    const { data: userData } = await supabase.auth.getUser();
+    if (!userData?.user) {
+      throw new Error("User not authenticated");
+    }
+
+    // Indsæt noten og returner dataene
+    const { data, error } = await supabase
+      .from("notes")
+      .insert([
+        {
+          desc: desc,
+          request_id: requestId,
+          creator_id: userData.user.id,
+        },
+      ])
+      .select("*")
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to create request note: ${error.message}`);
+    }
+
+    return data;
+  } catch (error) {
+    console.error("Error in createRequestNote:", error);
+    throw error;
+  }
+}
+
+export async function getNotesByRequestId(requestId: string) {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data, error } = await supabase
+      .from("notes")
+      .select("*")
+      .eq("request_id", requestId);
+
+    if (error) {
+      throw new Error(`Failed to fetch notes: ${error.message}`);
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Unexpected error during fetching notes:", err);
+    throw err;
+  }
+}
+
+export async function deleteRequestNote(noteId: string): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase.from("notes").delete().eq("id", noteId);
+
+    if (error) {
+      throw new Error(`Failed to delete request note: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in deleteRequestNote:", error);
     throw error;
   }
 }

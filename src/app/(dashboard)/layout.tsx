@@ -7,9 +7,9 @@ export default function adminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col sm:flex-row sm:h-lvh bg-base-200 h-dvh relative">
+    <div className="flex flex-col sm:flex-row bg-base-200 sm:h-lvh h-dvh relative">
       <Navbar />
-      <div className="p-3 w-full sm:pl-[238px] flex flex-col gap-3 md:gap-5 pb-28 md:pb-0">
+      <div className="p-3 w-full sm:pl-[238px] xl:pl-[300px] flex flex-col gap-3 md:gap-5 pb-28 md:pb-0">
         <Topbar />
         {children}
       </div>

@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { FaPen, FaTrash } from "react-icons/fa6";
-import { FaEdit } from "react-icons/fa";
 import { getAllUsers, deleteUser } from "@/lib/server/actions";
 
 interface User {
   id: string;
   email?: string;
+  name?: string;
   role?: string;
 }
 
-const UserList = () => {
+const UserList = ({
+  onUpdateUserClick,
+}: {
+  onUpdateUserClick: (userId: string) => void;
+}) => {
   const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -64,6 +68,10 @@ const UserList = () => {
     setIsModalOpen(false);
   };
 
+  const handleUpdateClick = (userId: string) => {
+    onUpdateUserClick(userId);
+  };
+
   return (
     <div>
       {loading ? (
@@ -75,24 +83,36 @@ const UserList = () => {
         <>
           {error && <p className="text-red-500">{error}</p>}{" "}
           {/* Display error message */}
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col gap-4 md:gap-5">
             {users.map((user) => (
               <React.Fragment key={user.id}>
                 <li
                   key={user.id}
                   className=" flex justify-between items-center rounded-lg"
                 >
-                  <div className="flex gap-3 items-center">
-                    <div className="w-20">
-                      <span className=" badge badge-primary badge-outline capitalize">
+                  <div className="flex gap-3 items-center ">
+                    <div className="w-20 md:w-32">
+                      <span className=" badge md:badge-lg badge-primary badge-outline capitalize">
                         {user.role === "editor" ? "Redaktør" : user.role}
                       </span>
                     </div>
-                    <span className="font-semibold text-xs">{user.email}</span>
+                    <div className="w-20 md:w-32">
+                      <span className="font-semibold md:font-bold text-xs md:text-base">
+                        {user.name}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-semibold md:font-bold text-xs md:text-base hidden md:block">
+                        {user.email}
+                      </span>
+                    </div>
                   </div>
 
                   <div className="flex gap-5 items-center">
-                    <button className="btn btn-sm">
+                    <button
+                      className="btn btn-sm"
+                      onClick={() => handleUpdateClick(user.id)}
+                    >
                       <FaPen size={17} />
                     </button>
                     <button

@@ -34,7 +34,6 @@ const NewsList = ({ view, page, setTotal, onEditNews }: NewsListProps) => {
     try {
       setLoading(true);
       const { news, total } = await getAllNews(page);
-      console.log("Fetched News Data:", news); // Log data her
       setNewsItems(news || []);
       setTotal(total);
     } catch (error) {

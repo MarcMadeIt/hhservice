@@ -30,7 +30,7 @@ const Navbar = () => {
           <span className="text-sm">HH SERVICE</span>
         </div>
         <div className="hidden sm:flex">
-          <ul className="menu gap-2 rounded-box w-56">
+          <ul className="menu menu-lg gap-2 rounded-box w-56 xl:w-72">
             <li>
               <Link
                 className={pathname === "/admin" ? "active" : ""}
@@ -106,7 +106,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <span className=" text-[9px] items-center justify-center p-4 hidden sm:flex">
+      <span className="text-[11px] items-center justify-center p-4 hidden sm:flex">
         © Crafted by Marccode
       </span>
     </div>
