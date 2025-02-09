@@ -4,9 +4,10 @@ import React, { useState } from "react";
 
 interface ContactSelectProps {
   onChange: (value: string) => void;
+  isCallForm?: boolean;
 }
 
-const TaskSelect = ({ onChange }: ContactSelectProps) => {
+const TaskSelect = ({ onChange, isCallForm = false }: ContactSelectProps) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -23,7 +24,9 @@ const TaskSelect = ({ onChange }: ContactSelectProps) => {
         </span>
       </div>
       <select
-        className="select select-bordered select-md md:select-lg"
+        className={`select select-bordered ${
+          isCallForm ? "md:select-lg" : "select-md"
+        }`}
         value={selectedOption}
         onChange={handleChange}
         required
@@ -33,7 +36,13 @@ const TaskSelect = ({ onChange }: ContactSelectProps) => {
         </option>
         <option value="Græsslåning">Græsslåning</option>
         <option value="Hækkeklipning">Hækkeklipning</option>
+        <option value="Brolægning">Brolægning</option>
         <option value="Plantning">Plantning</option>
+        <option value="Snerydning">Snerydning</option>
+        <option value="Ukrudtfjernelse">Ukrudtfjernelse</option>
+        <option value="Beskæring">Beskæring</option>
+        <option value="Plantning">Snerydning</option>
+        <option value="Bortskaffelse">Bortskaffelse</option>
         <option value="Specialopgaver">Specialopgaver</option>
         <option value="Andet">Andet</option>
       </select>

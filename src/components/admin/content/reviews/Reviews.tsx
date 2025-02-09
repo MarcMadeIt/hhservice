@@ -5,11 +5,14 @@ import ReviewsList from "./ReviewsList";
 import ReviewsListChange from "./ReviewsListChange";
 import ReviewsPagination from "./ReviewsPagination";
 import CreateReview from "./createReview/CreateReview";
+import UpdateReview from "./updateReview/UpdateReview";
 import { FaAngleLeft } from "react-icons/fa6";
 
 const Reviews = () => {
   const [view, setView] = useState<"cards" | "list">("cards");
   const [showCreateReview, setShowCreateReview] = useState(false);
+  const [showUpdateReview, setShowUpdateReview] = useState(false);
+  const [selectedReviewId, setSelectedReviewId] = useState<number | null>(null);
   const [showToast, setShowToast] = useState(false);
   const [page, setPage] = useState<number>(1);
   const [total, setTotal] = useState<number>(0);
@@ -20,6 +23,12 @@ const Reviews = () => {
 
   const handleReviewCreated = () => {
     setShowCreateReview(false);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 3000);
+  };
+
+  const handleReviewUpdated = () => {
+    setShowUpdateReview(false);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 3000);
   };
@@ -37,6 +46,20 @@ const Reviews = () => {
           </button>
           <CreateReview onReviewCreated={handleReviewCreated} />
         </div>
+      ) : showUpdateReview && selectedReviewId !== null ? (
+        <div className="flex flex-col items-start gap-5">
+          <button
+            onClick={() => setShowUpdateReview(false)}
+            className="btn btn-ghost"
+          >
+            <FaAngleLeft />
+            Tilbage
+          </button>
+          <UpdateReview
+            reviewId={selectedReviewId}
+            onReviewUpdated={handleReviewUpdated}
+          />
+        </div>
       ) : (
         <>
           <div className="flex justify-between items-center w-full">
@@ -48,7 +71,15 @@ const Reviews = () => {
             </button>
             <ReviewsListChange onViewChange={handleViewChange} />
           </div>
-          <ReviewsList view={view} page={page} setTotal={setTotal} />
+          <ReviewsList
+            view={view}
+            page={page}
+            setTotal={setTotal}
+            onEditReview={(reviewId: number) => {
+              setSelectedReviewId(reviewId);
+              setShowUpdateReview(true);
+            }}
+          />
           <div className="flex w-full justify-center">
             <ReviewsPagination page={page} setPage={setPage} total={total} />
           </div>
@@ -57,7 +88,11 @@ const Reviews = () => {
       {showToast && (
         <div className="toast toast-end">
           <div className="alert alert-success">
-            <span>Anmeldelse oprettet</span>
+            <span className="text-base md:text-lg">
+              {showCreateReview
+                ? "Anmeldelse oprettet"
+                : "Anmeldelse opdateret"}
+            </span>
           </div>
         </div>
       )}

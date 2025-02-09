@@ -8,7 +8,7 @@ const FAQ = () => {
           Ofte stillede spørgsmål
         </h2>
         <div className="flex flex-col gap-4 md:gap-6 w-full justify-center items-center">
-          <div className="collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100">
+          <div className="collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100">
             <input type="radio" name="my-accordion-1" />
             <div className="collapse-title text-md md:text-xl font-semibold">
               Kan jeg få servicefradrag for haveservice?
@@ -22,7 +22,7 @@ const FAQ = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100">
+          <div className="collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100">
             <input type="radio" name="my-accordion-1" />
             <div className="collapse-title text-md md:text-xl font-semibold">
               Hvilke typer haveservice tilbyder I?
@@ -35,7 +35,7 @@ const FAQ = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100">
+          <div className="collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100">
             <input type="radio" name="my-accordion-1" />
             <div className="collapse-title text-md md:text-xl font-semibold">
               Hvad koster jeres haveservice?
@@ -48,7 +48,7 @@ const FAQ = () => {
               </p>
             </div>
           </div>
-          <div className="collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100">
+          <div className="collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100">
             <input type="radio" name="my-accordion-1" />
             <div className="collapse-title text-md md:text-xl font-semibold">
               Hvilken tid på året er bedst til beskæring af hække og træer?

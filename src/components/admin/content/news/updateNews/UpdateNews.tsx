@@ -32,6 +32,7 @@ const UpdateNews = ({
   });
   const [loading, setLoading] = useState(false);
   const [formType, setFormType] = useState<"normal" | "beforeAfter">("normal");
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -82,6 +83,8 @@ const UpdateNews = ({
       );
 
       onNewsUpdated();
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
     } catch (error) {
       console.error(error);
       if (error instanceof Error) {
@@ -308,6 +311,13 @@ const UpdateNews = ({
           {loading ? "Opdaterer" : "Opdater nyhed"}
         </button>
       </form>
+      {showToast && (
+        <div className="toast bottom-20 md:bottom-0 toast-end">
+          <div className="alert alert-success text-neutral-content">
+            <span className="text-base md:text-lg">Nyhed opdateret</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

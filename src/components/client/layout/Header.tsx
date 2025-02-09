@@ -11,6 +11,7 @@ import {
   FaLinkedin,
   FaXmark,
 } from "react-icons/fa6";
+import Image from "next/image";
 
 const Header = () => {
   const pathname = usePathname();
@@ -25,14 +26,21 @@ const Header = () => {
   };
 
   useEffect(() => {
-    handleCloseDrawer(); // Luk drawer, når path skifter
+    handleCloseDrawer();
   }, [pathname]);
 
   return (
     <div className="navbar fixed top-0 bg-base-100 inset-x-0 z-50">
       <div className="flex-1">
-        <Link className="text-lg md:text-2xl p-2 font-bold" href="/">
-          Halsnæs Haveservice
+        <Link className="h-auto w-56 md:w-72 pl-1" href="/">
+          <Image
+            src="/HH-logoweb5.png"
+            alt="logo"
+            width={500}
+            height={113}
+            priority
+            rel="preload"
+          />
         </Link>
       </div>
       <div className="flex-none">
@@ -59,7 +67,7 @@ const Header = () => {
               htmlFor="my-drawer-4"
               className="drawer-button btn btn-ghost"
             >
-              <FaBars size={25} />
+              <FaBars size={30} />
             </label>
           </div>
           <div className="drawer-side">
@@ -69,7 +77,7 @@ const Header = () => {
               className="drawer-overlay"
             ></label>
             <ul className="menu menu-lg bg-base-200 text-base-content min-h-full w-72 p-4 pt-20 gap-2 items-center relative">
-              <li className="absolute top-1 right-0">
+              <li className="absolute top-1 right-1">
                 <label htmlFor="my-drawer-4">
                   <FaXmark size={30} />
                 </label>
@@ -102,12 +110,17 @@ const Header = () => {
               <div className="flex flex-col items-center gap-6 flex-1 justify-center w-full">
                 <span className=" text-lg font-bold">Følg os på</span>
                 <div className="flex gap-6">
-                  <div className="flex flex-col items-center gap-2">
+                  <Link
+                    href="https://www.facebook.com/share/18mtAGts1w/?mibextid=wwXIfr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2"
+                  >
                     <div className="w-14 h-14 shadow-lg rounded-full flex items-center justify-center">
                       <FaFacebook className="text-3xl text-secondary" />
                     </div>
                     <span className="text-secondary font-bold">Facebook</span>
-                  </div>
+                  </Link>
                   <div className="flex flex-col items-center gap-2">
                     <div className="w-14 h-14 shadow-lg rounded-full flex items-center justify-center">
                       <FaInstagram className="text-3xl text-secondary" />

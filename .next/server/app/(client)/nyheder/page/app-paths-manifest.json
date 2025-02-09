@@ -1,0 +1,3 @@
+{
+  "/(client)/nyheder/page": "app/(client)/nyheder/page.js"
+}

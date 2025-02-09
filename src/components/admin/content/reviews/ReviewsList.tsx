@@ -13,6 +13,7 @@ interface ReviewsListProps {
   view: "cards" | "list";
   page: number;
   setTotal: (total: number) => void;
+  onEditReview: (reviewId: number) => void;
 }
 
 interface ReviewItem {
@@ -23,7 +24,12 @@ interface ReviewItem {
   rate: number;
 }
 
-const ReviewsList = ({ view, page, setTotal }: ReviewsListProps) => {
+const ReviewsList = ({
+  view,
+  page,
+  setTotal,
+  onEditReview,
+}: ReviewsListProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [reviewItems, setReviewItems] = useState<ReviewItem[]>([]);
   const [deletingReviewId, setDeletingReviewId] = useState<number | null>(null);
@@ -87,7 +93,10 @@ const ReviewsList = ({ view, page, setTotal }: ReviewsListProps) => {
                       {item.name}, {item.city} <FaLocationDot />
                     </h2>
                     <div className="card-actions justify-end">
-                      <button className="btn btn-sm">
+                      <button
+                        className="btn btn-sm"
+                        onClick={() => onEditReview(item.id)}
+                      >
                         <FaPen />
                         Rediger
                       </button>
@@ -123,7 +132,10 @@ const ReviewsList = ({ view, page, setTotal }: ReviewsListProps) => {
                         <ReviewsRating rate={item.rate} />
                       </div>
                       <div className="flex gap-5 md:gap-2 flex-1 justify-end">
-                        <button className="btn btn-sm">
+                        <button
+                          className="btn btn-sm"
+                          onClick={() => onEditReview(item.id)}
+                        >
                           <FaPen />
                           <span className="md:flex hidden"> Rediger </span>
                         </button>

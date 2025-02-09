@@ -90,7 +90,7 @@ const RequestNote = ({ requestId }: { requestId: string }) => {
   }, [showToast]);
 
   return (
-    <div className="flex flex-col gap-4 w-full md:w-4/5 2xl:w-3/5">
+    <div className="flex flex-col gap-2 w-full md:w-4/5 2xl:w-3/5">
       <span className="text-xs md:text-sm font-medium text-gray-400">
         Noter for kunde
       </span>

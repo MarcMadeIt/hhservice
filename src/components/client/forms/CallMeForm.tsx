@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { createRequest } from "@/lib/client/actions";
 import TaskSelect from "./TaskSelect";
+import ConsentModal from "../modal/ConsentModal";
 
 const CallMeForm = () => {
   const [name, setName] = useState("");
@@ -14,8 +15,18 @@ const CallMeForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const validatePhoneNumber = (phoneNumber: string) => {
+    const danishPhoneRegex = /^(?:\+45\d{8}|\d{8})$/;
+    return danishPhoneRegex.test(phoneNumber);
+  };
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    if (!validatePhoneNumber(mobile)) {
+      setMessage("Ugyldigt telefonnummer");
+      return;
+    }
 
     if (!isChecked) {
       setMessage("Du skal acceptere opbevaring af dine oplysninger.");
@@ -27,7 +38,7 @@ const CallMeForm = () => {
 
     try {
       // 1. Gem kundehenvendelsen i databasen
-      await createRequest(name, mobile, category, isChecked);
+      await createRequest(name, mobile, "", category, isChecked, "");
 
       // 2. Send e-mail til virksomheden via EmailJS
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
@@ -65,7 +76,7 @@ const CallMeForm = () => {
   return (
     <div>
       {isSuccess ? (
-        <div className="flex flex-col gap-4 bg-base-100 p-10">
+        <div className="flex flex-col gap-4 bg-base-100 p-8 md:p-10">
           <h2 className="text-xl font-bold">Tak for din henvendelse!</h2>
           <p>Vi vender tilbage til dig hurtigst muligt.</p>
           <button onClick={handleClose} className="btn btn-primary mt-5">
@@ -75,10 +86,13 @@ const CallMeForm = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 bg-base-100 p-10 rounded-lg"
+          className="flex flex-col gap-4 bg-base-100 p-8 md:p-10 rounded-lg relative"
         >
           <h2 className="text-2xl font-bold">Bliv ringet op</h2>
-          <TaskSelect onChange={(value) => setCategory(value)} />
+          <TaskSelect
+            onChange={(value) => setCategory(value)}
+            isCallForm={true}
+          />
           <label htmlFor="name" className="form-control w-full max-w-xs">
             <div className="label">
               <span className="label-text md:text-base">Navn</span>
@@ -103,10 +117,8 @@ const CallMeForm = () => {
               autoComplete="tel"
               id="phone"
               type="tel"
-              pattern="(\+45\s?[0-9]{8}|[0-9]{3}\s?[0-9]{8})"
               placeholder="Indtast 8-cifret nummer"
-              className="input input-bordered input-md md:input-lg w-full "
-              title="Telefonnummeret skal være præcis 8 cifre."
+              className="input input-bordered input-md md:input-lg w-full"
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}
               required
@@ -123,12 +135,11 @@ const CallMeForm = () => {
               />
             </label>
             <span className="label-text text-xs md:text-sm max-w-60">
-              Jeg accepterer opbevaring af mine oplysninger i op til 30 dage
-              &nbsp;
-              <a className="link link-primary">Læs mere.</a>
+              Jeg giver samtykke til opbevaring af mine oplysninger. &nbsp;
+              <ConsentModal buttonText="Læs mere" variant="primary" />
             </span>
           </div>
-          <div>
+          <div className="absolute bottom-28">
             {message && (
               <p className={`text-${isSuccess ? "green" : "red"}-500`}>
                 {message}
@@ -137,7 +148,7 @@ const CallMeForm = () => {
           </div>
           <button
             type="submit"
-            className="btn btn-primary mt-5"
+            className="btn btn-primary mt-10"
             disabled={isLoading}
           >
             {isLoading ? "Sender..." : "Bliv kontaktet"}

@@ -30,11 +30,11 @@ const NavSettings = () => {
         <button
           role="tab"
           className={`tab gap-2  ${
-            activeTab === "extra"
+            activeTab === "setup"
               ? "bg-neutral text-neutral-content rounded-lg shadow-md"
               : ""
           }`}
-          onClick={() => setActiveTab("extra")}
+          onClick={() => setActiveTab("setup")}
         >
           <FaExternalLinkAlt />
           Sideopsætning
@@ -47,7 +47,7 @@ const NavSettings = () => {
             <Users />
           </div>
         )}
-        {activeTab === "extra" && (
+        {activeTab === "setup" && (
           <div className="bg-base-100 rounded-lg shadow-md p-5 md:p-7">
             <Setup />
           </div>

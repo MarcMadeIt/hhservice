@@ -6,6 +6,7 @@ import CallMeForm from "@/components/client/forms/CallMeForm";
 import Steps from "@/components/client/service/Steps";
 import Link from "next/link";
 import { byData } from "@/lib/client/servicesData";
+import Locations from "@/components/client/home/Locations";
 
 const ServiceClient = ({
   serviceInfo,
@@ -43,9 +44,9 @@ const ServiceClient = ({
         }}
       />
 
-      <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-10 justify-center items-center">
-        <div className=" xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-16 lg:gap-4 max-w-7xl">
-          <div className="lg:w-2/3 p-4 py-8 lg:py-0 flex flex-col items-center justify-center bg-base-100 rounded-lg">
+      <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-16 justify-center items-center">
+        <div className=" xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl">
+          <div className="lg:w-2/3 p-4 lg:py-0 flex flex-col items-center justify-center bg-base-200 rounded-lg">
             <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
               <div>
                 <h1 className="mb-5 text-2xl md:text-4xl font-bold">
@@ -76,12 +77,17 @@ const ServiceClient = ({
                 </p>
               )}
               <div className="flex flex-col gap-3">
-                <h2 className="text-lg font-semibold">Vælg din by:</h2>
+                <h2 className="text-md font-semibold">
+                  Vi dækker bl.a. disse områder:
+                </h2>
                 <ul className="flex gap-3 flex-wrap">
                   {Object.entries(byData)
                     .filter(([slug]) => slug !== cityInfo?.name.toLowerCase())
                     .map(([slug, city]) => (
-                      <li key={slug}>
+                      <li
+                        key={slug}
+                        className="text-primary bg-base-100 shadow-md py-2 px-2 rounded-md font-semibold"
+                      >
                         <Link href={`/service/${serviceKey}/${slug}`}>
                           {city.name}
                         </Link>
@@ -119,6 +125,7 @@ const ServiceClient = ({
           </div>
         </div>
         <Steps />
+        <Locations />
       </div>
     </>
   );

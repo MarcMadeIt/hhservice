@@ -18,7 +18,7 @@ const Home = () => {
       <section className="h-full md:h-[800px]">
         <Services />
       </section>
-      <section className="h-full md:h-[800px]">
+      <section className="h-full lg:h-[800px]">
         <About />
       </section>
       <section className="h-full md:h-[800px]">
@@ -33,7 +33,7 @@ const Home = () => {
       <section className="h-[380px] sm:h-[500px] md:h-[700px]">
         <News />
       </section>
-      <section className="h-[380px] md:h-[500px]">
+      <section className="h-full md:h-[500px] mt-10">
         <Locations />
       </section>
     </>

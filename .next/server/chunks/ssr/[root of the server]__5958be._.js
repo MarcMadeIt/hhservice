@@ -65,7 +65,7 @@ const services = [
         image3: "/prune3.jpeg"
     },
     {
-        key: "haekklipning",
+        key: "haekkeklipning",
         name: "Hækkeklipning",
         icon: "/hedge.png",
         image1: "/hedge1.jpeg",
@@ -100,9 +100,9 @@ const services = [
         key: "ukrudtsfjernelse",
         name: "Ukrudtsfjernelse",
         icon: "/weeds.png",
-        image1: "/grass1.jpeg",
-        image2: "/grass2.jpeg",
-        image3: "/grass3.jpeg"
+        image1: "/weeds1.jpeg",
+        image2: "/weeds2.jpeg",
+        image3: "/weeds3.jpeg"
     },
     {
         key: "byggepladsservice",
@@ -286,7 +286,7 @@ function createClient() {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
     "createRequest": (()=>createRequest),
     "getAllNews": (()=>getAllNews),
     "getLatestNews": (()=>getLatestNews),
@@ -299,7 +299,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getAllNews(page = 1, limit = 6) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getAllNews(page = 1, limit = 3) {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createClient"])();
     const offset = (page - 1) * limit;
     try {
@@ -345,7 +345,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getLatestReviews() {
         throw err;
     }
 }
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mobile, category, consent) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mobile, mail, category, consent, message) {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createClient"])();
     try {
         // Hent brugerens IP-adresse
@@ -358,8 +358,10 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mob
             {
                 name,
                 mobile,
+                mail,
                 category,
                 consent,
+                message,
                 consent_timestamp: consentTimestamp,
                 ip_address: ipAddress,
                 terms_version: "v1.0"
@@ -383,7 +385,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mob
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getAllNews, "60fa24a9fc21f9bb62ec671ef8de65823d688c3922", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getLatestNews, "00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getLatestReviews, "00feda0587a92d54fc827b77606103fa8d595d235c", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createRequest, "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createRequest, "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", null);
 }}),
 "[project]/.next-internal/server/app/(client)/service/[service]/[by]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript) <locals>": ((__turbopack_context__) => {
 "use strict";
@@ -414,7 +416,7 @@ __turbopack_esm__({
     "00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getLatestNews"]),
     "00feda0587a92d54fc827b77606103fa8d595d235c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getLatestReviews"]),
     "60fa24a9fc21f9bb62ec671ef8de65823d688c3922": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getAllNews"]),
-    "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createRequest"])
+    "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createRequest"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__('[project]/.next-internal/server/app/(client)/service/[service]/[by]/page/actions.js { ACTIONS_MODULE0 => "[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)" } [app-rsc] (ecmascript) <locals>');
@@ -428,7 +430,7 @@ __turbopack_esm__({
     "00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c"]),
     "00feda0587a92d54fc827b77606103fa8d595d235c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["00feda0587a92d54fc827b77606103fa8d595d235c"]),
     "60fa24a9fc21f9bb62ec671ef8de65823d688c3922": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["60fa24a9fc21f9bb62ec671ef8de65823d688c3922"]),
-    "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120"])
+    "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120"])
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__('[project]/.next-internal/server/app/(client)/service/[service]/[by]/page/actions.js { ACTIONS_MODULE0 => "[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)" } [app-rsc] (ecmascript) <module evaluation>');
 var __TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$service$2f5b$service$5d2f5b$by$5d2f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__ = __turbopack_import__('[project]/.next-internal/server/app/(client)/service/[service]/[by]/page/actions.js { ACTIONS_MODULE0 => "[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)" } [app-rsc] (ecmascript) <exports>');

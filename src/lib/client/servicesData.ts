@@ -45,7 +45,7 @@ export const services: ServiceData[] = [
     image3: "/prune3.jpeg",
   },
   {
-    key: "haekklipning",
+    key: "haekkeklipning",
     name: "Hækkeklipning",
     icon: "/hedge.png",
     image1: "/hedge1.jpeg",
@@ -80,9 +80,9 @@ export const services: ServiceData[] = [
     key: "ukrudtsfjernelse",
     name: "Ukrudtsfjernelse",
     icon: "/weeds.png",
-    image1: "/grass1.jpeg",
-    image2: "/grass2.jpeg",
-    image3: "/grass3.jpeg",
+    image1: "/weeds1.jpeg",
+    image2: "/weeds2.jpeg",
+    image3: "/weeds3.jpeg",
   },
   {
     key: "byggepladsservice",

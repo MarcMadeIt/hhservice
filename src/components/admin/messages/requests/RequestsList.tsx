@@ -8,6 +8,7 @@ export interface Request {
   created_at: string;
   mobile: string;
   mail: string;
+  message: string;
   address: string;
   city: string;
   consent: boolean;
@@ -118,7 +119,7 @@ const RequestsList = ({
               </td>
               <th className="">
                 <button
-                  className="btn  btn-sm flex items-center"
+                  className="btn btn-outline btn-primary btn-sm flex items-center"
                   onClick={() => onDetailsClick(request.id)}
                 >
                   <span className="hidden lg:block">Detaljer</span>

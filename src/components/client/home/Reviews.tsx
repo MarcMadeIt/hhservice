@@ -54,8 +54,8 @@ const Review = () => {
               >
                 <div className="card-body p-5">
                   <ReviewsRating rate={item.rate} />
-                  <p className="text-sm md:text-lg">{item.desc}</p>
-                  <h2 className="text-xs font-bold flex items-center gap-1">
+                  <p className="text-xs md:text-lg">{item.desc}</p>
+                  <h2 className="text-xs md:text-base font-bold flex items-center gap-1">
                     {item.name}, {item.city} <FaLocationDot />
                   </h2>
                 </div>

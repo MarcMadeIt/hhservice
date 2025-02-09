@@ -20,6 +20,7 @@ interface RequestsDetailsProps {
   mail: string;
   address: string;
   city: string;
+  message: string;
   consent: boolean;
   requestId: string;
   setIsEditing: (isEditing: boolean) => void;
@@ -34,25 +35,35 @@ const RequestsDetails = ({
   mail,
   address,
   city,
+  message,
   consent,
   requestId,
   setIsEditing,
   onUpdateRequest,
 }: RequestsDetailsProps) => {
+  console.log("Message prop:", message); // Add this line to log the message prop
+
   const [isEditing, setLocalIsEditing] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [requestDetails, setRequestDetails] = useState({
     name,
     category,
     mobile,
+    message,
     mail,
     address,
     city,
   });
 
+  useEffect(() => {
+    console.log("Request details message:", requestDetails.message); // Add this line to log the message in requestDetails
+  }, [requestDetails]);
+
   const handleUpdateRequest = (requestId: string, data: Partial<Request>) => {
     setRequestDetails((prevDetails) => ({ ...prevDetails, ...data }));
     onUpdateRequest(requestId, data);
+
+    setShowToast(true);
   };
 
   const endDate = created_at ? addDays(new Date(created_at), 30) : null;
@@ -206,20 +217,30 @@ const RequestsDetails = ({
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-2 w-full md:w-1/2 2xl:w-1/3">
-          <p className="text-sm font-medium text-gray-400">
-            Status for samtykke
-          </p>
-          <div>
-            {consent ? (
-              <span className="text-lg font-semibold text-success flex items-center gap-2">
-                <FaCircleCheck /> Samtykke givet
+        <div className="flex flex-col md:flex-row gap-10 md:gap-0">
+          <div className="flex flex-col gap-2 w-full md:w-1/2 2xl:w-1/3">
+            <p className="text-sm font-medium text-gray-400">
+              Status for samtykke
+            </p>
+            <div>
+              {consent ? (
+                <span className="text-lg font-semibold text-success flex items-center gap-2">
+                  <FaCircleCheck /> Samtykke givet
+                </span>
+              ) : (
+                <span className="text-lg font-semibold text-error flex items-center gap-2">
+                  <FaCircleXmark /> Samtykke mangler
+                </span>
+              )}
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 md:w-1/2">
+            <p className="text-sm font-medium text-gray-400">Besked</p>
+            <div className="max-h-32 overflow-y-auto flex flex-col gap-5 width-full">
+              <span className="text-base font-semibold">
+                {requestDetails.message || "Ingen besked"}
               </span>
-            ) : (
-              <span className="text-lg font-semibold text-error flex items-center gap-2">
-                <FaCircleXmark /> Samtykke mangler
-              </span>
-            )}
+            </div>
           </div>
         </div>
       </div>

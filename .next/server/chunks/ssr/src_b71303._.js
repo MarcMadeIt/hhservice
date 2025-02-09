@@ -5,7 +5,7 @@ module.exports = {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
     "createRequest": (()=>createRequest),
     "getAllNews": (()=>getAllNews),
     "getLatestNews": (()=>getLatestNews),
@@ -16,7 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var getAllNews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("60fa24a9fc21f9bb62ec671ef8de65823d688c3922", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getAllNews");
 var getLatestNews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getLatestNews");
 var getLatestReviews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("00feda0587a92d54fc827b77606103fa8d595d235c", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getLatestReviews");
-var createRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "createRequest");
+var createRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "createRequest");
 }}),
 "[project]/src/components/client/forms/TaskSelect.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -31,7 +31,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 "use client";
 ;
 ;
-const TaskSelect = ({ onChange })=>{
+const TaskSelect = ({ onChange, isCallForm = false })=>{
     const [selectedOption, setSelectedOption] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
     const handleChange = (event)=>{
         const value = event.target.value;
@@ -48,16 +48,16 @@ const TaskSelect = ({ onChange })=>{
                     children: "Hvilken opgave ønsker du?"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                className: "select select-bordered select-md md:select-lg",
+                className: `select select-bordered ${isCallForm ? "md:select-lg" : "select-md"}`,
                 value: selectedOption,
                 onChange: handleChange,
                 required: true,
@@ -68,7 +68,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Vælg opgave"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 31,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -76,7 +76,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Græsslåning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 34,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -84,7 +84,15 @@ const TaskSelect = ({ onChange })=>{
                         children: "Hækkeklipning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 35,
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Brolægning",
+                        children: "Brolægning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -92,7 +100,47 @@ const TaskSelect = ({ onChange })=>{
                         children: "Plantning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 36,
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Snerydning",
+                        children: "Snerydning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Ukrudtfjernelse",
+                        children: "Ukrudtfjernelse"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Beskæring",
+                        children: "Beskæring"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Plantning",
+                        children: "Snerydning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Bortskaffelse",
+                        children: "Bortskaffelse"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -100,7 +148,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Specialopgaver"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 37,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -108,19 +156,19 @@ const TaskSelect = ({ onChange })=>{
                         children: "Andet"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 38,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 };
@@ -139,8 +187,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$emailjs$2d$com$2f$es$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/emailjs-com/es/index.js [app-ssr] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/client/actions.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$forms$2f$TaskSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/client/forms/TaskSelect.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$modal$2f$ConsentModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/client/modal/ConsentModal.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$emailjs$2d$com$2f$es$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/emailjs-com/es/index.js [app-ssr] (ecmascript) <locals>");
 "use client";
+;
 ;
 ;
 ;
@@ -154,8 +204,16 @@ const CallMeForm = ()=>{
     const [isChecked, setIsChecked] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isSuccess, setIsSuccess] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const validatePhoneNumber = (phoneNumber)=>{
+        const danishPhoneRegex = /^(?:\+45\d{8}|\d{8})$/;
+        return danishPhoneRegex.test(phoneNumber);
+    };
     const handleSubmit = async (event)=>{
         event.preventDefault();
+        if (!validatePhoneNumber(mobile)) {
+            setMessage("Ugyldigt telefonnummer");
+            return;
+        }
         if (!isChecked) {
             setMessage("Du skal acceptere opbevaring af dine oplysninger.");
             return;
@@ -164,7 +222,7 @@ const CallMeForm = ()=>{
         setMessage("");
         try {
             // 1. Gem kundehenvendelsen i databasen
-            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createRequest"])(name, mobile, category, isChecked);
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createRequest"])(name, mobile, "", category, isChecked, "");
             // 2. Send e-mail til virksomheden via EmailJS
             const serviceId = ("TURBOPACK compile-time value", "service_033r29n");
             const templateId = ("TURBOPACK compile-time value", "hhservice_8de7spc");
@@ -191,21 +249,21 @@ const CallMeForm = ()=>{
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: isSuccess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col gap-4 bg-base-100 p-10",
+            className: "flex flex-col gap-4 bg-base-100 p-8 md:p-10",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-xl font-bold",
                     children: "Tak for din henvendelse!"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 69,
+                    lineNumber: 80,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     children: "Vi vender tilbage til dig hurtigst muligt."
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 70,
+                    lineNumber: 81,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -214,31 +272,32 @@ const CallMeForm = ()=>{
                     children: "Luk"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 71,
+                    lineNumber: 82,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-            lineNumber: 68,
+            lineNumber: 79,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
             onSubmit: handleSubmit,
-            className: "flex flex-col gap-4 bg-base-100 p-10 rounded-lg",
+            className: "flex flex-col gap-4 bg-base-100 p-8 md:p-10 rounded-lg relative",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-2xl font-bold",
                     children: "Bliv ringet op"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 80,
+                    lineNumber: 91,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$forms$2f$TaskSelect$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    onChange: (value)=>setCategory(value)
+                    onChange: (value)=>setCategory(value),
+                    isCallForm: true
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 81,
+                    lineNumber: 92,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -252,12 +311,12 @@ const CallMeForm = ()=>{
                                 children: "Navn"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 84,
+                                lineNumber: 98,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 83,
+                            lineNumber: 97,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -272,13 +331,13 @@ const CallMeForm = ()=>{
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 86,
+                            lineNumber: 100,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 82,
+                    lineNumber: 96,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -292,34 +351,32 @@ const CallMeForm = ()=>{
                                 children: "Mobilnummer"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 100,
+                                lineNumber: 114,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 99,
+                            lineNumber: 113,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                             autoComplete: "tel",
                             id: "phone",
                             type: "tel",
-                            pattern: "(\\+45\\s?[0-9]{8}|[0-9]{3}\\s?[0-9]{8})",
                             placeholder: "Indtast 8-cifret nummer",
-                            className: "input input-bordered input-md md:input-lg w-full ",
-                            title: "Telefonnummeret skal være præcis 8 cifre.",
+                            className: "input input-bordered input-md md:input-lg w-full",
                             value: mobile,
                             onChange: (e)=>setMobile(e.target.value),
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 102,
+                            lineNumber: 116,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 98,
+                    lineNumber: 112,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -335,71 +392,72 @@ const CallMeForm = ()=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 117,
+                                lineNumber: 129,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 116,
+                            lineNumber: 128,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "label-text text-xs md:text-sm max-w-60",
                             children: [
-                                "Jeg accepterer opbevaring af mine oplysninger i op til 30 dage  ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    className: "link link-primary",
-                                    children: "Læs mere."
+                                "Jeg giver samtykke til opbevaring af mine oplysninger.  ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$modal$2f$ConsentModal$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    buttonText: "Læs mere",
+                                    variant: "primary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 139,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 125,
+                            lineNumber: 137,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 115,
+                    lineNumber: 127,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "absolute bottom-28",
                     children: message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         className: `text-${isSuccess ? "green" : "red"}-500`,
                         children: message
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                        lineNumber: 133,
+                        lineNumber: 144,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 131,
+                    lineNumber: 142,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     type: "submit",
-                    className: "btn btn-primary mt-5",
+                    className: "btn btn-primary mt-10",
                     disabled: isLoading,
                     children: isLoading ? "Sender..." : "Bliv kontaktet"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 138,
+                    lineNumber: 149,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-            lineNumber: 76,
+            lineNumber: 87,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-        lineNumber: 66,
+        lineNumber: 77,
         columnNumber: 5
     }, this);
 };
@@ -422,15 +480,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 const Hero = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "hero min-h-[200px] md:min-h-[550px] mt-[60px]",
+        className: "hero min-h-[250px] md:min-h-[600px] mt-[75px]",
         style: {
-            backgroundImage: "url(/test.jpeg)",
-            backgroundPosition: "50% 58%",
+            backgroundImage: "url(/hero.png)",
+            backgroundPosition: "50% 30%",
             backgroundSize: "cover"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "hero-overlay bg-gray-700 bg-opacity-20"
+                className: "hero-overlay bg-gray-500 md:bg-gray-700 bg-opacity-30  md:bg-opacity-20"
             }, void 0, false, {
                 fileName: "[project]/src/components/client/home/Hero.tsx",
                 lineNumber: 16,
@@ -442,7 +500,7 @@ const Hero = ()=>{
                     className: "max-w-xl lg:max-w-2xl text-center flex flex-col justify-center items-center mx-auto md:mt-20",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "mb-5 text-xl md:text-4xl lg:text-5xl font-bold",
+                            className: "mb-5 text-2xl md:text-4xl lg:text-5xl font-bold",
                             children: "Professionel Haveservice"
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/home/Hero.tsx",
@@ -450,13 +508,13 @@ const Hero = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "mb-5 text-sm font-semibold md:text-2xl drop-shadow-lg",
+                            className: "mb-5 text-lg font-medium md:text-2xl lg:text-3xl drop-shadow-lg",
                             children: [
-                                "Din have, vores passion – haveservice i Halsnæs ",
+                                "Din have, vores passion ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/components/client/home/Hero.tsx",
                                     lineNumber: 23,
-                                    columnNumber: 61
+                                    columnNumber: 37
                                 }, this)
                             ]
                         }, void 0, true, {
@@ -474,7 +532,7 @@ const Hero = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "gap-16 md:gap-20 mt-5 hidden md:flex",
+                            className: "gap-16 md:gap-32 mt-5 hidden md:flex",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex flex-col shadow-xl items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg",
@@ -540,7 +598,7 @@ const Hero = ()=>{
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     className: "md:text-xl font-bold",
-                                                    href: "+4526181201",
+                                                    href: "tel:+4526181201",
                                                     children: "+45 26 18 12 01"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/client/home/Hero.tsx",
@@ -620,7 +678,7 @@ const __TURBOPACK__default__export__ = ReviewsRating;
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00011da1dcefcfd02d28653fba3c48255b49d12280":"getAllUsers","003639b9021d4b7be0b38537f0a6b169c0d23dc8c4":"signOut","400641d504809bcdc9915d08ab2379a05d95519627":"getLatestReviews","405851529b1e1a0593e3f7943ee6d814ffa23211e2":"createMember","405de6f9b593c299c6ffe0f5a8767ce79caf0adc43":"getNotesByRequestId","40617255a970dd06372d6182328026a79ab44a2124":"deleteRequest","40682a7962d6dcb9e86ed246c93cfb317f3bf6baac":"deleteReview","4071a50055f137eab505484a01f03955da2bbfcb7d":"deleteRequestNote","40781105dc4c90ea4caeec757d1199adf66b8695a7":"deleteUser","4086269f8734bf3178ad5245f2bb7c0ca040b58cdd":"getNewsById","40c9529e31e282c4e5db837fa62a74cf914deaf80b":"deleteNews","40fe50af9914ab1db9de9992e5b02b192097674fa0":"getRequestById","603093ac094e2edeb276c62a8c92fd3b12fb51bfff":"getAllReviews","6038064035b8d607543902088e4c70bc2ff759a5b6":"updateUser","6058d2837372b1e2b1917d3feebbd33e5a686fc014":"getAllNews","60686c255201c27e4a5343baf12c8fe95784a49276":"createRequestNote","60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a":"getAllRequests","60fda435c7eabb2f831664189646f0b1f23df0041d":"updateRequest","7806443f197e7ce30eef0fb17bef5ff014a30f089c":"createReview","7f467190b7e914f9fa715989e5b0b533f0bf6770cf":"createNews","7f8107030d1eca46fd343715a6a50f25805c53c7b3":"updateNews"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00011da1dcefcfd02d28653fba3c48255b49d12280":"getAllUsers","003639b9021d4b7be0b38537f0a6b169c0d23dc8c4":"signOut","400641d504809bcdc9915d08ab2379a05d95519627":"getLatestReviews","405851529b1e1a0593e3f7943ee6d814ffa23211e2":"createMember","405de6f9b593c299c6ffe0f5a8767ce79caf0adc43":"getNotesByRequestId","40617255a970dd06372d6182328026a79ab44a2124":"deleteRequest","40682a7962d6dcb9e86ed246c93cfb317f3bf6baac":"deleteReview","4071a50055f137eab505484a01f03955da2bbfcb7d":"deleteRequestNote","40781105dc4c90ea4caeec757d1199adf66b8695a7":"deleteUser","4086269f8734bf3178ad5245f2bb7c0ca040b58cdd":"getNewsById","4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025":"getReviewById","40c9529e31e282c4e5db837fa62a74cf914deaf80b":"deleteNews","40fe50af9914ab1db9de9992e5b02b192097674fa0":"getRequestById","603093ac094e2edeb276c62a8c92fd3b12fb51bfff":"getAllReviews","6038064035b8d607543902088e4c70bc2ff759a5b6":"updateUser","6058d2837372b1e2b1917d3feebbd33e5a686fc014":"getAllNews","60686c255201c27e4a5343baf12c8fe95784a49276":"createRequestNote","60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a":"getAllRequests","60fda435c7eabb2f831664189646f0b1f23df0041d":"updateRequest","7806443f197e7ce30eef0fb17bef5ff014a30f089c":"createReview","7c6349c252bccd5c9a38a511eab568da55bedb79e6":"updateReview","7f467190b7e914f9fa715989e5b0b533f0bf6770cf":"createNews","7f8107030d1eca46fd343715a6a50f25805c53c7b3":"updateNews"} */ __turbopack_esm__({
     "createMember": (()=>createMember),
     "createNews": (()=>createNews),
     "createRequestNote": (()=>createRequestNote),
@@ -638,9 +696,11 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
     "getNewsById": (()=>getNewsById),
     "getNotesByRequestId": (()=>getNotesByRequestId),
     "getRequestById": (()=>getRequestById),
+    "getReviewById": (()=>getReviewById),
     "signOut": (()=>signOut),
     "updateNews": (()=>updateNews),
     "updateRequest": (()=>updateRequest),
+    "updateReview": (()=>updateReview),
     "updateUser": (()=>updateUser)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/action-client-wrapper.js [app-ssr] (ecmascript)");
@@ -659,6 +719,8 @@ var createReview = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$
 var getAllReviews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("603093ac094e2edeb276c62a8c92fd3b12fb51bfff", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getAllReviews");
 var deleteReview = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("40682a7962d6dcb9e86ed246c93cfb317f3bf6baac", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "deleteReview");
 var getLatestReviews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("400641d504809bcdc9915d08ab2379a05d95519627", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getLatestReviews");
+var updateReview = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("7c6349c252bccd5c9a38a511eab568da55bedb79e6", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "updateReview");
+var getReviewById = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getReviewById");
 var getAllRequests = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getAllRequests");
 var deleteRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("40617255a970dd06372d6182328026a79ab44a2124", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "deleteRequest");
 var updateRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createServerReference"])("60fda435c7eabb2f831664189646f0b1f23df0041d", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["findSourceMapURL"], "updateRequest");
@@ -753,7 +815,7 @@ const Review = ()=>{
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-sm md:text-lg",
+                                                className: "text-xs md:text-lg",
                                                 children: item.desc
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/client/home/Reviews.tsx",
@@ -761,7 +823,7 @@ const Review = ()=>{
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                className: "text-xs font-bold flex items-center gap-1",
+                                                className: "text-xs md:text-base font-bold flex items-center gap-1",
                                                 children: [
                                                     item.name,
                                                     ", ",

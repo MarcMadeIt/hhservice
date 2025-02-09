@@ -2,7 +2,7 @@
 
 import { createClient } from "@/utils/supabase/client";
 
-export async function getAllNews(page: number = 1, limit: number = 6) {
+export async function getAllNews(page: number = 1, limit: number = 3) {
   const supabase = createClient();
   const offset = (page - 1) * limit;
 
@@ -63,12 +63,13 @@ export async function getLatestReviews() {
   }
 }
 
-// CREATE REQUEST
 export async function createRequest(
   name: string,
   mobile: string,
+  mail: string,
   category: string,
-  consent: boolean
+  consent: boolean,
+  message: string
 ): Promise<void> {
   const supabase = createClient();
 
@@ -85,8 +86,10 @@ export async function createRequest(
       {
         name,
         mobile,
+        mail,
         category,
         consent,
+        message,
         consent_timestamp: consentTimestamp,
         ip_address: ipAddress,
         terms_version: "v1.0",

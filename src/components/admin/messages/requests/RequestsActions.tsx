@@ -5,9 +5,11 @@ import { deleteRequest } from "@/lib/server/actions"; // Import delete action
 const RequestsActions = ({
   requestId,
   onEditClick,
+  onDeleteSuccess,
 }: {
   requestId: string;
   onEditClick: () => void;
+  onDeleteSuccess: () => void;
 }) => {
   const [showModal, setShowModal] = useState(false);
 
@@ -19,7 +21,7 @@ const RequestsActions = ({
     try {
       await deleteRequest(requestId);
       setShowModal(false);
-      window.location.href = "/admin/messages";
+      onDeleteSuccess();
     } catch (error) {
       console.error("Failed to delete request:", error);
     }

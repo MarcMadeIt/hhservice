@@ -5,7 +5,7 @@
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, k: __turbopack_refresh__, m: module, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
     "createRequest": (()=>createRequest),
     "getAllNews": (()=>getAllNews),
     "getLatestNews": (()=>getLatestNews),
@@ -16,7 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var getAllNews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("60fa24a9fc21f9bb62ec671ef8de65823d688c3922", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getAllNews");
 var getLatestNews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getLatestNews");
 var getLatestReviews = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("00feda0587a92d54fc827b77606103fa8d595d235c", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "getLatestReviews");
-var createRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "createRequest");
+var createRequest = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createServerReference"])("7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["callServer"], void 0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$action$2d$client$2d$wrapper$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["findSourceMapURL"], "createRequest");
 }}),
 "[project]/src/components/client/forms/TaskSelect.tsx [app-client] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
@@ -32,7 +32,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var _s = __turbopack_refresh__.signature();
 "use client";
 ;
-const TaskSelect = ({ onChange })=>{
+const TaskSelect = ({ onChange, isCallForm = false })=>{
     _s();
     const [selectedOption, setSelectedOption] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const handleChange = (event)=>{
@@ -50,16 +50,16 @@ const TaskSelect = ({ onChange })=>{
                     children: "Hvilken opgave ønsker du?"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                className: "select select-bordered select-md md:select-lg",
+                className: `select select-bordered ${isCallForm ? "md:select-lg" : "select-md"}`,
                 value: selectedOption,
                 onChange: handleChange,
                 required: true,
@@ -70,7 +70,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Vælg opgave"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 31,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -78,7 +78,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Græsslåning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 34,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -86,7 +86,15 @@ const TaskSelect = ({ onChange })=>{
                         children: "Hækkeklipning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 35,
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Brolægning",
+                        children: "Brolægning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -94,7 +102,47 @@ const TaskSelect = ({ onChange })=>{
                         children: "Plantning"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 36,
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Snerydning",
+                        children: "Snerydning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Ukrudtfjernelse",
+                        children: "Ukrudtfjernelse"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Beskæring",
+                        children: "Beskæring"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 43,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Plantning",
+                        children: "Snerydning"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                        value: "Bortskaffelse",
+                        children: "Bortskaffelse"
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -102,7 +150,7 @@ const TaskSelect = ({ onChange })=>{
                         children: "Specialopgaver"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 37,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -110,19 +158,19 @@ const TaskSelect = ({ onChange })=>{
                         children: "Andet"
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                        lineNumber: 38,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/client/forms/TaskSelect.tsx",
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 };
@@ -148,11 +196,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$emailjs$2d$com$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/emailjs-com/es/index.js [app-client] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/lib/client/actions.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$forms$2f$TaskSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/client/forms/TaskSelect.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$modal$2f$ConsentModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/components/client/modal/ConsentModal.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$emailjs$2d$com$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/emailjs-com/es/index.js [app-client] (ecmascript) <locals>");
 ;
 var _s = __turbopack_refresh__.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -176,7 +226,7 @@ const CallMeForm = ()=>{
         setMessage("");
         try {
             // 1. Gem kundehenvendelsen i databasen
-            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createRequest"])(name, mobile, category, isChecked);
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createRequest"])(name, mobile, "", category, isChecked, "");
             // 2. Send e-mail til virksomheden via EmailJS
             const serviceId = ("TURBOPACK compile-time value", "service_033r29n");
             const templateId = ("TURBOPACK compile-time value", "hhservice_8de7spc");
@@ -203,21 +253,21 @@ const CallMeForm = ()=>{
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: isSuccess ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "flex flex-col gap-4 bg-base-100 p-10",
+            className: "flex flex-col gap-4 bg-base-100 p-8 md:p-10",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-xl font-bold",
                     children: "Tak for din henvendelse!"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 69,
+                    lineNumber: 70,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     children: "Vi vender tilbage til dig hurtigst muligt."
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 70,
+                    lineNumber: 71,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -226,31 +276,32 @@ const CallMeForm = ()=>{
                     children: "Luk"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 71,
+                    lineNumber: 72,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-            lineNumber: 68,
+            lineNumber: 69,
             columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
             onSubmit: handleSubmit,
-            className: "flex flex-col gap-4 bg-base-100 p-10 rounded-lg",
+            className: "flex flex-col gap-4 bg-base-100 p-8 md:p-10 rounded-lg",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                     className: "text-2xl font-bold",
                     children: "Bliv ringet op"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 80,
+                    lineNumber: 81,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$forms$2f$TaskSelect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    onChange: (value)=>setCategory(value)
+                    onChange: (value)=>setCategory(value),
+                    isCallForm: true
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 81,
+                    lineNumber: 82,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -264,12 +315,12 @@ const CallMeForm = ()=>{
                                 children: "Navn"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 84,
+                                lineNumber: 88,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 83,
+                            lineNumber: 87,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -284,13 +335,13 @@ const CallMeForm = ()=>{
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 86,
+                            lineNumber: 90,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 82,
+                    lineNumber: 86,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -304,12 +355,12 @@ const CallMeForm = ()=>{
                                 children: "Mobilnummer"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 100,
+                                lineNumber: 104,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 99,
+                            lineNumber: 103,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -325,13 +376,13 @@ const CallMeForm = ()=>{
                             required: true
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 102,
+                            lineNumber: 106,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 98,
+                    lineNumber: 102,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -347,36 +398,36 @@ const CallMeForm = ()=>{
                                 required: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                lineNumber: 117,
+                                lineNumber: 121,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 116,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             className: "label-text text-xs md:text-sm max-w-60",
                             children: [
-                                "Jeg accepterer opbevaring af mine oplysninger i op til 30 dage  ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                    className: "link link-primary",
-                                    children: "Læs mere."
+                                "Jeg giver samtykke til opbevaring af mine oplysninger.  ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$modal$2f$ConsentModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    buttonText: "Læs mere",
+                                    variant: "primary"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 131,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                            lineNumber: 125,
+                            lineNumber: 129,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 115,
+                    lineNumber: 119,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -385,12 +436,12 @@ const CallMeForm = ()=>{
                         children: message
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                        lineNumber: 133,
+                        lineNumber: 136,
                         columnNumber: 15
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 131,
+                    lineNumber: 134,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -400,18 +451,18 @@ const CallMeForm = ()=>{
                     children: isLoading ? "Sender..." : "Bliv kontaktet"
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-                    lineNumber: 138,
+                    lineNumber: 141,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-            lineNumber: 76,
+            lineNumber: 77,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/client/forms/CallMeForm.tsx",
-        lineNumber: 66,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 };
@@ -441,10 +492,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$ico
 ;
 const Steps = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full flex flex-col justify-center items-center gap-16 max-w-7xl",
+        className: "w-full flex flex-col justify-center items-center gap-10 lg:max-w-7xl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "text-xl lg:text-3xl font-bold",
+                className: "text-xl lg:text-3xl font-bold ",
                 children: "Sådan får du vores haveservice"
             }, void 0, false, {
                 fileName: "[project]/src/components/client/service/Steps.tsx",
@@ -455,11 +506,11 @@ const Steps = ()=>{
                 className: " flex gap-5 lg:gap-3 items-center justify-center xl:flex-row flex-col",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "w-80 lg:w-full h-48 lg:h-60 bg-secondary text-neutral-content p-3 rounded-md text-center items-center flex flex-col gap-3 py-8 justify-start",
+                        className: "w-80 lg:w-full h-48 lg:h-60 bg-base-100 text-neutral p-3 rounded-md shadow-md text-center items-center flex flex-col gap-3 py-8 justify-start",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaSquarePhone"], {
                                 size: 50,
-                                className: ""
+                                className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 20,
@@ -475,7 +526,7 @@ const Steps = ()=>{
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm 2xl:text-base",
-                                children: "Ring til os, bliv ringet op eller bestil et uforpligtende tilbud på græsslåning."
+                                children: "Ring til os, bliv ringet op eller bed om et uforpligtende tilbud på græsslåning."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 23,
@@ -490,7 +541,7 @@ const Steps = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaAngleRight"], {
-                                className: "hidden xl:flex text-secondary text-6xl"
+                                className: "hidden xl:flex text-secondary text-5xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 30,
@@ -510,11 +561,11 @@ const Steps = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "w-80 lg:w-full h-48 lg:h-60 bg-secondary text-neutral-content p-3 rounded-md text-center items-center flex flex-col gap-3 py-8",
+                        className: "w-80 lg:w-full h-48 lg:h-60 bg-base-100 text-neutral p-3 rounded-md shadow-md text-center items-center flex flex-col gap-3 py-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaClipboardList"], {
                                 size: 50,
-                                className: ""
+                                className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 35,
@@ -545,7 +596,7 @@ const Steps = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaAngleRight"], {
-                                className: "hidden xl:flex text-secondary text-6xl"
+                                className: "hidden xl:flex text-secondary text-5xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 44,
@@ -565,11 +616,11 @@ const Steps = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "w-80 lg:w-full h-48 lg:h-60  bg-secondary text-neutral-content p-3 rounded-md text-center items-center flex flex-col gap-3 py-8",
+                        className: "w-80 lg:w-full h-48 lg:h-60  bg-base-100 text-neutral p-3 rounded-md shadow-md text-center items-center flex flex-col gap-3 py-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaCalendarAlt"], {
                                 size: 50,
-                                className: ""
+                                className: "text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 48,
@@ -600,7 +651,7 @@ const Steps = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaAngleRight"], {
-                                className: "hidden xl:flex text-secondary text-6xl"
+                                className: "hidden xl:flex text-secondary text-5xl"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 56,
@@ -620,7 +671,7 @@ const Steps = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                        className: "w-80  lg:w-full h-48 lg:h-60 bg-base-100 text-neutral ring-4 ring-primary p-6 rounded-md items-center text-center flex flex-col gap-3 py-8",
+                        className: "w-80  lg:w-full h-48 lg:h-60 bg-base-100 text-neutral ring-4 ring-primary p-6 rounded-md shadow-md items-center text-center flex flex-col gap-3 py-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaCheckCircle"], {
                                 size: 50,
@@ -640,7 +691,7 @@ const Steps = ()=>{
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm 2xl:text-base",
-                                children: "Vi udfører arbejdet grundigt, så din have står flot og velplejet. 🌿"
+                                children: "Vi udfører arbejdet grundigt, så din have står flot og velplejet."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/service/Steps.tsx",
                                 lineNumber: 64,
@@ -738,7 +789,7 @@ const services = [
         image3: "/prune3.jpeg"
     },
     {
-        key: "haekklipning",
+        key: "haekkeklipning",
         name: "Hækkeklipning",
         icon: "/hedge.png",
         image1: "/hedge1.jpeg",
@@ -773,9 +824,9 @@ const services = [
         key: "ukrudtsfjernelse",
         name: "Ukrudtsfjernelse",
         icon: "/weeds.png",
-        image1: "/grass1.jpeg",
-        image2: "/grass2.jpeg",
-        image3: "/grass3.jpeg"
+        image1: "/weeds1.jpeg",
+        image2: "/weeds2.jpeg",
+        image3: "/weeds3.jpeg"
     },
     {
         key: "byggepladsservice",
@@ -831,13 +882,13 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-10 justify-center items-center",
+                className: "mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-16 justify-center items-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: " xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-16 lg:gap-4 max-w-7xl",
+                        className: " xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "lg:w-2/3 p-4 py-8 lg:py-0 flex flex-col items-center justify-center bg-base-100 rounded-lg",
+                                className: "lg:w-2/3 p-4 lg:py-0 flex flex-col items-center justify-center bg-base-200 rounded-lg",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4",
                                     children: [
@@ -939,8 +990,8 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                             className: "flex flex-col gap-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                    className: "text-lg font-semibold",
-                                                    children: "Vælg din by:"
+                                                    className: "text-md font-semibold",
+                                                    children: "Vi dækker bl.a. disse områder:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
                                                     lineNumber: 79,
@@ -949,22 +1000,23 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                                     className: "flex gap-3 flex-wrap",
                                                     children: Object.entries(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$servicesData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["byData"]).filter(([slug])=>slug !== cityInfo?.name.toLowerCase()).map(([slug, city])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                                            className: "text-primary bg-base-100 shadow-md py-2 px-2 rounded-md font-semibold",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                                 href: `/service/${serviceKey}/${slug}`,
                                                                 children: city.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                                lineNumber: 85,
+                                                                lineNumber: 90,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, slug, false, {
                                                             fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                            lineNumber: 84,
+                                                            lineNumber: 86,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 82,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
@@ -984,7 +1036,7 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                                     className: "rounded-md hidden sm:block object-cover w-[50%] sm:w-[33%]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                    lineNumber: 93,
+                                                    lineNumber: 98,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -995,7 +1047,7 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                                     className: "rounded-md object-cover w-[50%] sm:w-[33%]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                    lineNumber: 100,
+                                                    lineNumber: 105,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1006,13 +1058,13 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                                     className: "rounded-md object-cover w-[50%] sm:w-[33%]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                                    lineNumber: 107,
+                                                    lineNumber: 112,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                            lineNumber: 92,
+                                            lineNumber: 97,
                                             columnNumber: 15
                                         }, this)
                                     ]
@@ -1030,12 +1082,12 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                                 className: "lg:w-auto flex items-center justify-center",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$forms$2f$CallMeForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                     fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 123,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                                lineNumber: 117,
+                                lineNumber: 122,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -1046,7 +1098,7 @@ const ServiceClient = ({ serviceInfo, serviceKey, cityInfo })=>{
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$service$2f$Steps$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/(client)/service/[service]/ServiceClient.tsx",
-                        lineNumber: 121,
+                        lineNumber: 126,
                         columnNumber: 9
                     }, this)
                 ]

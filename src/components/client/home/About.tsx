@@ -1,22 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import { FaCut, FaTools } from "react-icons/fa";
-import {
-  FaCanadianMapleLeaf,
-  FaFacebook,
-  FaInstagram,
-  FaLeaf,
-  FaLinkedin,
-  FaSeedling,
-  FaTree,
-} from "react-icons/fa6";
+import { FaLeaf, FaSeedling, FaTree } from "react-icons/fa6";
 
 const About = () => {
   return (
     <article className="w-full h-full p-2 sm:p-3 relative">
-      <div className="bg-secondary py-10 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6">
-        <div className="flex-1 p-10 hidden md:flex">
-          <div className="relative w-full md:h-full rounded-lg overflow-hidden">
+      <div className="bg-secondary py-8 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6">
+        <div className="flex-1 p-10 hidden lg:flex">
+          <div className="relative w-full lg:h-full rounded-lg overflow-hidden">
             <Image
               src="/about.png"
               alt="Beskrivelse af billedet"
@@ -26,7 +18,7 @@ const About = () => {
             />
           </div>
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-8 md:gap-12 p-5 md:p-10 text-neutral-content">
+        <div className="lg:flex-1 flex flex-col justify-center gap-8 md:gap-12 p-5 md:p-10 text-neutral-content">
           <div className="flex flex-col gap-6">
             <h3 className="text-lg md:text-3xl font-bold">
               Om Os – Halsnæs Haveservice
@@ -47,13 +39,13 @@ const About = () => {
             </p>
             <p className="text-sm md:text-md font-medium tracking-wide">
               Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage
-              fat i os – vi står klar til at hjælpe! 🌿😊
+              fat i os – vi står klar til at hjælpe! 🌿
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 flex flex-col gap-3 items-start">
               <ul className="flex flex-col gap-3 list-none font-medium ">
-                <li className="flex items-center gap-2 text-md md:text-lg">
+                <li className="flex items-center gap-2 text-  v md:text-lg">
                   <FaLeaf /> Græsslåning & plænepleje
                 </li>
                 <li className="flex items-center gap-2 text-md md:text-lg">

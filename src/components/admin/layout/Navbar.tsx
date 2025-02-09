@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaComment, FaGear, FaHouse, FaList, FaMessage } from "react-icons/fa6";
 import { readUserSession } from "@/lib/auth/readUserSession";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -24,10 +25,10 @@ const Navbar = () => {
 
   return (
     <div className="flex flex-col items-center justify-between  bg-base-100 rounded-lg sm:fixed sm:h-full md:py-0 md:pr-0">
-      <div className="flex flex-col sm:gap-7 h-full ">
+      <div className="flex flex-col sm:gap-5 h-full ">
         <div className="flex flex-col items-center justify-center h-24 w-full text-xl">
           <span className="font-bold">ADMIN</span>
-          <span className="text-sm">HH SERVICE</span>
+          <span className="text-base font-semibold">hhservice.dk</span>
         </div>
         <div className="hidden sm:flex">
           <ul className="menu menu-lg gap-2 rounded-box w-56 xl:w-72">

@@ -1,12 +1,29 @@
+"use client";
 import Footer from "@/components/client/layout/Footer";
 import Header from "@/components/client/layout/Header";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaArrowUp, FaAngleUp } from "react-icons/fa6";
+import { useEffect, useState } from "react";
 
 export default function clientLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="sm:h-lvh h-dvh">
       <header>
@@ -16,16 +33,24 @@ export default function clientLayout({
       <footer>
         <Footer />
       </footer>
-      <article className="sticky bottom-0 w-full px-2 block md:hidden">
-        <div className="p-4 bg-secondary text-neutral-content rounded-tl-lg rounded-tr-lg ">
+      <article className="sticky bottom-0 w-full px-2 block md:hidden z-50">
+        <div className="p-4 bg-secondary text-neutral-content rounded-tl-lg rounded-tr-lg">
           <a
             href="tel:+4526181201"
             className="flex  gap-2 items-center justify-center"
           >
-            Ring til os <FaPhone /> +4526181201
+            Ring til os <FaPhone /> +45 26 18 12 01
           </a>
         </div>
       </article>
+      {showScroll && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-16 right-4 p-3 bg-secondary text-white rounded-full shadow-lg z-50 block md:hidden"
+        >
+          <FaAngleUp />
+        </button>
+      )}
     </div>
   );
 }

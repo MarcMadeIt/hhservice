@@ -21,6 +21,7 @@ const Requests = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRequests, setSelectedRequests] = useState<number[]>([]);
   const [isEditing, setIsEditing] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleDetailsClick = (requestId: number) => {
     setSelectedRequestId(requestId);
@@ -40,6 +41,8 @@ const Requests = () => {
       await Promise.all(
         selectedRequests.map((id) => deleteRequest(id.toString()))
       );
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
     } catch (error) {
       console.error("Failed to delete selected requests:", error);
     }
@@ -117,10 +120,11 @@ const Requests = () => {
             mail={selectedRequest.mail}
             city={selectedRequest.city}
             address={selectedRequest.address}
+            message={selectedRequest.message}
             consent={selectedRequest.consent}
             requestId={selectedRequest.id.toString()}
             setIsEditing={setIsEditing}
-            onUpdateRequest={handleUpdateRequest} // Pass handleUpdateRequest to RequestsDetails
+            onUpdateRequest={handleUpdateRequest}
           />
         </div>
       ) : (
@@ -156,6 +160,13 @@ const Requests = () => {
             </>
           )}
         </>
+      )}
+      {showToast && (
+        <div className="toast bottom-20 md:bottom-0 toast-end">
+          <div className="alert alert-success text-neutral-content">
+            <span className="text-base md:text-lg">Henvendelse slettet</span>
+          </div>
+        </div>
       )}
     </div>
   );

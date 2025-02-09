@@ -75,7 +75,9 @@ const Users = () => {
       {showToast && (
         <div className="toast bottom-20 md:bottom-0 toast-end">
           <div className="alert alert-success text-neutral-content">
-            <span>{showRegister ? "Bruger oprettet" : "Bruger opdateret"}</span>
+            <span className="text-base md:text-lg">
+              {showRegister ? "Bruger oprettet" : "Bruger opdateret"}
+            </span>
           </div>
         </div>
       )}

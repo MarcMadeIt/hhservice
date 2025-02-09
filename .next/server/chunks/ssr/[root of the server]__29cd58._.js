@@ -21,12 +21,12 @@ const About = ()=>{
         className: "w-full h-full p-2 sm:p-3 relative",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-secondary py-10 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6",
+                className: "bg-secondary py-8 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1 p-10 hidden md:flex",
+                        className: "flex-1 p-10 hidden lg:flex",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "relative w-full md:h-full rounded-lg overflow-hidden",
+                            className: "relative w-full lg:h-full rounded-lg overflow-hidden",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 src: "/about.png",
                                 alt: "Beskrivelse af billedet",
@@ -35,21 +35,21 @@ const About = ()=>{
                                 sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                lineNumber: 20,
+                                lineNumber: 12,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/client/home/About.tsx",
-                            lineNumber: 19,
+                            lineNumber: 11,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/home/About.tsx",
-                        lineNumber: 18,
+                        lineNumber: 10,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex-1 flex flex-col justify-center gap-8 md:gap-12 p-5 md:p-10 text-neutral-content",
+                        className: "lg:flex-1 flex flex-col justify-center gap-8 md:gap-12 p-5 md:p-10 text-neutral-content",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col gap-6",
@@ -59,7 +59,7 @@ const About = ()=>{
                                         children: "Om Os – Halsnæs Haveservice"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                        lineNumber: 31,
+                                        lineNumber: 23,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -67,7 +67,7 @@ const About = ()=>{
                                         children: "Vi er Halsnæs Haveservice, og vi har hjulpet kunder med at holde deres haver flotte siden 2021. Det hele startede som en lille sidebeskæftigelse, hvor vi hjalp et par lokale med at vedligeholde deres haver. Men med tiden voksede efterspørgslen, og det, der begyndte som en hobby, er i dag blevet til en professionel haveservice."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                        lineNumber: 34,
+                                        lineNumber: 26,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -75,21 +75,21 @@ const About = ()=>{
                                         children: "Vi hjælper både private og virksomheder i Halsnæs med alt fra græsslåning og hækkeklipning til træfældning og vedligeholdelse. For os handler det ikke kun om at passe en have – vi ønsker at skabe uderum, som vores kunder virkelig kan nyde."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                        lineNumber: 42,
+                                        lineNumber: 34,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "text-sm md:text-md font-medium tracking-wide",
-                                        children: "Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage fat i os – vi står klar til at hjælpe! 🌿😊"
+                                        children: "Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage fat i os – vi står klar til at hjælpe! 🌿"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 40,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                lineNumber: 30,
+                                lineNumber: 22,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -100,18 +100,18 @@ const About = ()=>{
                                         className: "flex flex-col gap-3 list-none font-medium ",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                className: "flex items-center gap-2 text-md md:text-lg",
+                                                className: "flex items-center gap-2 text-  v md:text-lg",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaLeaf"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                                        lineNumber: 57,
+                                                        lineNumber: 49,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Græsslåning & plænepleje"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                                lineNumber: 56,
+                                                lineNumber: 48,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -119,14 +119,14 @@ const About = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaCut"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                                        lineNumber: 60,
+                                                        lineNumber: 52,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Hækkeklipning & beskæring"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                                lineNumber: 59,
+                                                lineNumber: 51,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -134,14 +134,14 @@ const About = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTree"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                                        lineNumber: 63,
+                                                        lineNumber: 55,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Træfældning & stubfræsning"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                                lineNumber: 62,
+                                                lineNumber: 54,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -149,14 +149,14 @@ const About = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaSeedling"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                                        lineNumber: 66,
+                                                        lineNumber: 58,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Ukrudtsbekæmpelse & lugning"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                                lineNumber: 65,
+                                                lineNumber: 57,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -164,42 +164,42 @@ const About = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTools"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                                        lineNumber: 69,
+                                                        lineNumber: 61,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Fliserens & vedligeholdelse"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                                lineNumber: 68,
+                                                lineNumber: 60,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/client/home/About.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 47,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/client/home/About.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/client/home/About.tsx",
-                                lineNumber: 53,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/client/home/About.tsx",
-                        lineNumber: 29,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/client/home/About.tsx",
-                lineNumber: 17,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -211,18 +211,18 @@ const About = ()=>{
                     height: 200
                 }, void 0, false, {
                     fileName: "[project]/src/components/client/home/About.tsx",
-                    lineNumber: 77,
+                    lineNumber: 69,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/client/home/About.tsx",
-                lineNumber: 76,
+                lineNumber: 68,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/client/home/About.tsx",
-        lineNumber: 16,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 };
@@ -392,13 +392,13 @@ const Services = ()=>{
                                 className: "flex flex-col items-center gap-4 md:gap-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center",
+                                        className: "w-20 h-20 sm:w-24  sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/lawn.png",
                                             alt: "Græsslåning",
                                             width: 200,
                                             height: 200,
-                                            className: "w-[55px] md:w-[70px] h-auto"
+                                            className: "w-10 md:w-[55px] lg:w-[60] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
                                             lineNumber: 17,
@@ -410,7 +410,7 @@ const Services = ()=>{
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg md:text-2xl font-bold",
+                                        className: "text-[17px] lg:text-[22px] font-semibold md:font-bold",
                                         children: "Græsslåning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
@@ -428,35 +428,35 @@ const Services = ()=>{
                                 className: "flex flex-col items-center gap-4 md:gap-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center",
+                                        className: " w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/hedge.png",
                                             alt: "Hækkeklipning",
                                             width: 200,
                                             height: 200,
-                                            className: "w-[45px] md:w-[60px] h-auto"
+                                            className: "w-8 sm:w-[45px] lg:w-[50px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 32,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 31,
+                                        lineNumber: 33,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg md:text-2xl font-bold",
+                                        className: "text-[17px] lg:text-[22px] font-semibold md:font-bold ",
                                         children: "Hækkeklipning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 40,
+                                        lineNumber: 42,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 27,
+                                lineNumber: 29,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -473,35 +473,35 @@ const Services = ()=>{
                                 className: "flex flex-col items-center gap-4 md:gap-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center",
+                                        className: "w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/tile.png",
                                             alt: "Brolægning",
                                             width: 200,
                                             height: 200,
-                                            className: "w-[47px] md:w-[70px] h-auto"
+                                            className: "w-9 sm:w-[47px] lg:w-[60px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 49,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 52,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg md:text-2xl font-bold",
+                                        className: "text-[17px] lg:text-[22px] font-semibold md:font-bold",
                                         children: "Brolægning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 61,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 44,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -509,41 +509,41 @@ const Services = ()=>{
                                 className: "flex flex-col items-center gap-4 md:gap-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center",
+                                        className: "w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/reno.png",
                                             alt: "Bortskaffelse",
                                             width: 200,
                                             height: 200,
-                                            className: "w-[47px] md:w-[70px] h-auto"
+                                            className: "w-9 sm:w-[47px] lg:w-[60px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 64,
+                                            lineNumber: 70,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 69,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg md:text-2xl font-bold",
+                                        className: "text-[17px] lg:text-[22px] font-semibold md:font-bold",
                                         children: "Bortskaffelse"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 59,
+                                lineNumber: 65,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/client/home/Services.tsx",
-                        lineNumber: 43,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this)
                 ]
@@ -558,7 +558,7 @@ const Services = ()=>{
                 children: "Se alle services"
             }, void 0, false, {
                 fileName: "[project]/src/components/client/home/Services.tsx",
-                lineNumber: 76,
+                lineNumber: 84,
                 columnNumber: 7
             }, this)
         ]
@@ -598,7 +598,7 @@ const FAQ = ()=>{
                     className: "flex flex-col gap-4 md:gap-6 w-full justify-center items-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100",
+                            className: "collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "radio",
@@ -637,7 +637,7 @@ const FAQ = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100",
+                            className: "collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "radio",
@@ -676,7 +676,7 @@ const FAQ = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100",
+                            className: "collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "radio",
@@ -715,7 +715,7 @@ const FAQ = ()=>{
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "collapse collapse-arrow shadow-lg max-w-[650px] w-full bg-base-100",
+                            className: "collapse collapse-arrow shadow-md max-w-[650px] w-full bg-base-100",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                     type: "radio",
@@ -863,7 +863,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 const Locations = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full h-full p-2 sm:p-4",
+        className: "w-full h-full p-2 sm:p-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "hidden",
@@ -877,7 +877,7 @@ const Locations = ()=>{
                 className: "flex flex-col items-center justify-center h-full gap-10 text-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "max-w-lg font-semibold text-[11px] sm:text-base",
+                        className: "max-w-sm sm:max-w-md md:max-w-lg font-semibold text-[11px] sm:text-base",
                         children: "Vi dækker hele Nordsjælland, alt fra Frederiksværk, Gilleleje, Hornbæk til kulhuse og Jyllinge med mange flere endnu."
                     }, void 0, false, {
                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -885,10 +885,10 @@ const Locations = ()=>{
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                        className: "flex flex-wrap justify-center gap-4 max-w-3xl",
+                        className: "flex flex-wrap justify-center gap-4 max-w-sm sm:max-w-xl md:max-w-3xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                className: " w-24  sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
+                                className: " w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
@@ -902,8 +902,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-14 sm:w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 19,
@@ -930,8 +930,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 31,
@@ -958,8 +958,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 43,
@@ -986,8 +986,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 55,
@@ -1014,8 +1014,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 67,
@@ -1042,8 +1042,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 79,
@@ -1070,8 +1070,8 @@ const Locations = ()=>{
                                         className: "opacity-70 absolute bottom-0 h-auto w-16 md:w-24",
                                         src: "/city.png",
                                         alt: "byskilt",
-                                        width: 100,
-                                        height: 100
+                                        width: 135,
+                                        height: 50
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
                                         lineNumber: 91,
@@ -1158,7 +1158,7 @@ const Home = ()=>{
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "h-full md:h-[800px]",
+                className: "h-full lg:h-[800px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$About$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
                     lineNumber: 22,
@@ -1941,7 +1941,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getAllNews(page = 1, limit = 6) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getAllNews(page = 1, limit = 3) {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createClient"])();
     const offset = (page - 1) * limit;
     try {

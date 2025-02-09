@@ -295,7 +295,6 @@ export async function createNews(
         throw new Error("Failed to retrieve public URL");
       }
 
-      console.log("Generated Public URL:", data.publicUrl); // Debug log
       return data.publicUrl;
     };
 
@@ -384,7 +383,6 @@ export async function updateNews(
         throw new Error("Failed to retrieve public URL");
       }
 
-      console.log("Generated Public URL:", data.publicUrl); // Debug log
       return data.publicUrl;
     };
 
@@ -604,6 +602,51 @@ export async function getLatestReviews(limit: number = 10) {
   }
 }
 
+export async function updateReview(
+  reviewId: number,
+  name: string,
+  city: string,
+  desc: string,
+  rate: number
+): Promise<void> {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { error } = await supabase
+      .from("reviews")
+      .update({ name, city, desc, rate })
+      .eq("id", reviewId);
+
+    if (error) {
+      throw new Error(`Failed to update review: ${error.message}`);
+    }
+  } catch (error) {
+    console.error("Error in updateReview:", error);
+    throw error;
+  }
+}
+
+export async function getReviewById(reviewId: number) {
+  const supabase = await createServerClientInstance();
+
+  try {
+    const { data, error } = await supabase
+      .from("reviews")
+      .select("*")
+      .eq("id", reviewId)
+      .single();
+
+    if (error) {
+      throw new Error(`Failed to fetch review by ID: ${error.message}`);
+    }
+
+    return data;
+  } catch (err) {
+    console.error("Unexpected error during fetching review by ID:", err);
+    throw err;
+  }
+}
+
 // REQUESTS
 
 export async function getAllRequests(page: number = 1, limit: number = 6) {
@@ -653,6 +696,7 @@ export async function updateRequest(
     category?: string;
     mobile?: string;
     mail?: string;
+    massage?: string;
     address?: string;
     city?: string;
   }

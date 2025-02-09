@@ -13,31 +13,35 @@ const Services = () => {
             href="/service/graesslaaning"
             className="flex flex-col items-center gap-4 md:gap-6"
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center">
+            <div className="w-20 h-20 sm:w-24  sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center">
               <Image
                 src="/lawn.png"
                 alt="Græsslåning"
                 width={200}
                 height={200}
-                className="w-[55px] md:w-[70px] h-auto"
+                className="w-10 md:w-[55px] lg:w-[60] h-auto"
               />
             </div>
-            <h3 className="text-lg md:text-2xl font-bold">Græsslåning</h3>
+            <h3 className="text-[17px] lg:text-[22px] font-semibold md:font-bold">
+              Græsslåning
+            </h3>
           </Link>
           <Link
             href="/service/haekklipning"
             className="flex flex-col items-center gap-4 md:gap-6"
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center">
+            <div className=" w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center">
               <Image
                 src="/hedge.png"
                 alt="Hækkeklipning"
                 width={200}
                 height={200}
-                className="w-[45px] md:w-[60px] h-auto"
+                className="w-8 sm:w-[45px] lg:w-[50px] h-auto"
               />
             </div>
-            <h3 className="text-lg md:text-2xl font-bold">Hækkeklipning</h3>
+            <h3 className="text-[17px] lg:text-[22px] font-semibold md:font-bold ">
+              Hækkeklipning
+            </h3>
           </Link>
         </div>
         <div className="flex justify-center gap-10 md:gap-16 lg:gap-20">
@@ -45,31 +49,35 @@ const Services = () => {
             href="/service/brolaegning"
             className="flex flex-col items-center gap-4 md:gap-6"
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center">
               <Image
                 src="/tile.png"
                 alt="Brolægning"
                 width={200}
                 height={200}
-                className="w-[47px] md:w-[70px] h-auto"
+                className="w-9 sm:w-[47px] lg:w-[60px] h-auto"
               />
             </div>
-            <h3 className="text-lg md:text-2xl font-bold">Brolægning</h3>
+            <h3 className="text-[17px] lg:text-[22px] font-semibold md:font-bold">
+              Brolægning
+            </h3>
           </Link>
           <Link
             href="/service/bortskaffelse"
             className="flex flex-col items-center gap-4 md:gap-6"
           >
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-xl flex items-center justify-center">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center">
               <Image
                 src="/reno.png"
                 alt="Bortskaffelse"
                 width={200}
                 height={200}
-                className="w-[47px] md:w-[70px] h-auto"
+                className="w-9 sm:w-[47px] lg:w-[60px] h-auto"
               />
             </div>
-            <h3 className="text-lg md:text-2xl font-bold">Bortskaffelse</h3>
+            <h3 className="text-[17px] lg:text-[22px] font-semibold md:font-bold">
+              Bortskaffelse
+            </h3>
           </Link>
         </div>
       </div>
