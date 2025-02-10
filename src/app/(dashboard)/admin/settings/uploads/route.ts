@@ -69,9 +69,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   try {
-    // Konverter Next.js request til en kompatibel IncomingMessage
     const incomingReq = convertNextRequestToIncomingMessage(req);
-
     const form = new IncomingForm({
       multiples: false,
       maxFileSize: 5 * 1024 * 1024,
@@ -79,13 +77,22 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
     console.log("📥 Parser fil fra request...");
 
-    const formData: { fields: Fields<string>; files: Files<string> } =
-      await new Promise((resolve, reject) => {
-        form.parse(incomingReq, (err, fields, files) => {
-          if (err) reject(err);
-          else resolve({ fields, files });
-        });
+    const formData = await new Promise<{
+      fields: Fields<string>;
+      files: Files<string>;
+    }>((resolve, reject) => {
+      form.parse(incomingReq, (err, fields, files) => {
+        if (err) {
+          console.error("❌ Fejl ved parsing:", err);
+          reject(err);
+        } else {
+          console.log("✅ Parsing lykkedes!");
+          resolve({ fields, files });
+        }
       });
+    });
+
+    console.log("📂 Parsed data:", formData);
 
     if (!formData.files.file) {
       console.log("❌ Ingen fil fundet i request.");
