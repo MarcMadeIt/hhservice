@@ -6,8 +6,10 @@ interface CityServicePageProps {
 }
 
 const CityServicePage = async ({ params }: CityServicePageProps) => {
-  const serviceInfo = await getServiceInfo(params.service);
-  const byInfo = await getCityInfo(params.by);
+  const { service, by } = params;
+
+  const serviceInfo = await getServiceInfo(service);
+  const byInfo = await getCityInfo(by);
 
   if (!serviceInfo || !byInfo) {
     return <div>Service eller by ikke fundet</div>;
@@ -16,7 +18,7 @@ const CityServicePage = async ({ params }: CityServicePageProps) => {
   return (
     <ServiceClient
       serviceInfo={serviceInfo}
-      serviceKey={params.service}
+      serviceKey={service}
       cityInfo={byInfo}
     />
   );
