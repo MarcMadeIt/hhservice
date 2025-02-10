@@ -7,35 +7,46 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted # ✅ Kører på din VPS runner
+    runs-on: self-hosted
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      - name: 🏗 Install dependencies
+      - name: 🔄 Reset & Pull Latest Code from GitHub
         run: |
-          cd /home/marccode/htdocs/hhs.marccode.com  # ✅ Korrekt projektsti
+          echo "⚠️ Resetting repository and pulling latest code..."
+          cd /home/marccode/htdocs/hhs.marccode.com
+          git fetch --all
+          git reset --hard origin/main  # ✅ Resets local changes & forces latest version
+          git pull origin main --force  # ✅ Ensures latest code is pulled
+
+      - name: 🛠 Remove old Next.js & dependencies
+        run: |
+          echo "⚠️ Removing old dependencies and Next.js cache..."
+          cd /home/marccode/htdocs/hhs.marccode.com
+          rm -rf node_modules package-lock.json .next
           npm install
 
       - name: 🔧 Build Next.js project
         run: |
+          echo "⚡ Building Next.js app..."
           cd /home/marccode/htdocs/hhs.marccode.com
-          echo "⚡ Cleaning up old builds..."
-          rm -rf .next
-          echo "⚡ Building Next.js project..."
           npm run build
 
       - name: 🚀 Restart PM2
         run: |
           echo "🔄 Restarting PM2..."
           export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loader NVM
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loads NVM correctly
 
           cd /home/marccode/htdocs/hhs.marccode.com
           npm install --production
 
           echo "⚡ Restarting PM2 process..."
-          pm2 restart hhs-marccode || pm2 start npm --name "hhs-marccode" -- start
+          pm2 delete hhs-marccode || true  # ✅ Removes old PM2 process
+          pm2 start npm --name "hhs-marccode" -- start
           pm2 save
           pm2 list
 
