@@ -26,6 +26,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           source: "."
           target: "/var/www/my-nextjs-app"
+          strip_components: 1 # Sikrer, at filerne ikke pakker sig ind i en ekstra mappe
 
       - name: 🚀 Restart PM2 on VPS
         uses: appleboy/ssh-action@master
@@ -34,8 +35,22 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            cd /var/www/my-nextjs-app
-            npm install
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loader nvm korrekt
+
+            echo "🔄 Navigerer til projektmappe..."
+            cd /var/www/my-nextjs-app || exit 1
+
+            echo "🛠️ Installerer dependencies..."
+            npm install --production
+
+            echo "⚡ Bygger Next.js (rydder gammel cache)..."
+            rm -rf .next
             npm run build
+
+            echo "🔄 Genstarter PM2..."
             pm2 restart nextjs-app || pm2 start npm --name "nextjs-app" -- start
             pm2 save
+            pm2 list
+
+            echo "✅ Deployment færdig!"
