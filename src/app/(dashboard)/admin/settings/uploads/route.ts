@@ -3,9 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { IncomingForm, Fields, Files } from "formidable";
 import { Readable } from "stream";
 import { IncomingMessage } from "http";
+import fs from "fs-extra";
 import sharp from "sharp";
 
-export const config = { api: { bodyParser: false } };
+export const config = { api: { bodyParser: false } }; // Required for Formidable
 
 async function isAdmin(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
@@ -59,7 +60,7 @@ export async function POST(req: NextRequest) {
   try {
     const form = new IncomingForm({
       multiples: false,
-      maxFileSize: 5 * 1024 * 1024, // 5MB limit
+      maxFileSize: 5 * 1024 * 1024,
     });
 
     // Convert Next.js request into IncomingMessage
@@ -95,16 +96,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const uploadDir = path.join(process.cwd(), "public");
-    const fileName = `${fileType}.png`; // Altid gem som PNG
+    const uploadDir = path.join(process.cwd(), "public"); // Save directly in public/
+    const fileName = `${fileType}.png`; // Always save as PNG
     const newPath = path.join(uploadDir, fileName);
 
-    // Resize og konverter billede til PNG
-    await processImage(file.filepath, newPath, fileType);
+    // Move file manually
+    await fs.move(file.filepath, newPath);
+
+    // Resize and convert image to PNG
+    await processImage(newPath, newPath, fileType);
 
     return NextResponse.json({
       message: `File uploaded and converted successfully!`,
-      filePath: `/public/${fileName}`,
+      filePath: `/${fileName}`,
     });
   } catch (error) {
     return NextResponse.json(

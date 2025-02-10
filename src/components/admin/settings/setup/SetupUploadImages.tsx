@@ -34,7 +34,7 @@ const SetupUploadImages = () => {
       method: "POST",
       body: formData,
       headers: {
-        Authorization: "Bearer SECRET_ADMIN_KEY", // Erstat med dit eget auth-system
+        Authorization: "Bearer SECRET_ADMIN_KEY",
       },
     });
 
