@@ -29,6 +29,12 @@ jobs:
           rm -rf node_modules package-lock.json .next
           npm install
 
+      - name: 🗑️ Ryd `public/`-mappen inden deployment
+        run: |
+          echo "⚠️ Fjerner gamle filer i public/ for at sikre korrekt opdatering..."
+          cd /home/marccode/htdocs/hhs.marccode.com/public
+          rm -rf *
+
       - name: 🔧 Build Next.js project
         run: |
           echo "⚡ Building Next.js app..."

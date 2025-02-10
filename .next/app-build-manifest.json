@@ -31,10 +31,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(client)/service/page.js"
     ],
-    "/_not-found/page": [
+    "/(dashboard)/admin/content/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/(dashboard)/admin/content/page.js"
+    ],
+    "/(dashboard)/admin/messages/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/admin/messages/page.js"
+    ],
+    "/(dashboard)/admin/settings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/admin/settings/page.js"
     ]
   }
 }

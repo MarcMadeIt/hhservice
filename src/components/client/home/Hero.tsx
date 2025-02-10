@@ -34,14 +34,14 @@ const Hero = () => {
         </Link>
 
         <div className="gap-16 md:gap-32 mt-5 hidden md:flex">
-          <div className="flex flex-col shadow-xl items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
+          <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
             <FaCalendar className="text-2xl md:text-4xl text-primary" />
             <div className="flex flex-col items-center gap-0">
               <h3 className="md:text-xl font-bold">Alle dage</h3>
               <h3 className="md:text-xl font-bold">07 - 17</h3>
             </div>
           </div>
-          <div className="flex flex-col shadow-xl items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
+          <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
             <FaPhone className="text-2xl md:text-4xl text-primary" />
             <div className="flex flex-col items-center gap-0">
               <h3 className="md:text-xl font-bold">Ring til os</h3>

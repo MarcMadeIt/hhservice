@@ -86,7 +86,7 @@ const CallMeForm = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 bg-base-100 p-8 md:p-10 rounded-lg relative"
+          className="flex flex-col gap-4 bg-base-100 p-8 md:p-10 rounded-lg  relative"
         >
           <h2 className="text-2xl font-bold">Bliv ringet op</h2>
           <TaskSelect
