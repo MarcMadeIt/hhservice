@@ -19,8 +19,8 @@ jobs:
           echo "⚠️ Resetting repository and pulling latest code..."
           cd /home/marccode/htdocs/hhs.marccode.com
           git fetch --all
-          git reset --hard origin/main  # ✅ Resets local changes & forces latest version
-          git pull origin main --force  # ✅ Ensures latest code is pulled
+          git reset --hard origin/main
+          git pull origin main --force
 
       - name: 🛠 Remove old Next.js & dependencies
         run: |
@@ -35,18 +35,18 @@ jobs:
           cd /home/marccode/htdocs/hhs.marccode.com
           npm run build
 
-      - name: 🚀 Restart PM2
+      - name: 🚀 Restart PM2 with `npm run start`
         run: |
-          echo "🔄 Restarting PM2..."
+          echo "🔄 Restarting PM2 with Production Mode..."
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loads NVM correctly
 
           cd /home/marccode/htdocs/hhs.marccode.com
           npm install --production
 
-          echo "⚡ Restarting PM2 process..."
-          pm2 delete hhs-marccode || true  # ✅ Removes old PM2 process
-          pm2 start npm --name "hhs-marccode" -- start
+          echo "⚡ Restarting PM2 process with npm run start..."
+          pm2 delete hhs-marccode || true  # ✅ Ensures old process is removed
+          pm2 start npm --name "hhs-marccode" -- start -- -p 3030  # ✅ Runs in production mode on port 3030
           pm2 save
           pm2 list
 
