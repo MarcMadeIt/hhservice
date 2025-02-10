@@ -6,8 +6,8 @@ const CityServicePage = async ({
 }: {
   params: { service: string; by: string };
 }) => {
-  const serviceInfo = getServiceInfo(params.service);
-  const byInfo = getCityInfo(params.by);
+  const serviceInfo = await getServiceInfo(params.service);
+  const byInfo = await getCityInfo(params.by);
 
   if (!serviceInfo || !byInfo) {
     return <div>Service eller by ikke fundet</div>;
