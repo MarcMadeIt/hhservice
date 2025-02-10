@@ -1,11 +1,11 @@
 import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 
-const CityServicePage = async ({
-  params,
-}: {
+interface CityServicePageProps {
   params: { service: string; by: string };
-}) => {
+}
+
+const CityServicePage = async ({ params }: CityServicePageProps) => {
   const serviceInfo = await getServiceInfo(params.service);
   const byInfo = await getCityInfo(params.by);
 
