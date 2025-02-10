@@ -117,7 +117,7 @@ const CallMeForm = () => {
               autoComplete="tel"
               id="phone"
               type="tel"
-              placeholder="Indtast 8-cifret nummer"
+              placeholder="Skriv dit mobilnummer"
               className="input input-bordered input-md md:input-lg w-full"
               value={mobile}
               onChange={(e) => setMobile(e.target.value)}

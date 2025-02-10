@@ -151,7 +151,7 @@ const OfferForm = () => {
                   autoComplete="tel"
                   id="phone"
                   type="tel"
-                  placeholder="Indtast 8-cifret nummer"
+                  placeholder="Skriv dit mobilnummer"
                   className="input input-bordered w-full"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}

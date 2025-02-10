@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { IncomingForm, Fields, Files } from "formidable";
 import { Readable } from "stream";
 import { IncomingMessage } from "http";
-import fs from "fs-extra";
 import sharp from "sharp";
 
 export const config = { api: { bodyParser: false } };
@@ -48,10 +47,11 @@ async function processImage(
 
   await sharp(filePath)
     .resize(width, height, { fit: "cover" })
-    .toFormat("png")
+    .toFormat("png") // Convert to PNG
     .toFile(outputPath);
 }
 
+// Handle File Upload
 export async function POST(req: NextRequest) {
   if (!(await isAdmin(req))) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 403 });
@@ -60,9 +60,10 @@ export async function POST(req: NextRequest) {
   try {
     const form = new IncomingForm({
       multiples: false,
-      maxFileSize: 5 * 1024 * 1024, // 5MB max
+      maxFileSize: 5 * 1024 * 1024, // 5MB limit
     });
 
+    // Convert Next.js request into IncomingMessage
     const incomingReq = await convertNextRequestToIncomingMessage(req);
 
     const { fields, files }: { fields: Fields; files: Files } =
@@ -96,17 +97,15 @@ export async function POST(req: NextRequest) {
     }
 
     const uploadDir = path.join(process.cwd(), "public");
-    await fs.ensureDir(uploadDir);
-
-    const fileName = `${fileType}.png`;
+    const fileName = `${fileType}.png`; // Altid gem som PNG
     const newPath = path.join(uploadDir, fileName);
 
-    await fs.move(file.filepath, newPath);
-    await processImage(newPath, newPath, fileType);
+    // Resize og konverter billede til PNG
+    await processImage(file.filepath, newPath, fileType);
 
     return NextResponse.json({
       message: `File uploaded and converted successfully!`,
-      filePath: `/${fileName}`,
+      filePath: `/public/${fileName}`,
     });
   } catch (error) {
     return NextResponse.json(

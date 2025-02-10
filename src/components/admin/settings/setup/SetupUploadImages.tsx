@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 
 const SetupUploadImages = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -38,6 +37,7 @@ const SetupUploadImages = () => {
       },
     });
 
+    const data = await res.json();
     if (res.ok) {
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
@@ -97,11 +97,10 @@ const SetupUploadImages = () => {
         <div className="md:flex-1">
           {preview && (
             <div className="relative w-64 h-36 overflow-hidden rounded-md border">
-              <Image
+              <img
                 src={preview}
                 alt="Preview"
-                layout="fill"
-                objectFit="cover"
+                className="absolute top-0 left-0 w-full h-full object-cover"
               />
             </div>
           )}
