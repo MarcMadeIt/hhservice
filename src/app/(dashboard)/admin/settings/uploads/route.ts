@@ -6,11 +6,11 @@ import { IncomingMessage } from "http";
 import fs from "fs-extra";
 import sharp from "sharp";
 
-export const config = { api: { bodyParser: false } }; // Required for Formidable
+export const config = { api: { bodyParser: false } }; // Formidable kræver dette
 
 async function isAdmin(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
-  return authHeader === "Bearer SECRET_ADMIN_KEY";
+  return authHeader === "Bearer SECRET_ADMIN_KEY"; // Skift denne til din auth logik
 }
 
 async function convertNextRequestToIncomingMessage(
@@ -60,10 +60,9 @@ export async function POST(req: NextRequest) {
   try {
     const form = new IncomingForm({
       multiples: false,
-      maxFileSize: 5 * 1024 * 1024,
+      maxFileSize: 5 * 1024 * 1024, // 5MB max
     });
 
-    // Convert Next.js request into IncomingMessage
     const incomingReq = await convertNextRequestToIncomingMessage(req);
 
     const { fields, files }: { fields: Fields; files: Files } =
@@ -96,14 +95,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const uploadDir = path.join(process.cwd(), "public"); // Save directly in public/
-    const fileName = `${fileType}.png`; // Always save as PNG
+    const uploadDir = path.join(process.cwd(), "public");
+    await fs.ensureDir(uploadDir);
+
+    const fileName = `${fileType}.png`;
     const newPath = path.join(uploadDir, fileName);
 
-    // Move file manually
     await fs.move(file.filepath, newPath);
-
-    // Resize and convert image to PNG
     await processImage(newPath, newPath, fileType);
 
     return NextResponse.json({
