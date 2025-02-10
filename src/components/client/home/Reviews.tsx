@@ -64,7 +64,7 @@ const Review = () => {
                     <ReviewsRating rate={item.rate} />
                     <p className="text-xs md:text-lg">{item.desc}</p>
                     <h2 className="text-xs md:text-base font-bold flex items-center gap-1">
-                      {item.name}, {item.city} <FaLocationDot />
+                      {item.name} fra {item.city} <FaLocationDot />
                     </h2>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ const Review = () => {
           )}
         </div>
       </div>
-      <div className="absolute -top-16 left-0 md:-top-40 md:left-16 p-4 w-24 md:w-52 h-auto">
+      <div className="absolute -top-16 right-4 md:-top-24 md:right-16 p-4 w-20 md:w-28 h-auto">
         <Image src="/grass-reviews.png" alt="græs" width={200} height={200} />
       </div>
     </div>

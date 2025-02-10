@@ -70,7 +70,7 @@ const Prices = () => {
           </div>
         </div>
         <Image
-          src="/leaf1.png"
+          src="/leaf2.png"
           alt="hero"
           width={200}
           height={200}

@@ -78,14 +78,14 @@ const Larger = () => {
         </div>
       </div>
       <Image
-        src="/leaf6.png"
+        src="/leaf1.png"
         alt="hero"
         width={200}
         height={200}
         className="w-9 md:w-9 lg:w-16 h-auto absolute rotate-45 top-40 right-5 lg:right-16 xl:right-40 hidden md:block"
       />
       <Image
-        src="/leaf2.png"
+        src="/leaf4.png"
         alt="hero"
         width={200}
         height={200}

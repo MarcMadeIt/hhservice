@@ -98,7 +98,7 @@ const News = () => {
         </div>
       </div>
 
-      <div className="absolute -top-16 right-6 md:-top-24 md:right-16 p-4 w-36 md:w-52 h-auto">
+      <div className="absolute -top-[75px] left-6 md:-top-28 md:left-16 p-4 w-20 md:w-28 h-auto">
         <Image src="/grass-news.png" alt="græs" width={200} height={200} />
       </div>
     </div>

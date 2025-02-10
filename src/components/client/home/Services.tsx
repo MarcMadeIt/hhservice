@@ -26,7 +26,7 @@ const Services = () => {
             </h3>
           </Link>
           <Link
-            href="/service/haekklipning"
+            href="/service/haekkeklipning"
             className="flex flex-col items-center gap-4 md:gap-6"
           >
             <div className=" w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full shadow-md bg-base-100 flex items-center justify-center">

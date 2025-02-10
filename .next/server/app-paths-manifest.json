@@ -1,8 +1,7 @@
 {
-  "/(client)/service/page": "app/(client)/service/page.js",
-  "/(dashboard)/admin/content/page": "app/(dashboard)/admin/content/page.js",
-  "/(client)/nyheder/page": "app/(client)/nyheder/page.js",
-  "/(client)/tilbud/page": "app/(client)/tilbud/page.js",
+  "/(client)/page": "app/(client)/page.js",
+  "/(dashboard)/admin/settings/page": "app/(dashboard)/admin/settings/page.js",
   "/(client)/service/[service]/page": "app/(client)/service/[service]/page.js",
-  "/(client)/page": "app/(client)/page.js"
+  "/(client)/service/page": "app/(client)/service/page.js",
+  "/(client)/tilbud/page": "app/(client)/tilbud/page.js"
 }

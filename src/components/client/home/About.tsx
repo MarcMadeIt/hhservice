@@ -65,7 +65,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="absolute -top-16 left-5 md:-top-24 md:left-16 p-4 w-36 md:w-52 h-auto">
+      <div className="absolute -top-20 left-5 md:-top-24 md:left-16 p-4 w-28 md:w-32 h-auto">
         <Image src="/grass-about.png" alt="græs" width={200} height={200} />
       </div>
     </article>
