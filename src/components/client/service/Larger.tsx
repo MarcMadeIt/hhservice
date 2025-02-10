@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaLeaf, FaPhone } from "react-icons/fa6";
+import { FaLeaf } from "react-icons/fa6";
 
 const Larger = () => {
   return (

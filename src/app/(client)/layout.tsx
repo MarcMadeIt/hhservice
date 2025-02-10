@@ -1,10 +1,10 @@
 "use client";
 import Footer from "@/components/client/layout/Footer";
 import Header from "@/components/client/layout/Header";
-import { FaPhone, FaArrowUp, FaAngleUp } from "react-icons/fa6";
+import { FaPhone, FaAngleUp } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
-export default function clientLayout({
+export default function ClientLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

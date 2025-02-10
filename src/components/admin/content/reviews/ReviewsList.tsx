@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  FaLocationDot,
-  FaPen,
-  FaQuoteLeft,
-  FaQuoteRight,
-  FaTrash,
-} from "react-icons/fa6";
+import { FaLocationDot, FaPen, FaTrash } from "react-icons/fa6";
 import { getAllReviews, deleteReview } from "@/lib/server/actions";
 import ReviewsRating from "./ReviewsRating";
 
@@ -68,7 +62,7 @@ const ReviewsList = ({
 
   useEffect(() => {
     fetchReviews();
-  }, [page]);
+  }, [page, fetchReviews]);
 
   return (
     <div className="w-full">

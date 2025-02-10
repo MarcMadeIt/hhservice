@@ -18,7 +18,7 @@ const LoginPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let valid = true;
-    let errors = { email: "", password: "" };
+    const errors = { email: "", password: "" };
 
     if (!validateEmail(email)) {
       errors.email = "Invalid email address";
@@ -40,8 +40,6 @@ const LoginPage = () => {
         formData.append("password", password);
 
         await login(formData);
-      } catch (error) {
-        setErrors({ ...errors, password: "Fejl ved login, prøv igen" });
       } finally {
         setLoading(false);
       }

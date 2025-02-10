@@ -197,7 +197,9 @@ const CreateNews = ({ onNewsCreated }: { onNewsCreated: () => void }) => {
                 <div className="flex flex-col gap-2 relative w-full">
                   <label className="form-control">
                     <div className="label">
-                      <span className="label-text">Vælg "før" billede</span>
+                      <span className="label-text">
+                        Vælg &quot;før&quot; billede
+                      </span>
                     </div>
                     <input
                       name="imageBefore"
@@ -218,7 +220,9 @@ const CreateNews = ({ onNewsCreated }: { onNewsCreated: () => void }) => {
                 <div className="flex flex-col gap-2 relative w-full">
                   <label className="form-control">
                     <div className="label">
-                      <span className="label-text">Vælg "efter" billede</span>
+                      <span className="label-text">
+                        Vælg &quot;efter&quot; billede
+                      </span>
                     </div>
                     <input
                       name="imageAfter"

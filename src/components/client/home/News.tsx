@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getLatestNews } from "@/lib/client/actions";
-import Link from "next/link";
 
 interface NewsItem {
   id: number;

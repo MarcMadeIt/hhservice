@@ -58,7 +58,7 @@ const RequestNote = ({ requestId }: { requestId: string }) => {
             : note
         )
       );
-    } catch (error) {
+    } catch {
       setToastMessage("Fejl ved tilføjelse af kundenote");
       setShowToast(true);
     }

@@ -7,7 +7,6 @@ import FAQ from "@/components/client/home/FAQ";
 import Review from "@/components/client/home/Reviews";
 import News from "@/components/client/home/News";
 import Locations from "@/components/client/home/Locations";
-import { FaPhone } from "react-icons/fa6";
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import Navbar from "@/components/admin/layout/Navbar";
 import Topbar from "@/components/admin/layout/Topbar";
 
-export default function adminLayout({
+export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

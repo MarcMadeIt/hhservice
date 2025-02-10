@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaComment, FaGear, FaHouse, FaList, FaMessage } from "react-icons/fa6";
+import { FaComment, FaGear, FaHouse, FaList } from "react-icons/fa6";
 import { readUserSession } from "@/lib/auth/readUserSession";
-import Image from "next/image";
 
 const Navbar = () => {
   const pathname = usePathname();

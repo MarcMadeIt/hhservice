@@ -45,7 +45,7 @@ const NewsList = ({ view, page, setTotal, onEditNews }: NewsListProps) => {
 
   useEffect(() => {
     fetchNews();
-  }, [page, setTotal]);
+  }, [page, setTotal, fetchNews]);
 
   const truncateDescription = (
     description: string | null,

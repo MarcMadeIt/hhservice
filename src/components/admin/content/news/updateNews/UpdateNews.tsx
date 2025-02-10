@@ -238,7 +238,9 @@ const UpdateNews = ({
                 <div className="flex flex-col gap-2 relative w-full">
                   <label className="form-control">
                     <div className="label">
-                      <span className="label-text">Opdater "før" billede</span>
+                      <span className="label-text">
+                        Opdater &quot;før&quot; billede
+                      </span>
                     </div>
                     <input
                       name="imageBefore"
@@ -270,7 +272,7 @@ const UpdateNews = ({
                   <label className="form-control">
                     <div className="label">
                       <span className="label-text">
-                        Opdater "efter" billede
+                        Opdater &quot;efter&quot; billede
                       </span>
                     </div>
                     <input

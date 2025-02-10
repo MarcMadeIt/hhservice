@@ -23,7 +23,7 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     let valid = true;
-    let errors = { email: "", password: "", confirmPassword: "" };
+    const errors = { email: "", password: "", confirmPassword: "" };
 
     if (!validateEmail(email)) {
       errors.email = "Mailen er ugyldig";
@@ -52,7 +52,7 @@ const Register = ({ onUserCreated }: { onUserCreated: () => void }) => {
           name,
         });
         onUserCreated();
-      } catch (error) {
+      } catch {
         setErrors({ ...errors, password: "Fejl ved registrering, prøv igen" });
       } finally {
         setLoading(false);

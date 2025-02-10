@@ -37,7 +37,7 @@ const CreateReview = ({ onReviewCreated }: CreateReviewProps) => {
     try {
       await createReview(name, city, desc, rate);
       onReviewCreated();
-    } catch (err) {
+    } catch {
       setError("Failed to create review. Please try again.");
     } finally {
       setLoading(false);

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaCalendar, FaPhone } from "react-icons/fa6";
 
 const Services = () => {
   return (

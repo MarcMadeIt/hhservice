@@ -3,14 +3,8 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Link from "next/link";
-import { FaTimes } from "react-icons/fa";
-import {
-  FaBars,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaXmark,
-} from "react-icons/fa6";
+
+import { FaBars, FaFacebook, FaInstagram, FaXmark } from "react-icons/fa6";
 import Image from "next/image";
 
 const Header = () => {

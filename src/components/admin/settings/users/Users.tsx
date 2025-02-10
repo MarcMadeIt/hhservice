@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import UserList from "./UserList";
 import Register from "./register/Register";
 import UpdateUser from "./update/UpdateUser"; // Import UpdateUser component

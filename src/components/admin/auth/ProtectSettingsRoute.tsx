@@ -6,7 +6,6 @@ import { readUserSession } from "@/lib/auth/readUserSession";
 
 const ProtectSettingsRoute = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  const [role, setRole] = useState<string | null>(null);
   const [accessDenied, setAccessDenied] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -14,13 +13,10 @@ const ProtectSettingsRoute = ({ children }: { children: React.ReactNode }) => {
     (async () => {
       const session = await readUserSession();
       if (session) {
-        setRole(session.role);
-
         if (pathname === "/admin/settings" && session.role === "editor") {
           setAccessDenied(true);
         }
       } else {
-        setRole(null);
         setAccessDenied(true);
       }
       setLoading(false);

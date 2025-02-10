@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaEnvelope, FaKey, FaShield, FaSignature } from "react-icons/fa6";
-import { updateUser, getAllUsers } from "@/lib/server/actions"; // Import updateUser and getAllUsers functions
+import { updateUser, getAllUsers } from "@/lib/server/actions";
 
 const UpdateUser = ({
   userId,
@@ -47,7 +47,7 @@ const UpdateUser = ({
   const handleUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     let valid = true;
-    let errors = { email: "", password: "", confirmPassword: "" };
+    const errors = { email: "", password: "", confirmPassword: "" };
 
     if (email && !validateEmail(email)) {
       errors.email = "Mailen er ugyldig";
