@@ -4610,14 +4610,6 @@ html:has(.drawer-toggle:checked) {
   font-weight: 600;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
-.font-thin {
-  font-weight: 100;
-}
-
 .capitalize {
   text-transform: capitalize;
 }

@@ -378,7 +378,7 @@ const Services = ()=>{
                 children: "Vores Services"
             }, void 0, false, {
                 fileName: "[project]/src/components/client/home/Services.tsx",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -401,12 +401,12 @@ const Services = ()=>{
                                             className: "w-10 md:w-[55px] lg:w-[60] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 17,
+                                            lineNumber: 16,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 16,
+                                        lineNumber: 15,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -414,13 +414,13 @@ const Services = ()=>{
                                         children: "Græsslåning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 25,
+                                        lineNumber: 24,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 12,
+                                lineNumber: 11,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -437,12 +437,12 @@ const Services = ()=>{
                                             className: "w-8 sm:w-[45px] lg:w-[50px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 34,
+                                            lineNumber: 33,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 33,
+                                        lineNumber: 32,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -450,19 +450,19 @@ const Services = ()=>{
                                         children: "Hækkeklipning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 42,
+                                        lineNumber: 41,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 29,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/client/home/Services.tsx",
-                        lineNumber: 11,
+                        lineNumber: 10,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -482,12 +482,12 @@ const Services = ()=>{
                                             className: "w-9 sm:w-[47px] lg:w-[60px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 53,
+                                            lineNumber: 52,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 52,
+                                        lineNumber: 51,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -495,13 +495,13 @@ const Services = ()=>{
                                         children: "Brolægning"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 61,
+                                        lineNumber: 60,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 48,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -518,12 +518,12 @@ const Services = ()=>{
                                             className: "w-9 sm:w-[47px] lg:w-[60px] h-auto"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/client/home/Services.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 69,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -531,25 +531,25 @@ const Services = ()=>{
                                         children: "Bortskaffelse"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Services.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/client/home/Services.tsx",
-                                lineNumber: 65,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/client/home/Services.tsx",
-                        lineNumber: 47,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/client/home/Services.tsx",
-                lineNumber: 10,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -558,13 +558,13 @@ const Services = ()=>{
                 children: "Se alle services"
             }, void 0, false, {
                 fileName: "[project]/src/components/client/home/Services.tsx",
-                lineNumber: 84,
+                lineNumber: 83,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/client/home/Services.tsx",
-        lineNumber: 8,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 };
@@ -863,7 +863,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 ;
 const Locations = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full h-full p-2 sm:p-3",
+        className: "w-full h-[380px] md:h-[400px] p-2 sm:p-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                 className: "hidden",
@@ -891,7 +891,7 @@ const Locations = ()=>{
                                 className: " w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Frederiksværk"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -919,7 +919,7 @@ const Locations = ()=>{
                                 className: " w-24  sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Tisvildeleje"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -947,7 +947,7 @@ const Locations = ()=>{
                                 className: " w-24  sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Hundested"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -975,7 +975,7 @@ const Locations = ()=>{
                                 className: " w-24  sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Liseleje"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -1003,7 +1003,7 @@ const Locations = ()=>{
                                 className: " w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Ølsted"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -1031,7 +1031,7 @@ const Locations = ()=>{
                                 className: " w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl hidden sm:flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Gilleleje"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -1059,7 +1059,7 @@ const Locations = ()=>{
                                 className: " w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl hidden sm:flex flex-col items-center p-1 md:p-0 relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "font-semibold sm:font-black tracking-wider text-[11px] sm:text-xs md:text-base",
+                                        className: "font-semibold sm:font-bold tracking-wider text-[11px] sm:text-xs md:text-base",
                                         children: "Hillerød"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/client/home/Locations.tsx",
@@ -1137,96 +1137,96 @@ const Home = ()=>{
                 className: "h-full",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$Hero$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 16,
+                    lineNumber: 15,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 15,
+                lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-full md:h-[800px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$Services$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 19,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-full lg:h-[800px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$About$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 22,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 21,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-full md:h-[800px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$Contact$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 25,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 24,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-[380px]  md:h-[500px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$Reviews$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 28,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 27,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-full md:h-[800px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$FAQ$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 31,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "h-[380px] sm:h-[500px] md:h-[700px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$News$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 34,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "h-[380px] md:h-[500px]",
+                className: "h-full md:h-[500px] mt-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$client$2f$home$2f$Locations$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/(client)/page.tsx",
-                    lineNumber: 37,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/(client)/page.tsx",
-                lineNumber: 36,
+                lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
@@ -1337,7 +1337,7 @@ async function createAdmin() {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00011da1dcefcfd02d28653fba3c48255b49d12280":"getAllUsers","003639b9021d4b7be0b38537f0a6b169c0d23dc8c4":"signOut","400641d504809bcdc9915d08ab2379a05d95519627":"getLatestReviews","405851529b1e1a0593e3f7943ee6d814ffa23211e2":"createMember","405de6f9b593c299c6ffe0f5a8767ce79caf0adc43":"getNotesByRequestId","40617255a970dd06372d6182328026a79ab44a2124":"deleteRequest","40682a7962d6dcb9e86ed246c93cfb317f3bf6baac":"deleteReview","4071a50055f137eab505484a01f03955da2bbfcb7d":"deleteRequestNote","40781105dc4c90ea4caeec757d1199adf66b8695a7":"deleteUser","4086269f8734bf3178ad5245f2bb7c0ca040b58cdd":"getNewsById","40c9529e31e282c4e5db837fa62a74cf914deaf80b":"deleteNews","40fe50af9914ab1db9de9992e5b02b192097674fa0":"getRequestById","603093ac094e2edeb276c62a8c92fd3b12fb51bfff":"getAllReviews","6038064035b8d607543902088e4c70bc2ff759a5b6":"updateUser","6058d2837372b1e2b1917d3feebbd33e5a686fc014":"getAllNews","60686c255201c27e4a5343baf12c8fe95784a49276":"createRequestNote","60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a":"getAllRequests","60fda435c7eabb2f831664189646f0b1f23df0041d":"updateRequest","7806443f197e7ce30eef0fb17bef5ff014a30f089c":"createReview","7f467190b7e914f9fa715989e5b0b533f0bf6770cf":"createNews","7f8107030d1eca46fd343715a6a50f25805c53c7b3":"updateNews"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00011da1dcefcfd02d28653fba3c48255b49d12280":"getAllUsers","003639b9021d4b7be0b38537f0a6b169c0d23dc8c4":"signOut","400641d504809bcdc9915d08ab2379a05d95519627":"getLatestReviews","405851529b1e1a0593e3f7943ee6d814ffa23211e2":"createMember","405de6f9b593c299c6ffe0f5a8767ce79caf0adc43":"getNotesByRequestId","40617255a970dd06372d6182328026a79ab44a2124":"deleteRequest","40682a7962d6dcb9e86ed246c93cfb317f3bf6baac":"deleteReview","4071a50055f137eab505484a01f03955da2bbfcb7d":"deleteRequestNote","40781105dc4c90ea4caeec757d1199adf66b8695a7":"deleteUser","4086269f8734bf3178ad5245f2bb7c0ca040b58cdd":"getNewsById","4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025":"getReviewById","40c9529e31e282c4e5db837fa62a74cf914deaf80b":"deleteNews","40fe50af9914ab1db9de9992e5b02b192097674fa0":"getRequestById","603093ac094e2edeb276c62a8c92fd3b12fb51bfff":"getAllReviews","6038064035b8d607543902088e4c70bc2ff759a5b6":"updateUser","6058d2837372b1e2b1917d3feebbd33e5a686fc014":"getAllNews","60686c255201c27e4a5343baf12c8fe95784a49276":"createRequestNote","60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a":"getAllRequests","60fda435c7eabb2f831664189646f0b1f23df0041d":"updateRequest","7806443f197e7ce30eef0fb17bef5ff014a30f089c":"createReview","7c6349c252bccd5c9a38a511eab568da55bedb79e6":"updateReview","7f467190b7e914f9fa715989e5b0b533f0bf6770cf":"createNews","7f8107030d1eca46fd343715a6a50f25805c53c7b3":"updateNews"} */ __turbopack_esm__({
     "createMember": (()=>createMember),
     "createNews": (()=>createNews),
     "createRequestNote": (()=>createRequestNote),
@@ -1355,9 +1355,11 @@ var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_
     "getNewsById": (()=>getNewsById),
     "getNotesByRequestId": (()=>getNotesByRequestId),
     "getRequestById": (()=>getRequestById),
+    "getReviewById": (()=>getReviewById),
     "signOut": (()=>signOut),
     "updateNews": (()=>updateNews),
     "updateRequest": (()=>updateRequest),
+    "updateReview": (()=>updateReview),
     "updateUser": (()=>updateUser)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/next/dist/build/webpack/loaders/next-flight-loader/server-reference.js [app-rsc] (ecmascript)");
@@ -1530,7 +1532,6 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createNews(title, desc,
             if (!data || !data.publicUrl) {
                 throw new Error("Failed to retrieve public URL");
             }
-            console.log("Generated Public URL:", data.publicUrl); // Debug log
             return data.publicUrl;
         };
         if (formType === "normal" && image) {
@@ -1590,7 +1591,6 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateNews(id, title, d
             if (!data || !data.publicUrl) {
                 throw new Error("Failed to retrieve public URL");
             }
-            console.log("Generated Public URL:", data.publicUrl); // Debug log
             return data.publicUrl;
         };
         if (formType === "normal" && image) {
@@ -1754,6 +1754,36 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getLatestReviews(limit 
         throw err;
     }
 }
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ updateReview(reviewId, name, city, desc, rate) {
+    const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$server$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createServerClientInstance"])();
+    try {
+        const { error } = await supabase.from("reviews").update({
+            name,
+            city,
+            desc,
+            rate
+        }).eq("id", reviewId);
+        if (error) {
+            throw new Error(`Failed to update review: ${error.message}`);
+        }
+    } catch (error) {
+        console.error("Error in updateReview:", error);
+        throw error;
+    }
+}
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getReviewById(reviewId) {
+    const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$server$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createServerClientInstance"])();
+    try {
+        const { data, error } = await supabase.from("reviews").select("*").eq("id", reviewId).single();
+        if (error) {
+            throw new Error(`Failed to fetch review by ID: ${error.message}`);
+        }
+        return data;
+    } catch (err) {
+        console.error("Unexpected error during fetching review by ID:", err);
+        throw err;
+    }
+}
 async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getAllRequests(page = 1, limit = 6) {
     const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$server$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createServerClientInstance"])();
     const offset = (page - 1) * limit;
@@ -1878,6 +1908,8 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteRequestNote(noteI
     getAllReviews,
     deleteReview,
     getLatestReviews,
+    updateReview,
+    getReviewById,
     getAllRequests,
     deleteRequest,
     updateRequest,
@@ -1900,6 +1932,8 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ deleteRequestNote(noteI
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getAllReviews, "603093ac094e2edeb276c62a8c92fd3b12fb51bfff", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteReview, "40682a7962d6dcb9e86ed246c93cfb317f3bf6baac", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getLatestReviews, "400641d504809bcdc9915d08ab2379a05d95519627", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateReview, "7c6349c252bccd5c9a38a511eab568da55bedb79e6", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getReviewById, "4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getAllRequests, "60e346241ed368f4cd697c60f8f46dfdd7ed38ec2a", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(deleteRequest, "40617255a970dd06372d6182328026a79ab44a2124", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(updateRequest, "60fda435c7eabb2f831664189646f0b1f23df0041d", null);
@@ -1928,7 +1962,7 @@ function createClient() {
 
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
-/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
+/* __next_internal_action_entry_do_not_use__ {"00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c":"getLatestNews","00feda0587a92d54fc827b77606103fa8d595d235c":"getLatestReviews","60fa24a9fc21f9bb62ec671ef8de65823d688c3922":"getAllNews","7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120":"createRequest"} */ __turbopack_esm__({
     "createRequest": (()=>createRequest),
     "getAllNews": (()=>getAllNews),
     "getLatestNews": (()=>getLatestNews),
@@ -1987,7 +2021,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ getLatestReviews() {
         throw err;
     }
 }
-async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mobile, category, consent) {
+async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mobile, mail, category, consent, message) {
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$supabase$2f$client$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createClient"])();
     try {
         // Hent brugerens IP-adresse
@@ -2000,8 +2034,10 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mob
             {
                 name,
                 mobile,
+                mail,
                 category,
                 consent,
+                message,
                 consent_timestamp: consentTimestamp,
                 ip_address: ipAddress,
                 terms_version: "v1.0"
@@ -2025,7 +2061,7 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mob
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getAllNews, "60fa24a9fc21f9bb62ec671ef8de65823d688c3922", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getLatestNews, "00e1ced007ad8f238ec4061271f4a25ae8a5a0f90c", null);
 (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(getLatestReviews, "00feda0587a92d54fc827b77606103fa8d595d235c", null);
-(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createRequest, "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", null);
+(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$webpack$2f$loaders$2f$next$2d$flight$2d$loader$2f$server$2d$reference$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["registerServerReference"])(createRequest, "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120", null);
 }}),
 "[project]/.next-internal/server/app/(client)/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/server/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/lib/client/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript) <locals>": ((__turbopack_context__) => {
 "use strict";
@@ -2033,6 +2069,8 @@ async function /*#__TURBOPACK_DISABLE_EXPORT_MERGING__*/ createRequest(name, mob
 var { r: __turbopack_require__, f: __turbopack_module_context__, i: __turbopack_import__, s: __turbopack_esm__, v: __turbopack_export_value__, n: __turbopack_export_namespace__, c: __turbopack_cache__, M: __turbopack_modules__, l: __turbopack_load__, j: __turbopack_dynamic__, P: __turbopack_resolve_absolute_path__, U: __turbopack_relative_url__, R: __turbopack_resolve_module_id_path__, b: __turbopack_worker_blob_url__, g: global, __dirname, x: __turbopack_external_require__, y: __turbopack_external_import__, z: __turbopack_require_stub__ } = __turbopack_context__;
 {
 __turbopack_esm__({});
+;
+;
 ;
 ;
 ;
@@ -2087,6 +2125,7 @@ __turbopack_esm__({
     "4071a50055f137eab505484a01f03955da2bbfcb7d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteRequestNote"]),
     "40781105dc4c90ea4caeec757d1199adf66b8695a7": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteUser"]),
     "4086269f8734bf3178ad5245f2bb7c0ca040b58cdd": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getNewsById"]),
+    "4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getReviewById"]),
     "40c9529e31e282c4e5db837fa62a74cf914deaf80b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["deleteNews"]),
     "40fe50af9914ab1db9de9992e5b02b192097674fa0": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getRequestById"]),
     "603093ac094e2edeb276c62a8c92fd3b12fb51bfff": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getAllReviews"]),
@@ -2097,7 +2136,8 @@ __turbopack_esm__({
     "60fa24a9fc21f9bb62ec671ef8de65823d688c3922": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getAllNews"]),
     "60fda435c7eabb2f831664189646f0b1f23df0041d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateRequest"]),
     "7806443f197e7ce30eef0fb17bef5ff014a30f089c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createReview"]),
-    "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createRequest"]),
+    "7c6349c252bccd5c9a38a511eab568da55bedb79e6": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateReview"]),
+    "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createRequest"]),
     "7f467190b7e914f9fa715989e5b0b533f0bf6770cf": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["createNews"]),
     "7f8107030d1eca46fd343715a6a50f25805c53c7b3": (()=>__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["updateNews"])
 });
@@ -2123,6 +2163,7 @@ __turbopack_esm__({
     "4071a50055f137eab505484a01f03955da2bbfcb7d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["4071a50055f137eab505484a01f03955da2bbfcb7d"]),
     "40781105dc4c90ea4caeec757d1199adf66b8695a7": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["40781105dc4c90ea4caeec757d1199adf66b8695a7"]),
     "4086269f8734bf3178ad5245f2bb7c0ca040b58cdd": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["4086269f8734bf3178ad5245f2bb7c0ca040b58cdd"]),
+    "4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["4091b0d85e5f04ac0f6af7fe2b551762d7a35fc025"]),
     "40c9529e31e282c4e5db837fa62a74cf914deaf80b": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["40c9529e31e282c4e5db837fa62a74cf914deaf80b"]),
     "40fe50af9914ab1db9de9992e5b02b192097674fa0": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["40fe50af9914ab1db9de9992e5b02b192097674fa0"]),
     "603093ac094e2edeb276c62a8c92fd3b12fb51bfff": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["603093ac094e2edeb276c62a8c92fd3b12fb51bfff"]),
@@ -2133,7 +2174,8 @@ __turbopack_esm__({
     "60fa24a9fc21f9bb62ec671ef8de65823d688c3922": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["60fa24a9fc21f9bb62ec671ef8de65823d688c3922"]),
     "60fda435c7eabb2f831664189646f0b1f23df0041d": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["60fda435c7eabb2f831664189646f0b1f23df0041d"]),
     "7806443f197e7ce30eef0fb17bef5ff014a30f089c": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7806443f197e7ce30eef0fb17bef5ff014a30f089c"]),
-    "7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7893edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120"]),
+    "7c6349c252bccd5c9a38a511eab568da55bedb79e6": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7c6349c252bccd5c9a38a511eab568da55bedb79e6"]),
+    "7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7e93edbbc9c961a3c1f60a9bbf568e8e1b7a2a1120"]),
     "7f467190b7e914f9fa715989e5b0b533f0bf6770cf": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f467190b7e914f9fa715989e5b0b533f0bf6770cf"]),
     "7f8107030d1eca46fd343715a6a50f25805c53c7b3": (()=>__TURBOPACK__imported__module__$5b$project$5d2f2e$next$2d$internal$2f$server$2f$app$2f28$client$292f$page$2f$actions$2e$js__$7b$__ACTIONS_MODULE0__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$server$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29222c$__ACTIONS_MODULE1__$3d3e$__$225b$project$5d2f$src$2f$lib$2f$client$2f$actions$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$2922$__$7d$__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$exports$3e$__["7f8107030d1eca46fd343715a6a50f25805c53c7b3"])
 });

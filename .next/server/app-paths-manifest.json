@@ -1,8 +1,6 @@
 {
   "/(client)/page": "app/(client)/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(client)/service/[service]/page": "app/(client)/service/[service]/page.js",
-  "/(client)/nyheder/page": "app/(client)/nyheder/page.js",
   "/(client)/service/page": "app/(client)/service/page.js",
-  "/(client)/tilbud/page": "app/(client)/tilbud/page.js"
+  "/(client)/service/[service]/page": "app/(client)/service/[service]/page.js",
+  "/_not-found/page": "app/_not-found/page.js"
 }
