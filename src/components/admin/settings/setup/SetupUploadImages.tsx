@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
 
@@ -31,11 +30,11 @@ const SetupUploadImages = () => {
     formData.append("file", file);
     formData.append("type", selectedType);
 
-    const res = await fetch("/api/upload", {
+    const res = await fetch("/admin/settings/uploads", {
       method: "POST",
       body: formData,
       headers: {
-        Authorization: "Bearer SECRET_ADMIN_KEY",
+        Authorization: "Bearer SECRET_ADMIN_KEY", // Erstat med dit eget auth-system
       },
     });
 
@@ -48,51 +47,91 @@ const SetupUploadImages = () => {
     }
   };
 
+  const openModal = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const confirmUpload = () => {
+    setIsModalOpen(false);
+    handleUpload();
+  };
+
   return (
     <div className="p-4 w-full">
-      <h3 className="text-lg md:text-xl font-semibold ">Upload billede</h3>
-      <div className="flex flex-col md:flex-row items-center md:justify-between w-full gap-10">
+      <h3 className="text-lg md:text-xl font-semibold ">Skift billede</h3>
+      <div className="flex flex-col md:flex-row items-center md:justify-between lg:justify-start w-full gap-10 ">
         <div className="md:flex-1 flex flex-col gap-3 items-start w-full">
-          <select
-            className="select select-bordered w-full max-w-xs"
-            value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
-          >
-            <option value="hero">Intro (startside)</option>
-            <option value="about">Om os (startside)</option>
-          </select>
-
-          <input
-            type="file"
-            className="file-input file-input-bordered w-full max-w-xs"
-            onChange={handleFileChange}
-          />
-
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text">Vælg billede type</span>
+            </div>
+            <select
+              className="select select-bordered w-full max-w-xs"
+              value={selectedType}
+              onChange={(e) => setSelectedType(e.target.value)}
+            >
+              <option value="hero">Intro (startside)</option>
+              <option value="about">Om os (startside)</option>
+            </select>
+          </label>
+          <label className="form-control w-full max-w-xs">
+            <input
+              type="file"
+              className="file-input file-input-bordered w-full max-w-xs"
+              onChange={handleFileChange}
+            />
+          </label>
           <button
-            onClick={handleUpload}
+            onClick={openModal}
             className="btn btn-primary"
             disabled={!file}
           >
             Upload
           </button>
         </div>
-
-        {preview && (
-          <div className="relative w-64 h-36 overflow-hidden rounded-md border">
-            <Image
-              src={preview}
-              alt="Preview"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        )}
+        <div className="md:flex-1">
+          {preview && (
+            <div className="relative w-64 h-36 overflow-hidden rounded-md border">
+              <Image
+                src={preview}
+                alt="Preview"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+          )}
+        </div>
       </div>
-
       {showToast && (
         <div className="toast bottom-20 md:bottom-0 toast-end">
           <div className="alert alert-success text-neutral-content">
             <span>Fil uploadet!</span>
+          </div>
+        </div>
+      )}
+      {isModalOpen && (
+        <div className="modal modal-open">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">Bekræft upload</h3>
+            <p className="py-4">
+              Er du sikker på, at du vil uploade dette billede?
+            </p>
+            <p className="text-sm text-secondary font-bold">
+              Advarsel: Det gamle billede kan ikke genskabes
+            </p>
+            <div className="modal-action">
+              <button className="btn" onClick={closeModal}>
+                Annuller
+              </button>
+              <button className="btn btn-primary" onClick={confirmUpload}>
+                Upload
+              </button>
+            </div>
           </div>
         </div>
       )}

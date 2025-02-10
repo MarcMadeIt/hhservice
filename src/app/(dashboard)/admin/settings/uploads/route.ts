@@ -6,11 +6,11 @@ import { IncomingMessage } from "http";
 import fs from "fs-extra";
 import sharp from "sharp";
 
-export const config = { api: { bodyParser: false } }; // Formidable kræver dette
+export const config = { api: { bodyParser: false } };
 
 async function isAdmin(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
-  return authHeader === "Bearer SECRET_ADMIN_KEY"; // Skift denne til din auth logik
+  return authHeader === "Bearer SECRET_ADMIN_KEY";
 }
 
 async function convertNextRequestToIncomingMessage(
