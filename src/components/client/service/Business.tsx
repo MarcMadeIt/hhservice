@@ -7,7 +7,6 @@ import Head from "next/head";
 const Business = () => {
   return (
     <>
-      {/* SEO-optimering med meta-tags */}
       <Head>
         <title>
           Haveservice til erhverv | Vedligeholdelse for virksomheder
