@@ -37,21 +37,20 @@ async function processImage(
 
   if (fileType === "hero") {
     width = 1920;
-    height = Math.round(width / (16 / 9)); // 16:9 aspect ratio
+    height = Math.round(width / (16 / 9));
   } else if (fileType === "about") {
     width = 1000;
-    height = 1000; // 1:1 aspect ratio
+    height = 1000;
   } else {
     throw new Error("Invalid file type");
   }
 
   await sharp(filePath)
     .resize(width, height, { fit: "cover" })
-    .toFormat("png") // Convert to PNG
+    .toFormat("png")
     .toFile(outputPath);
 }
 
-// Handle File Upload
 export async function POST(req: NextRequest) {
   if (!(await isAdmin(req))) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 403 });
