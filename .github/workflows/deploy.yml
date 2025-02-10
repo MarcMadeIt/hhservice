@@ -29,22 +29,11 @@ jobs:
           rm -rf node_modules package-lock.json .next
           npm install
 
-      - name: 🗑️ Ryd kun gamle uploads, men bevar statiske filer
-        run: |
-          echo "⚠️ Sletter kun gamle uploads i public/, men bevarer statiske filer..."
-          find /home/marccode/htdocs/hhs.marccode.com/public -type f -not -name '.gitkeep' -not -name '*.png' -not -name '*.jpg' -not -name '*.jpeg' -not -name '*.webp' -delete
-
       - name: 🔧 Build Next.js project
         run: |
           echo "⚡ Building Next.js app..."
           cd /home/marccode/htdocs/hhs.marccode.com
           npm run build
-
-      - name: 🗂️ Genskab `public/` fra Git (hvis filer mangler)
-        run: |
-          echo "🛠️ Genskaber `public/` fra GitHub repo..."
-          cd /home/marccode/htdocs/hhs.marccode.com
-          git checkout HEAD -- public
 
       - name: 🚀 Restart PM2 with `npm run start`
         run: |

@@ -1,6 +1,6 @@
 {
-  "/(dashboard)/admin/content/page": "app/(dashboard)/admin/content/page.js",
   "/(client)/service/page": "app/(client)/service/page.js",
+  "/(dashboard)/admin/content/page": "app/(dashboard)/admin/content/page.js",
   "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js",
   "/(client)/page": "app/(client)/page.js"
 }
