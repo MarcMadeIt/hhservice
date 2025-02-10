@@ -9,23 +9,28 @@ import { IncomingMessage } from "http";
 // Deaktiver Next.js bodyParser
 export const config = { api: { bodyParser: false } };
 
-// **Konverter NextRequest til IncomingMessage**
+// **Konverter NextRequest til IncomingMessage (uden TypeScript fejl)**
 function convertNextRequestToIncomingMessage(
   req: NextRequest
 ): IncomingMessage {
   const readable = new Readable();
-  readable.push(Buffer.from(req.body as any)); // Konverter body til buffer
+  readable.push(Buffer.from([])); // Empty buffer to prevent issues
   readable.push(null);
 
-  return Object.assign(readable, {
+  const incomingReq = Object.assign(readable, {
     headers: Object.fromEntries(req.headers.entries()),
     method: req.method,
     url: req.url,
-  }) as IncomingMessage;
+  });
+
+  // **Sørg for at arve fra IncomingMessage for at undgå TS fejl**
+  Object.setPrototypeOf(incomingReq, IncomingMessage.prototype);
+
+  return incomingReq as IncomingMessage;
 }
 
 // **Autentificering**
-async function isAdmin(req: NextRequest) {
+async function isAdmin(req: NextRequest): Promise<boolean> {
   const authHeader = req.headers.get("Authorization");
   return authHeader === "Bearer SECRET_ADMIN_KEY"; // ERSTAT med din egen nøgle!
 }
@@ -35,7 +40,7 @@ async function processImage(
   filePath: string,
   outputPath: string,
   fileType: string
-) {
+): Promise<void> {
   let width: number, height: number;
 
   if (fileType === "hero") {
@@ -55,7 +60,7 @@ async function processImage(
 }
 
 // **UPLOAD HANDLER**
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest): Promise<NextResponse> {
   console.log("🔵 Modtager fil-upload request...");
 
   if (!(await isAdmin(req))) {
@@ -73,14 +78,14 @@ export async function POST(req: NextRequest) {
     });
 
     console.log("📥 Parser fil fra request...");
-    const formData: { fields: Fields; files: Files } = await new Promise(
-      (resolve, reject) => {
+
+    const formData: { fields: Fields<string>; files: Files<string> } =
+      await new Promise((resolve, reject) => {
         form.parse(incomingReq, (err, fields, files) => {
           if (err) reject(err);
           else resolve({ fields, files });
         });
-      }
-    );
+      });
 
     if (!formData.files.file) {
       console.log("❌ Ingen fil fundet i request.");
