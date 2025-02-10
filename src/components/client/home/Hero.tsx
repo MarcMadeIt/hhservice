@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative min-h-[250px] md:min-h-[600px] mt-[75px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src="/hero.webp"
+          src="/hero.png"
           alt="Hero baggrundsbillede"
           layout="fill"
           objectFit="cover"
