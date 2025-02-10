@@ -82,7 +82,7 @@ const UpdateUser = ({
 
         await updateUser(userId, updateData); // Use updateUser function
         onUserUpdated(); // Call onUserUpdated after successful update
-      } catch (_error) {
+      } catch {
         setErrors({ ...errors, password: "Fejl ved opdatering, prøv igen" });
       } finally {
         setLoading(false);
