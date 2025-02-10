@@ -3,35 +3,34 @@
   "middleware": {
     "/": {
       "files": [
-        "server/edge/chunks/_2a98c1._.js",
-        "server/edge/chunks/[root of the server]__44848a._.js",
-        "server/edge/chunks/edge-wrapper_acc1cf.js"
+        "server/edge-runtime-webpack.js",
+        "server/src/middleware.js"
       ],
-      "name": "middleware",
+      "name": "src/middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json)?[\\/#\\?]?$",
           "originalSource": "/admin/:path*"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$",
           "originalSource": "/admin"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "development",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "BPc1F3fAvS5WWsZZ4sVmCUf05b9+mnj9uWHijHfElsI=",
-        "__NEXT_PREVIEW_MODE_ID": "df591ada8b7e6b864c014af5f0397e47",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "ce766ea377e1efaa1715a8850e02e5c59b4fba969f76c348ebecd9fe6e42e83b",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "60c0691926ad4e7cf9b43fc541825a470d9569390fb516374b2c410933ae0b96"
+        "__NEXT_BUILD_ID": "WqNfyrOp9sysZNZg-WNnv",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "apGNjcndb91br/+ilLT1jn9GAS/AgIAYoCxw2GgTM78=",
+        "__NEXT_PREVIEW_MODE_ID": "c09b713e00dac38de8173bb7c4b121a4",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "93d6067e01ca680f81d51cfda8f9c445b738de18558005dab4c1a1fdbdbba581",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "a036217474d68977740c976512fa4a3dd9d09284fd95cd234a7fe102a9cf9ae7"
       }
     }
   },
+  "functions": {},
   "sortedMiddleware": [
     "/"
-  ],
-  "functions": {}
+  ]
 }

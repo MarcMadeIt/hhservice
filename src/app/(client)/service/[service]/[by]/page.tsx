@@ -2,15 +2,13 @@ import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 
 interface CityServicePageProps {
-  params: {
-    service: string;
-    by: string;
-  };
+  params: Promise<{ service: string; by: string }>;
 }
 
 const CityServicePage = async ({ params }: CityServicePageProps) => {
-  const serviceInfo = getServiceInfo(params.service);
-  const cityInfo = getCityInfo(params.by);
+  const { service, by } = await params; // Await params to ensure correct types
+  const serviceInfo = await getServiceInfo(service);
+  const cityInfo = await getCityInfo(by);
 
   if (!serviceInfo || !cityInfo) {
     return <div>Service eller by ikke fundet</div>;
@@ -19,7 +17,7 @@ const CityServicePage = async ({ params }: CityServicePageProps) => {
   return (
     <ServiceClient
       serviceInfo={serviceInfo}
-      serviceKey={params.service}
+      serviceKey={service}
       cityInfo={cityInfo}
     />
   );

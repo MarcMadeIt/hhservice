@@ -5,13 +5,16 @@ interface CityServicePageProps {
   params: { service: string; by: string };
 }
 
-const CityServicePage = async ({ params }: CityServicePageProps) => {
-  const { service, by } = params;
+const CityServicePage = ({ params }: CityServicePageProps) => {
+  if (!params) {
+    return <div>Fejl: Ingen parametre fundet</div>;
+  }
 
-  const serviceInfo = await getServiceInfo(service);
-  const byInfo = await getCityInfo(by);
+  const { service, by } = params; // Destructure for at sikre korrekt datatype
+  const serviceInfo = getServiceInfo(service);
+  const cityInfo = getCityInfo(by);
 
-  if (!serviceInfo || !byInfo) {
+  if (!serviceInfo || !cityInfo) {
     return <div>Service eller by ikke fundet</div>;
   }
 
@@ -19,7 +22,7 @@ const CityServicePage = async ({ params }: CityServicePageProps) => {
     <ServiceClient
       serviceInfo={serviceInfo}
       serviceKey={service}
-      cityInfo={byInfo}
+      cityInfo={cityInfo}
     />
   );
 };

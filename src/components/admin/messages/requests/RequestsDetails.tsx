@@ -66,6 +66,11 @@ const RequestsDetails = ({
     setShowToast(true);
   };
 
+  const handleDeleteSuccess = () => {
+    // Handle the success of the delete action
+    console.log("Request deleted successfully");
+  };
+
   const endDate = created_at ? addDays(new Date(created_at), 30) : null;
   const daysLeft = endDate ? differenceInDays(endDate, new Date()) : null;
 
@@ -132,7 +137,11 @@ const RequestsDetails = ({
             </a>
           </div>
         </div>
-        <RequestsActions requestId={requestId} onEditClick={handleEditClick} />
+        <RequestsActions
+          requestId={requestId}
+          onEditClick={handleEditClick}
+          onDeleteSuccess={handleDeleteSuccess} // Add this line
+        />
       </div>
       <div className="flex flex-col gap-10">
         <div className="flex flex-col md:flex-row gap-10 md:gap-0">
