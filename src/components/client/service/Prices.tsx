@@ -5,22 +5,22 @@ import React from "react";
 const Prices = () => {
   const services = [
     {
-      title: "Hækkeklipning & Græsslåning",
-      price: "Fra 1.200 kr.",
-      description:
-        "Inkluderer klipning af hæk op til 2 meter samt græsslåning af en almindelig villahave (ca. 300-500 m²). Oprydning og bortkørsel af affald kan tilkøbes.",
-    },
-    {
       title: "Græsslåning – fast aftale",
-      price: "Fra 500 kr. pr. gang",
+      price: "Fra 249 kr. pr. gang",
       description:
-        "Perfekt til dig, der ønsker en velplejet græsplæne uden besvær. Vi slår græsset efter aftale, f.eks. hver 14. dag i sæsonen. Prisen gælder for en almindelig græsplæne op til 500 m².",
+        "Perfekt til dig, der ønsker en velplejet græsplæne uden besvær. Prisen på 249 kr. gælder for en lille have op til 300 m². For større arealer som sommerhushaver (300-500 m²) er prisen fra 299 kr. Vi slår græsset efter aftale, f.eks. hver 14. dag i sæsonen.",
     },
     {
-      title: "Hækkeklipning – stor hæk",
-      price: "Fra 1.800 kr.",
+      title: "Hækkeklipning – fast aftale",
+      price: "Fra 995 kr. pr. gang",
       description:
-        "For større hække eller hække over 2 meter i højden. Vi sørger for et skarpt resultat.",
+        "Prisen starter ved 995 kr. inkl. moms for en lille rækkehushæk. De fleste villahække koster typisk mellem 2.000-4.000 kr. inkl. moms. Vi sørger for et skarpt resultat, og oprydning samt bortskaffelse af haveaffaldet er altid inkluderet i prisen.",
+    },
+    {
+      title: "Hækkeklipning & Græsslåning",
+      price: "Fra 1.500 kr.",
+      description:
+        "Inkluderer klipning af hæk op til 2 meter samt græsslåning af en mindre villahave. Oprydning og bortskaffelse af affald er inkluderet.",
     },
     {
       title: "Anlægning af ny græsplæne",
@@ -52,13 +52,21 @@ const Prices = () => {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-center  font-semibold">
-              Har du en specifik opgave? &nbsp;
-              <Link href="/tilbud" className="text-green-400" id="erhverv">
-                Kontakt os
-              </Link>{" "}
-              for et uforpligtende tilbud!
-            </p>
+            <div className="flex flex-col items-center justify-center gap-6 mt-4">
+              <p className=" text-center text-xs md:text-sm text-gray-600 md:max-w-lg">
+                Alle priser er <strong>vejledende eksempler</strong> og{" "}
+                <strong>inkluderer moms</strong>. Den endelige pris afhænger af
+                opgavens omfang og specifikke forhold.
+              </p>
+
+              <p className=" text-center font-semibold">
+                Har du en specifik opgave? &nbsp;
+                <Link href="/tilbud" className="text-green-500" id="erhverv">
+                  Kontakt os
+                </Link>{" "}
+                for et uforpligtende tilbud!
+              </p>
+            </div>
           </div>
         </div>
         <Image
@@ -66,7 +74,7 @@ const Prices = () => {
           alt="hero"
           width={200}
           height={200}
-          className=" w-6 md:w-9 lg:w-16 h-auto absolute rotate-45 top-0 right-5 lg:top-40 lg:right-16 xl:right-40"
+          className="w-6 md:w-9 lg:w-16 h-auto absolute rotate-45 top-0 right-5 lg:top-40 lg:right-16 xl:right-40"
         />
         <Image
           src="/leaf3.png"

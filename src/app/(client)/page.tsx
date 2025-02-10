@@ -23,7 +23,7 @@ const Home = () => {
       <section className="h-full md:h-[800px]">
         <Contact />
       </section>
-      <section className="h-[380px]  md:h-[500px]">
+      <section className="h-[300px] sm:h-[380px]  md:h-[500px]">
         <Review />
       </section>
       <section className="h-full md:h-[800px]">

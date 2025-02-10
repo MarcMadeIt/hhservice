@@ -57,7 +57,7 @@ const News = () => {
       <div className=" min-h-[1700px] md:min-h-[1200px] flex flex-col items-center gap-10 md:gap-20 w-full">
         {loading ? (
           <div className=" flex h-[500px] items-center justify-center">
-            <span className="loading loading-bars loading-lg text-primary"></span>
+            <span className="loading loading-dots loading-lg text-primary"></span>
           </div>
         ) : (
           <>

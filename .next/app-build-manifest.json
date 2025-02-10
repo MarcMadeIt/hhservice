@@ -45,6 +45,21 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(dashboard)/admin/settings/page.js"
+    ],
+    "/(client)/nyheder/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(client)/nyheder/page.js"
+    ],
+    "/(client)/tilbud/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(client)/tilbud/page.js"
+    ],
+    "/(client)/service/[service]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(client)/service/[service]/page.js"
     ]
   }
 }
