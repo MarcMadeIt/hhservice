@@ -39,7 +39,7 @@ const About = () => {
             </p>
             <p className="text-sm md:text-md font-medium tracking-wide">
               Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage
-              fat i os – vi står klar til at hjælpe! 🌿
+              fat i os – vi står klar til at hjælpe!
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">

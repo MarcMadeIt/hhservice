@@ -34,7 +34,7 @@ export default function ClientLayout({
         <Footer />
       </footer>
       <article className="sticky bottom-0 w-full px-2 block md:hidden z-50">
-        <div className="p-4 bg-secondary text-neutral-content rounded-tl-lg rounded-tr-lg">
+        <div className="p-4 bg-secondary text-neutral-content rounded-tl-lg rounded-tr-lg  ">
           <a
             href="tel:+4526181201"
             className="flex  gap-2 items-center justify-center"
