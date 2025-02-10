@@ -24,7 +24,7 @@ const Offer = () => {
               Du velkommen til at tage kontakt til os med det samme.
             </p>
             <p>Vi vil forsøge at give dig et prisestimat med det samme</p>
-            <p className="font-medium">Ring til os på:</p>
+            <p className="font-medium">Ring til os på</p>
             <a
               href="tel:+4526181201"
               className="flex items-center gap-2 text-primary text-xl font-bold"
