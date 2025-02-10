@@ -31,8 +31,8 @@ const UpdateUser = ({
           setRole(user.role as "editor" | "admin");
           setName(user.name || "");
         }
-      } catch (error) {
-        console.error("Failed to fetch user data:", error);
+      } catch {
+        console.error("Failed to fetch user data");
       }
     };
 

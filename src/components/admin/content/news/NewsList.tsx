@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { FaPen, FaTrash } from "react-icons/fa6";
 import { getAllNews, deleteNews } from "@/lib/server/actions";
@@ -30,7 +30,7 @@ const NewsList = ({ view, page, setTotal, onEditNews }: NewsListProps) => {
   const [deletingNewsId, setDeletingNewsId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const fetchNews = async () => {
+  const fetchNews = useCallback(async () => {
     try {
       setLoading(true);
       const { news, total } = await getAllNews(page);
@@ -41,7 +41,7 @@ const NewsList = ({ view, page, setTotal, onEditNews }: NewsListProps) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, setTotal]);
 
   useEffect(() => {
     fetchNews();

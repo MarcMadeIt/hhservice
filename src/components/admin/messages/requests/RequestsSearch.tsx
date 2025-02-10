@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch, FaTrashAlt } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa6";
 
 interface RequestsSearchProps {

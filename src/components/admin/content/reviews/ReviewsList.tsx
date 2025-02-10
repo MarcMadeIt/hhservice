@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaLocationDot, FaPen, FaTrash } from "react-icons/fa6";
 import { getAllReviews, deleteReview } from "@/lib/server/actions";
 import ReviewsRating from "./ReviewsRating";
@@ -29,7 +29,7 @@ const ReviewsList = ({
   const [deletingReviewId, setDeletingReviewId] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const fetchReviews = async () => {
+  const fetchReviews = useCallback(async () => {
     try {
       setLoading(true);
       const { reviews, total } = await getAllReviews(page);
@@ -40,7 +40,7 @@ const ReviewsList = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [page, setTotal]);
 
   const handleDelete = async () => {
     if (deletingReviewId !== null) {
@@ -62,7 +62,7 @@ const ReviewsList = ({
 
   useEffect(() => {
     fetchReviews();
-  }, [page, fetchReviews]);
+  }, [page, setTotal, fetchReviews]);
 
   return (
     <div className="w-full">
