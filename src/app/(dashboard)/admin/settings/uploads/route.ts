@@ -67,7 +67,7 @@ async function processImage(
 
   await sharp(filePath)
     .resize(sizes[fileType].width, sizes[fileType].height, { fit: "cover" })
-    .toFormat("png")
+    .toFormat("jpeg") // Change to jpeg
     .toFile(tempOutputPath);
 
   await fs.move(tempOutputPath, outputPath, { overwrite: true });
@@ -152,7 +152,7 @@ export async function POST(req: NextRequest) {
     const appPublicDir = path.join(process.cwd(), "public");
     await fs.ensureDir(appPublicDir); // Sørg for at `public` eksisterer
 
-    const fileName = `${fileType}.png`;
+    const fileName = `${fileType}.jpg`; // Change to jpg
     const newPath = path.join(appPublicDir, fileName);
 
     console.log("🔄 Resizing billede...");

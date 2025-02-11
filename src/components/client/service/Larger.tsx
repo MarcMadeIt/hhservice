@@ -9,7 +9,7 @@ const Larger = () => {
       <div className="bg-secondary rounded-lg p-4 py-4 md:py-8 flex flex-col gap-5 md:gap-10 justify-center items-center relative max-w-2xl ">
         <div className="h-full w-full absolute opacity-15">
           <Image
-            src="/larger3.jpeg"
+            src="/larger.jpg"
             alt="Haveprojekt"
             width={500}
             height={500}

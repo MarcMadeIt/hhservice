@@ -28,7 +28,7 @@ const Header = () => {
       <div className="flex-1">
         <Link className="h-auto w-56 md:w-72 pl-1" href="/">
           <Image
-            src="/HH-logoweb5.png"
+            src="/HH-logoweb.png"
             alt="logo"
             width={500}
             height={113}

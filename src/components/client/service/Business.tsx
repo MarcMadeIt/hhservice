@@ -34,7 +34,7 @@ const Business = () => {
         <article className="bg-secondary shadow-lg rounded-lg p-2 py-4 md:p-8 flex flex-col lg:flex-row gap-5 md:gap-10 justify-center items-center relative overflow-hidden max-w-3xl">
           <div className="h-full w-full absolute opacity-15 md:opacity-50">
             <Image
-              src="/business1.png"
+              src="/business1.jpg"
               alt="Haveservice til erhverv – Vedligeholdelse af grønne områder"
               width={500}
               height={500}
