@@ -3,7 +3,7 @@ import React from "react";
 
 const Locations = () => {
   return (
-    <div className="w-full h-[380px] md:h-[400px] p-2 sm:p-3">
+    <div className="w-full h-[260px] md:h-[400px] p-2 sm:p-3">
       <h2 className="hidden">Vi tilbyder haveservice i disse byer</h2>
 
       <div className="flex flex-col items-center justify-center h-full gap-10 text-center">

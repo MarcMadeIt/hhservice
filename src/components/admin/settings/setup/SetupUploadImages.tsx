@@ -34,7 +34,7 @@ const SetupUploadImages = () => {
       method: "POST",
       body: formData,
       headers: {
-        Authorization: "Bearer SECRET_ADMIN_KEY", // Erstat med dit eget auth-system
+        Authorization: "Bearer SECRET_ADMIN_KEY",
       },
     });
 
@@ -43,6 +43,8 @@ const SetupUploadImages = () => {
       console.log("Upload successful:", data);
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
+      setFile(null);
+      setPreview(null);
     } else {
       console.error("Upload failed:", data);
       setShowToast(true);

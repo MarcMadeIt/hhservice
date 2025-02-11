@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[250px] md:min-h-[600px] mt-[75px] flex items-center justify-center">
+    <div className="relative min-h-[250px] md:min-h-[600px] mt-[65px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
           src={`/hero.png?v=${imageVersion}`}

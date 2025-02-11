@@ -2,7 +2,7 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="w-full h-full p-4 py-16">
+    <div className="w-full h-full p-4 py-20 md:py-16">
       <div className="flex flex-col gap-10 sm:gap-16 md:gap-20 justify-center items-center h-full w-full">
         <h2 className="text-2xl md:text-4xl font-bold">
           Ofte stillede spørgsmål
