@@ -12,22 +12,20 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1 # Hurtigere clone, da vi ikke behøver hele historikken
 
-      - name: 🔄 Reset & Pull Latest Code from GitHub
+      - name: 🔄 Pull latest code from GitHub
         run: |
-          echo "⚠️ Resetting repository and pulling latest code..."
+          echo "⚠️ Pulling latest changes..."
           cd /home/hhservice/htdocs/hhservice.dk
-          git fetch --all
-          git reset --hard origin/main
+          git reset --hard HEAD  # Sikrer ren tilstand
           git pull origin main --force
 
-      - name: 🛠 Remove old Next.js & dependencies
+      - name: 📦 Install dependencies (Optimized)
         run: |
-          echo "⚠️ Removing old dependencies and Next.js cache..."
+          echo "⚠️ Installing dependencies..."
           cd /home/hhservice/htdocs/hhservice.dk
-          rm -rf node_modules package-lock.json .next
-          npm install
+          npm ci  # Hurtigere end "npm install" og sikrer stabilitet
 
       - name: 🔧 Build Next.js project
         run: |
@@ -35,18 +33,22 @@ jobs:
           cd /home/hhservice/htdocs/hhservice.dk
           npm run build
 
-      - name: 🚀 Restart PM2 with `npm run start`
+      - name: 🚀 Restart PM2 without creating a new instance
         run: |
-          echo "🔄 Restarting PM2 with Production Mode..."
+          echo "🔄 Restarting PM2 process..."
           export NVM_DIR="$HOME/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # Loads NVM correctly
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Loads NVM correctly
 
           cd /home/hhservice/htdocs/hhservice.dk
-          npm install --production
 
-          echo "⚡ Restarting PM2 process with npm run start..."
-          pm2 delete hhs-marccode || true  
-          pm2 start npm --name "nextjs-hhservice" -- start -- -p 3600
+          if pm2 list | grep -q "nextjs-hhservice"; then
+            echo "⚡ Process found! Reloading..."
+            pm2 restart nextjs-hhservice
+          else
+            echo "⚠️ Process not found! Starting a new instance..."
+            pm2 start npm --name "nextjs-hhservice" -- start -- -p 3600
+          fi
+
           pm2 save
           pm2 list
 
