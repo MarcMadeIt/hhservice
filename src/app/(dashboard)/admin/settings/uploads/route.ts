@@ -1,66 +1,21 @@
 import path from "path";
 import { NextRequest, NextResponse } from "next/server";
-import { IncomingForm, Fields, Files, File } from "formidable";
+import { IncomingForm, Fields, Files } from "formidable";
 import fs from "fs-extra";
 import sharp from "sharp";
-import { Readable } from "stream";
-import { IncomingMessage } from "http";
 
-// Deaktiver Next.js bodyParser
-export const config = { api: { bodyParser: false } };
+export const config = {
+  api: { bodyParser: false },
+  runtime: "nodejs",
+};
 
-// **Konverter NextRequest til IncomingMessage (uden TypeScript fejl)**
-function convertNextRequestToIncomingMessage(
-  req: NextRequest
-): IncomingMessage {
-  const readable = new Readable();
-  readable.push(Buffer.from([])); // Empty buffer to prevent issues
-  readable.push(null);
-
-  const incomingReq = Object.assign(readable, {
-    headers: Object.fromEntries(req.headers.entries()),
-    method: req.method,
-    url: req.url,
-  });
-
-  // **Sørg for at arve fra IncomingMessage for at undgå TS fejl**
-  Object.setPrototypeOf(incomingReq, IncomingMessage.prototype);
-
-  return incomingReq as IncomingMessage;
-}
-
-// **Autentificering**
-async function isAdmin(req: NextRequest): Promise<boolean> {
+// **Sikrer kun administratorer kan uploade**
+async function isAdmin(req: NextRequest) {
   const authHeader = req.headers.get("Authorization");
-  return authHeader === "Bearer SECRET_ADMIN_KEY"; // ERSTAT med din egen nøgle!
+  return authHeader === "Bearer SECRET_ADMIN_KEY"; // Erstat med din rigtige nøgle
 }
 
-// **Resize & konverter billede**
-async function processImage(
-  filePath: string,
-  outputPath: string,
-  fileType: string
-): Promise<void> {
-  let width: number, height: number;
-
-  if (fileType === "hero") {
-    width = 1920;
-    height = Math.round(width / (16 / 9));
-  } else if (fileType === "about") {
-    width = 1000;
-    height = 1000;
-  } else {
-    throw new Error("Invalid file type");
-  }
-
-  await sharp(filePath)
-    .resize(width, height, { fit: "cover" })
-    .toFormat("png")
-    .toFile(outputPath);
-}
-
-// **UPLOAD HANDLER**
-export async function POST(req: NextRequest): Promise<NextResponse> {
+export async function POST(req: NextRequest) {
   console.log("🔵 Modtager fil-upload request...");
 
   if (!(await isAdmin(req))) {
@@ -69,40 +24,34 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   try {
-    const incomingReq = convertNextRequestToIncomingMessage(req);
     const form = new IncomingForm({
       multiples: false,
-      maxFileSize: 5 * 1024 * 1024,
+      maxFileSize: 5 * 1024 * 1024, // 5MB limit
     });
 
-    console.log("📥 Parser fil fra request...");
+    console.log("📥 Parser form-data...");
 
-    const formData = await new Promise<{
-      fields: Fields<string>;
-      files: Files<string>;
+    const { fields, files } = await new Promise<{
+      fields: Fields;
+      files: Files;
     }>((resolve, reject) => {
-      form.parse(incomingReq, (err, fields, files) => {
+      form.parse(req as any, (err, fields, files) => {
         if (err) {
-          console.error("❌ Fejl ved parsing:", err);
+          console.log("❌ Form parsing fejl:", err);
           reject(err);
         } else {
-          console.log("✅ Parsing lykkedes!");
+          console.log("✅ Form parsed!", fields, files);
           resolve({ fields, files });
         }
       });
     });
 
-    console.log("📂 Parsed data:", formData);
-
-    if (!formData.files.file) {
-      console.log("❌ Ingen fil fundet i request.");
+    if (!files.file) {
+      console.log("❌ Fejl: Ingen fil fundet!");
       return NextResponse.json({ message: "No file found" }, { status: 400 });
     }
 
-    const file: File = Array.isArray(formData.files.file)
-      ? formData.files.file[0]
-      : formData.files.file;
-
+    const file = Array.isArray(files.file) ? files.file[0] : files.file;
     if (!file.filepath) {
       console.log("❌ Filen blev ikke korrekt uploaded.");
       return NextResponse.json(
@@ -111,11 +60,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // **Valider filtypen**
-    const fileType = Array.isArray(formData.fields.type)
-      ? formData.fields.type[0]
-      : formData.fields.type;
-
+    // **Hent filtypen**
+    const fileType = Array.isArray(fields.type) ? fields.type[0] : fields.type;
     const validTypes = ["hero", "about"];
 
     if (!fileType || !validTypes.includes(fileType)) {
@@ -126,26 +72,29 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
       );
     }
 
-    // **Gem i `/public/` mappen**
-    const appPublicDir = path.join(process.cwd(), "public");
-    await fs.ensureDir(appPublicDir); // Sørg for at `public` eksisterer
+    // **Definer filsti i `/public/`**
+    const uploadDir = path.join(process.cwd(), "public");
+    await fs.ensureDir(uploadDir); // Sikrer at mappen eksisterer
 
-    const fileName = `${fileType}.png`;
-    const newPath = path.join(appPublicDir, fileName);
+    const fileName = `${fileType}.png`; // Overskriver eksisterende fil
+    const newPath = path.join(uploadDir, fileName);
 
-    console.log(`📂 Flytter filen til: ${newPath}`);
-    await fs.move(file.filepath, newPath);
+    console.log(`📂 Flytter og overskriver: ${newPath}`);
+    await fs.move(file.filepath, newPath, { overwrite: true });
 
     console.log("🔄 Resizing billede...");
-    await processImage(newPath, newPath, fileType);
+    await sharp(newPath)
+      .resize(1920, 1080, { fit: "cover" })
+      .toFormat("png")
+      .toFile(newPath);
 
-    console.log("✅ Upload og resizing fuldført!");
+    console.log("✅ Upload fuldført!");
     return NextResponse.json({
       message: "Upload successful!",
       filePath: `/${fileName}`,
     });
   } catch (error) {
-    console.error("❌ Upload fejlede:", error);
+    console.log("❌ Upload fejlede:", error);
     return NextResponse.json(
       {
         message: "Upload failed",
