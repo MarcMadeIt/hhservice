@@ -63,10 +63,14 @@ async function processImage(
     throw new Error("Invalid file type");
   }
 
+  const tempOutputPath = `${outputPath}.tmp`;
+
   await sharp(filePath)
     .resize(sizes[fileType].width, sizes[fileType].height, { fit: "cover" })
     .toFormat("png")
-    .toFile(outputPath);
+    .toFile(tempOutputPath);
+
+  await fs.move(tempOutputPath, outputPath, { overwrite: true });
 }
 
 // ✅ **UPLOAD HANDLER**
@@ -135,11 +139,8 @@ export async function POST(req: NextRequest) {
     const fileName = `${fileType}.png`;
     const newPath = path.join(appPublicDir, fileName);
 
-    console.log(`📂 Flytter og overskriver: ${newPath}`);
-    await fs.move(file.filepath, newPath, { overwrite: true });
-
     console.log("🔄 Resizing billede...");
-    await processImage(newPath, newPath, fileType);
+    await processImage(file.filepath, newPath, fileType);
 
     console.log("✅ Upload fuldført!");
     return NextResponse.json({

@@ -12,8 +12,10 @@ const SetupUploadImages = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0] || null;
     setFile(selectedFile);
+
     if (selectedFile) {
-      setPreview(URL.createObjectURL(selectedFile));
+      const objectURL = URL.createObjectURL(selectedFile);
+      setPreview(objectURL);
     }
   };
 
@@ -31,10 +33,18 @@ const SetupUploadImages = () => {
     const res = await fetch("/admin/settings/uploads", {
       method: "POST",
       body: formData,
-      headers: { Authorization: "Bearer SECRET_ADMIN_KEY" },
+      headers: {
+        Authorization: "Bearer SECRET_ADMIN_KEY", // Erstat med dit eget auth-system
+      },
     });
 
+    const data = await res.json();
     if (res.ok) {
+      console.log("Upload successful:", data);
+      setShowToast(true);
+      setTimeout(() => setShowToast(false), 3000);
+    } else {
+      console.error("Upload failed:", data);
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
     }
@@ -56,8 +66,8 @@ const SetupUploadImages = () => {
 
   return (
     <div className="p-4 w-full">
-      <h3 className="text-lg md:text-xl font-semibold">Skift billede</h3>
-      <div className="flex flex-col md:flex-row items-center md:justify-between lg:justify-start w-full gap-10">
+      <h3 className="text-lg md:text-xl font-semibold ">Skift billede</h3>
+      <div className="flex flex-col md:flex-row items-center md:justify-between lg:justify-start w-full gap-10 ">
         <div className="md:flex-1 flex flex-col gap-3 items-start w-full">
           <label className="form-control w-full max-w-xs">
             <div className="label">
@@ -90,13 +100,16 @@ const SetupUploadImages = () => {
         <div className="md:flex-1">
           {preview && (
             <div className="relative w-64 h-36 overflow-hidden rounded-md border">
-              <Image src={preview} alt="Preview" width={256} height={144} />
+              <Image
+                src={preview}
+                alt="Preview"
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
           )}
         </div>
       </div>
-
-      {/* ✅ Toast-besked */}
       {showToast && (
         <div className="toast bottom-20 md:bottom-0 toast-end">
           <div className="alert alert-success text-neutral-content">
@@ -104,8 +117,6 @@ const SetupUploadImages = () => {
           </div>
         </div>
       )}
-
-      {/* ✅ Modal til bekræftelse af upload */}
       {isModalOpen && (
         <div className="modal modal-open">
           <div className="modal-box">
