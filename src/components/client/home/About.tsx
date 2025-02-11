@@ -19,7 +19,7 @@ const About = () => {
         <div className="flex-1 p-10 hidden lg:flex">
           <div className="relative w-full lg:h-full rounded-lg overflow-hidden">
             <Image
-              src={`/about.jpg?v=${imageVersion}`}
+              src={`/about.webp?v=${imageVersion}`}
               alt="Beskrivelse af billedet"
               fill
               className="absolute object-cover"

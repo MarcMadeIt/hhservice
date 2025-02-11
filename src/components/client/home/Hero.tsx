@@ -16,13 +16,12 @@ const Hero = () => {
     <div className="relative min-h-[250px] md:min-h-[600px] mt-[65px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src={`/hero.jpg?v=${imageVersion}`}
+          src={`/hero.webp?v=${imageVersion}`}
           alt="Hero baggrundsbillede"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="50% 30%"
+          fill
+          sizes="100vw"
           priority
-          quality={70}
+          quality={60}
         />
         <div className="absolute inset-0 bg-gray-500 md:bg-gray-700 bg-opacity-30 md:bg-opacity-20"></div>
       </div>
