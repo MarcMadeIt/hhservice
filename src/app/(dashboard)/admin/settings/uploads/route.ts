@@ -73,6 +73,22 @@ async function processImage(
   await fs.move(tempOutputPath, outputPath, { overwrite: true });
 }
 
+// ✅ **Opdater version**
+const versionFilePath = path.join(process.cwd(), "public", "version.json");
+
+async function updateVersion(fileType: string) {
+  let versions = { hero: 1, about: 1 };
+
+  if (await fs.pathExists(versionFilePath)) {
+    versions = await fs.readJson(versionFilePath);
+  }
+
+  // Opdater kun det specifikke billede
+  versions[fileType] = versions[fileType] + 1;
+
+  await fs.writeJson(versionFilePath, versions);
+}
+
 // ✅ **UPLOAD HANDLER**
 export async function POST(req: NextRequest) {
   console.log("🔵 Modtager fil-upload request...");
@@ -141,6 +157,9 @@ export async function POST(req: NextRequest) {
 
     console.log("🔄 Resizing billede...");
     await processImage(file.filepath, newPath, fileType);
+
+    console.log("🔄 Opdaterer version...");
+    await updateVersion(fileType);
 
     console.log("✅ Upload fuldført!");
     return NextResponse.json({

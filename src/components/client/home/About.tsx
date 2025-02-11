@@ -1,16 +1,23 @@
+import { getImageVersion } from "@/lib/server/getImageVersion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCut, FaTools } from "react-icons/fa";
 import { FaLeaf, FaSeedling, FaTree } from "react-icons/fa6";
 
 const About = () => {
+  const [imageVersion, setImageVersion] = useState(1);
+
+  useEffect(() => {
+    getImageVersion("about").then(setImageVersion);
+  }, []);
+
   return (
     <article className="w-full h-full p-2 sm:p-3 relative">
       <div className="bg-secondary py-8 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6">
         <div className="flex-1 p-10 hidden lg:flex">
           <div className="relative w-full lg:h-full rounded-lg overflow-hidden">
             <Image
-              src={`/about.png?timestamp=${Date.now()}`}
+              src={`/about.png?v=${imageVersion}`}
               alt="Beskrivelse af billedet"
               fill
               className="absolute object-cover"

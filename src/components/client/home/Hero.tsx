@@ -1,15 +1,22 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaCalendar, FaPhone } from "react-icons/fa6";
+import { getImageVersion } from "@/lib/server/getImageVersion";
 
 const Hero = () => {
+  const [imageVersion, setImageVersion] = useState(1);
+
+  useEffect(() => {
+    getImageVersion("hero").then(setImageVersion);
+  }, []);
+
   return (
     <div className="relative min-h-[250px] md:min-h-[600px] mt-[75px] flex items-center justify-center">
       <div className="absolute inset-0 w-full h-full">
         <Image
-          src={`/hero.png?timestamp=${Date.now()}`}
+          src={`/hero.png?v=${imageVersion}`}
           alt="Hero baggrundsbillede"
           layout="fill"
           objectFit="cover"
