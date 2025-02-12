@@ -1,4 +1,3 @@
 {
-  "/(client)/page": "app/(client)/page.js",
   "/(client)/service/[service]/page": "app/(client)/service/[service]/page.js"
 }

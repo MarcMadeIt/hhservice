@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa6";
 import ConsentModal from "../modal/ConsentModal";
 
 const Footer = () => {
