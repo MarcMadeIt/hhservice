@@ -70,9 +70,6 @@ const Footer = () => {
             <a>
               <FaInstagram size={45} />
             </a>
-            <a>
-              <FaLinkedin size={45} />
-            </a>
           </div>
         </nav>
       </footer>

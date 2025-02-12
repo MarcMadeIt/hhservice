@@ -15,7 +15,7 @@ const ServiceClient = ({
 }: {
   serviceInfo: { name: string; image1: string; image2: string; image3: string };
   serviceKey: string;
-  cityInfo?: { name: string; region: string; postnummer: string };
+  cityInfo?: { name: string; kommune: string; postnummer: string };
 }) => {
   return (
     <>
@@ -26,7 +26,7 @@ const ServiceClient = ({
         description={`Få professionel ${serviceInfo.name.toLowerCase()} i ${
           cityInfo?.name || "Halsnæs"
         }. Vi tilbyder kvalitetsservice i ${
-          cityInfo?.region || "Nordsjælland"
+          cityInfo?.kommune || "Nordsjælland"
         }.`}
         canonical={`https://hhservice.dk/service/${serviceKey}${
           cityInfo ? `/${cityInfo.name.toLowerCase()}` : ""
@@ -56,7 +56,7 @@ const ServiceClient = ({
                   Leder du efter en pålidelig løsning? <br />
                   Vi tilbyder professionel {serviceInfo.name.toLowerCase()} i{" "}
                   {cityInfo?.name || "Halsnæs"} og resten af{" "}
-                  {cityInfo?.region || "Nordsjælland"} – altid med fokus på
+                  {cityInfo?.kommune || "Nordsjælland"} – altid med fokus på
                   kvalitet og omhyggeligt håndværk.
                 </p>
                 <br />
@@ -72,7 +72,7 @@ const ServiceClient = ({
 
               {cityInfo && (
                 <p className="text-lg md:text-xl">
-                  <strong>Område:</strong> {cityInfo.region} <br />
+                  <strong>Område:</strong> {cityInfo.kommune} <br />
                   <strong>Postnummer:</strong> {cityInfo.postnummer}
                 </p>
               )}

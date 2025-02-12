@@ -1,21 +1,36 @@
 // Define the structure for city data
 export interface ByData {
-  [key: string]: { name: string; region: string; postnummer: string };
+  [key: string]: { name: string; kommune: string; postnummer: string };
 }
 
 // Define available cities
 export const byData: ByData = {
-  hundested: { name: "Hundested", region: "Halsnæs", postnummer: "3390" },
+  hundested: { name: "Hundested", kommune: "Halsnæs", postnummer: "3390" },
   frederiksvaerk: {
     name: "Frederiksværk",
-    region: "Halsnæs",
+    kommune: "Halsnæs",
     postnummer: "3300",
   },
-  liseleje: { name: "Liseleje", region: "Halsnæs", postnummer: "3360" },
-  melby: { name: "Melby", region: "Halsnæs", postnummer: "3370" },
-  olsted: { name: "Ølsted", region: "Halsnæs", postnummer: "3310" },
-  tise: { name: "Tisvildeleje", region: "Nordsjælland", postnummer: "3220" },
-  helsinge: { name: "Helsinge", region: "Nordsjælland", postnummer: "3200" },
+  liseleje: { name: "Liseleje", kommune: "Halsnæs", postnummer: "3360" },
+  melby: { name: "Melby", kommune: "Halsnæs", postnummer: "3370" },
+  olsted: { name: "Ølsted", kommune: "Halsnæs", postnummer: "3310" },
+  tise: { name: "Tisvildeleje", kommune: "Gribskov", postnummer: "3220" },
+  helsinge: { name: "Helsinge", kommune: "Gribskov", postnummer: "3200" },
+  vejby: { name: "Vejby Strand", kommune: "Gribskov", postnummer: "3210" },
+  raageleje: { name: "Rågeleje", kommune: "Gribskov", postnummer: "3210" },
+  smidstrup: {
+    name: "Smidstrup Strand",
+    kommune: "Gribskov",
+    postnummer: "3250",
+  },
+  gilleleje: { name: "Gilleleje", kommune: "Gribskov", postnummer: "3250" },
+  dronningmolle: {
+    name: "Dronningmølle",
+    kommune: "Gribskov",
+    postnummer: "3120",
+  },
+  hornbaek: { name: "Hornbæk", kommune: "Helsingør", postnummer: "3100" },
+  aalsgaarde: { name: "Ålsgårde", kommune: "Helsingør", postnummer: "3140" },
 };
 
 export interface ServiceData {

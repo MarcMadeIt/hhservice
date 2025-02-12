@@ -6,7 +6,7 @@ const Prices = () => {
   const services = [
     {
       title: "Græsslåning – fast aftale",
-      price: "Fra 249 kr. pr. gang",
+      price: "Fra 250 kr. pr. gang",
       description:
         "Perfekt til dig, der ønsker en velplejet græsplæne uden besvær. Prisen på 249 kr. gælder for en lille have op til 300 m². For større arealer som sommerhushaver (300-500 m²) er prisen fra 299 kr. Vi slår græsset efter aftale, f.eks. hver 14. dag i sæsonen.",
     },
@@ -18,13 +18,13 @@ const Prices = () => {
     },
     {
       title: "Hækkeklipning & Græsslåning",
-      price: "Fra 1.500 kr.",
+      price: "Fra 1.495 kr.",
       description:
         "Inkluderer klipning af hæk op til 2 meter samt græsslåning af en mindre villahave. Oprydning og bortskaffelse af affald er inkluderet.",
     },
     {
       title: "Anlægning af ny græsplæne",
-      price: "Fra 5.000 kr.",
+      price: "Fra 4.995 kr.",
       description:
         "Inkluderer planering af jorden, såning af græs samt vejledning til pleje af plænen. Prisen gælder op til 200 m² – kontakt os for større arealer.",
     },
