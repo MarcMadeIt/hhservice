@@ -13,7 +13,7 @@ const ServiceClient = ({
   serviceKey,
   cityInfo,
 }: {
-  serviceInfo: { name: string; image1: string; image2: string; image3: string };
+  serviceInfo: { name: string; image1: string; image2: string; image3: string, text1: string};
   serviceKey: string;
   cityInfo?: { name: string; kommune: string; postnummer: string };
 }) => {
@@ -50,7 +50,7 @@ const ServiceClient = ({
             <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
               <div>
                 <h1 className="mb-5 text-2xl md:text-4xl font-bold">
-                  {serviceInfo.name}
+                  {serviceInfo.name} {cityInfo}i {cityInfo?.name || ""}
                 </h1>
                 <p className="text-base md:text-lg">
                   Leder du efter en pålidelig løsning? <br />
@@ -59,6 +59,7 @@ const ServiceClient = ({
                   {cityInfo?.kommune || "Nordsjælland"} – altid med fokus på
                   kvalitet og omhyggeligt håndværk.
                 </p>
+                <p className="text-base md:text-lg">{serviceInfo.text1}</p>
                 <br />
                 <h4 className="text-base md:text-lg font-semibold">
                   Fast aftale – ingen bekymringer

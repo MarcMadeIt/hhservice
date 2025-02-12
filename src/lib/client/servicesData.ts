@@ -12,7 +12,6 @@ export const byData: ByData = {
     postnummer: "3300",
   },
   liseleje: { name: "Liseleje", kommune: "Halsnæs", postnummer: "3360" },
-  melby: { name: "Melby", kommune: "Halsnæs", postnummer: "3370" },
   olsted: { name: "Ølsted", kommune: "Halsnæs", postnummer: "3310" },
   tise: { name: "Tisvildeleje", kommune: "Gribskov", postnummer: "3220" },
   helsinge: { name: "Helsinge", kommune: "Gribskov", postnummer: "3200" },
@@ -40,6 +39,7 @@ export interface ServiceData {
   image1: string;
   image2: string;
   image3: string;
+  text1: string;
 }
 
 export const services: ServiceData[] = [
@@ -50,6 +50,7 @@ export const services: ServiceData[] = [
     image1: "/grass1.jpeg",
     image2: "/grass2.jpeg",
     image3: "/grass3.jpeg",
+    text1: "",
   },
   {
     key: "beskaering",
@@ -58,6 +59,7 @@ export const services: ServiceData[] = [
     image1: "/prune1.jpeg",
     image2: "/prune2.jpeg",
     image3: "/prune3.jpeg",
+    text1: "",
   },
   {
     key: "haekkeklipning",
@@ -66,6 +68,7 @@ export const services: ServiceData[] = [
     image1: "/hedge1.jpeg",
     image2: "/hedge2.jpeg",
     image3: "/hedge3.jpeg",
+    text1: "",
   },
   {
     key: "brolaegning",
@@ -74,6 +77,7 @@ export const services: ServiceData[] = [
     image1: "/paving1.jpeg",
     image2: "/paving2.jpeg",
     image3: "/paving3.jpeg",
+    text1: "",
   },
   {
     key: "snerydning",
@@ -82,6 +86,7 @@ export const services: ServiceData[] = [
     image1: "/grass1.jpeg",
     image2: "/grass2.jpeg",
     image3: "/grass3.jpeg",
+    text1: "",
   },
   {
     key: "bortskaffelse",
@@ -90,6 +95,7 @@ export const services: ServiceData[] = [
     image1: "/grass1.jpeg",
     image2: "/grass2.jpeg",
     image3: "/grass3.jpeg",
+    text1: "",
   },
   {
     key: "ukrudtsfjernelse",
@@ -98,6 +104,7 @@ export const services: ServiceData[] = [
     image1: "/weeds1.jpeg",
     image2: "/weeds2.jpeg",
     image3: "/weeds3.jpeg",
+    text1: "",
   },
   {
     key: "byggepladsservice",
@@ -106,5 +113,6 @@ export const services: ServiceData[] = [
     image1: "/grass1.jpeg",
     image2: "/grass2.jpeg",
     image3: "/grass3.jpeg",
+    text1: "",
   },
 ];
