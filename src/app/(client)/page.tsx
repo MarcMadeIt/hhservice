@@ -14,7 +14,7 @@ const Home = () => {
       <section className="h-full">
         <Hero />
       </section>
-      <section className="h-full md:h-[800px]">
+      <section className="h-full md:h-[800px] ">
         <Services />
       </section>
       <section className="h-full lg:h-[800px]">

@@ -14,12 +14,13 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-[250px] md:min-h-[600px] mt-[65px] flex items-center justify-center">
-      <div className="absolute inset-0 w-full h-full">
+      <div className="absolute inset-0 w-full h-full 2xl:rounded-b-lg overflow-hidden">
         <Image
           src={`/hero.webp?v=${imageVersion}`}
           alt="Hero baggrundsbillede"
           fill
           sizes="100vw"
+          className="object-cover"
           priority
           quality={60}
         />
@@ -41,14 +42,15 @@ const Hero = () => {
 
         <div className="gap-16 md:gap-32 mt-5 hidden md:flex">
           <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
-            <FaCalendar className="text-2xl md:text-4xl text-primary" />
+            <FaCalendar className="text-2xl md:text-4xl text-primary filter drop-shadow-[0_0_3px_rgba(150,150,150,0.7)]" />
+
             <div className="flex flex-col items-center gap-0">
               <h3 className="md:text-xl font-bold">Alle dage</h3>
-              <h3 className="md:text-xl font-bold">07 - 17</h3>
+              <h3 className="md:text-xl font-bold">07 - 18</h3>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
-            <FaPhone className="text-2xl md:text-4xl text-primary" />
+            <FaPhone className="text-2xl md:text-4xl text-primary filter drop-shadow-[0_0_4px_rgba(150,150,150,0.7)]" />
             <div className="flex flex-col items-center gap-0">
               <h3 className="md:text-xl font-bold">Ring til os</h3>
               <a className="md:text-xl font-bold" href="tel:+4526181201">

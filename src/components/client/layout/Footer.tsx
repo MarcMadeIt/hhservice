@@ -67,9 +67,13 @@ const Footer = () => {
             >
               <FaFacebook size={45} />
             </Link>
-            <a>
+            <Link
+              href="https://www.instagram.com/hhaveservice/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaInstagram size={45} />
-            </a>
+            </Link>
           </div>
         </nav>
       </footer>

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 
 import { FaBars, FaFacebook, FaInstagram, FaXmark } from "react-icons/fa6";
@@ -9,6 +9,7 @@ import Image from "next/image";
 
 const Header = () => {
   const pathname = usePathname();
+  const detailsRef = useRef<HTMLDetailsElement>(null);
 
   const handleCloseDrawer = () => {
     const drawerCheckbox = document.getElementById(
@@ -21,10 +22,13 @@ const Header = () => {
 
   useEffect(() => {
     handleCloseDrawer();
+    if (detailsRef.current) {
+      detailsRef.current.open = false;
+    }
   }, [pathname]);
 
   return (
-    <div className="navbar fixed top-0 bg-base-100 inset-x-0 z-50">
+    <div className="navbar fixed top-0 bg-base-100 inset-x-0 z-50 max-w-[1536px] mx-auto p-2 md:p-4 flex justify-between items-center 2xl:rounded-b-lg">
       <div className="flex-1">
         <Link className="h-auto w-56 md:w-72 pl-1" href="/">
           <Image
@@ -37,10 +41,51 @@ const Header = () => {
           />
         </Link>
       </div>
-      <div className="flex-none">
+      <nav className="flex-none">
         <ul className="menu md:menu-lg menu-horizontal font-bold md:font-medium gap-3 md:gap-5 items-center hidden md:flex">
           <li>
-            <Link href="/service">Service</Link>
+            <details ref={detailsRef}>
+              <summary>
+                {" "}
+                <Link href="/service">Services</Link>
+              </summary>
+              <ul className="bg-base-100 rounded-t-none p-2">
+                <li>
+                  <Link href="/service">Alle Services</Link>
+                </li>
+                <li>
+                  <Link href="/service/graesslaaning">Græsslåning</Link>
+                </li>
+                <li>
+                  <Link href="/service/haekkeklipning">Hækkeklipning</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link href="/service/beskaering">Beskæring</Link>
+                </li>
+                <li>
+                  <Link href="/service/brolaegning">Brolægning</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link href="/service/bortskaffelse">Bortskaffelse</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link href="/service/snerydning">Snerydning</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link href="/service/ukrudtfjernelse">Udkrudtfjernelse</Link>
+                </li>
+                <li>
+                  {" "}
+                  <Link href="/service/byggepladsservice">
+                    Byggepladsservice
+                  </Link>
+                </li>
+              </ul>
+            </details>
           </li>
           <li>
             <Link href="/nyheder">Nyheder</Link>
@@ -48,7 +93,7 @@ const Header = () => {
           <li>
             <Link
               href="/tilbud"
-              className="btn btn-primary text-neutral-content m-2"
+              className="btn btn-primary text-neutral-content"
             >
               Få et tilbud
             </Link>
@@ -83,7 +128,7 @@ const Header = () => {
               </li>
               <li className="text-2xl font-bold">
                 <Link href="/service" onClick={handleCloseDrawer}>
-                  Service
+                  Services
                 </Link>
               </li>
               <li className="text-2xl font-bold">
@@ -115,18 +160,23 @@ const Header = () => {
                     </div>
                     <span className="text-secondary font-bold">Facebook</span>
                   </Link>
-                  <div className="flex flex-col items-center gap-2">
+                  <Link
+                    href="https://www.instagram.com/hhaveservice/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-2"
+                  >
                     <div className="w-14 h-14 shadow-lg rounded-full flex items-center justify-center">
                       <FaInstagram className="text-3xl text-secondary" />
                     </div>
                     <span className="text-secondary font-bold">Instagram</span>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
   );
 };

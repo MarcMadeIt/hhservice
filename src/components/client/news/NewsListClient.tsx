@@ -28,7 +28,7 @@ const NewsListClient = ({ news }: NewsListClientProps) => {
   };
 
   return (
-    <div className="md:max-w-lg lg:max-w-3xl xl:max-w-4xl flex flex-col gap-10 md:gap-16">
+    <div className="md:max-w-lg lg:max-w-3xl xl:max-w-4xl flex flex-col gap-10 md:gap-16 p-1 md:p-0">
       {news.map((item) => (
         <div
           key={item.id}

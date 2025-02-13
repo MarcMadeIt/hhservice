@@ -32,7 +32,7 @@ const About = () => {
             <h3 className="text-lg md:text-3xl font-bold">
               Om Os – Halsnæs Haveservice
             </h3>
-            <p className="text-sm md:text-md font-medium  tracking-wide">
+            <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi er Halsnæs Haveservice, og vi har hjulpet kunder med at holde
               deres haver flotte siden 2021. Det hele startede som en lille
               sidebeskæftigelse, hvor vi hjalp et par lokale med at vedligeholde
@@ -40,13 +40,13 @@ const About = () => {
               begyndte som en hobby, er i dag blevet til en professionel
               haveservice.
             </p>
-            <p className="text-sm md:text-md font-medium  tracking-wide">
+            <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi hjælper både private og virksomheder i Halsnæs med alt fra
               græsslåning og hækkeklipning til træfældning og vedligeholdelse.
               For os handler det ikke kun om at passe en have – vi ønsker at
               skabe uderum, som vores kunder virkelig kan nyde.
             </p>
-            <p className="text-sm md:text-md font-medium tracking-wide">
+            <p className="text-[15px] md:text-base font-medium tracking-wide">
               Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage
               fat i os – vi står klar til at hjælpe!
             </p>
@@ -54,19 +54,19 @@ const About = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 flex flex-col gap-3 items-start">
               <ul className="flex flex-col gap-3 list-none font-medium ">
-                <li className="flex items-center gap-2 text-  v md:text-lg">
+                <li className="flex items-center gap-2 text-  v md:text-lg tracking-wide">
                   <FaLeaf /> Græsslåning & plænepleje
                 </li>
-                <li className="flex items-center gap-2 text-md md:text-lg">
+                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaCut /> Hækkeklipning & beskæring
                 </li>
-                <li className="flex items-center gap-2 text-md md:text-lg">
+                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaTree /> Træfældning & stubfræsning
                 </li>
-                <li className="flex items-center gap-2 text-md md:text-lg">
+                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaSeedling /> Ukrudtsbekæmpelse & lugning
                 </li>
-                <li className="flex items-center gap-2 text-md md:text-lg">
+                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaTools /> Fliserens & vedligeholdelse
                 </li>
               </ul>

@@ -23,13 +23,15 @@ export const byData: ByData = {
     postnummer: "3250",
   },
   gilleleje: { name: "Gilleleje", kommune: "Gribskov", postnummer: "3250" },
+  aalsgaarde: { name: "Ålsgårde", kommune: "Helsingør", postnummer: "3140" },
+  hoejby: { name: "Højby", kommune: "Odsherred", postnummer: "4573" },
   dronningmolle: {
     name: "Dronningmølle",
     kommune: "Gribskov",
     postnummer: "3120",
   },
   hornbaek: { name: "Hornbæk", kommune: "Helsingør", postnummer: "3100" },
-  aalsgaarde: { name: "Ålsgårde", kommune: "Helsingør", postnummer: "3140" },
+  kulhuse: { name: "Kulhuse", kommune: "Frederikssund", postnummer: "4573" },
 };
 
 export interface ServiceData {

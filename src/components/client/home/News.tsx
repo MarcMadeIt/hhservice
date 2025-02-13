@@ -93,7 +93,7 @@ const News = () => {
                   <h3 className="card-title text-sm sm:text-base md:text-xl">
                     {item.title}
                   </h3>
-                  <span className="text-sm sm:text-sm md:text-base flex items-center gap-1">
+                  <span className="text-sm sm:text-sm md:text-base  items-center gap-1 hidden md:flex">
                     <FaLocationDot />
                     {item.city}
                   </span>
