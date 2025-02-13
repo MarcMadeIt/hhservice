@@ -38,7 +38,7 @@ const News = () => {
   }, []);
 
   return (
-    <div className="w-full h-full p-2 sm:p-3 relative">
+    <div className="w-full h-full p-2 sm:p-3 2xl:p-0 relative">
       <div className="bg-secondary w-full h-full rounded-lg flex flex-col justify-center items-center gap-4 md:gap-10 overflow-hidden">
         <h2 className="text-2xl md:text-4xl font-bold text-neutral-content">
           Seneste nyheder

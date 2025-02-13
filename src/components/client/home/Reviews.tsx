@@ -38,7 +38,7 @@ const Review = () => {
   const duplicatedReviews = [...reviews, ...reviews];
 
   return (
-    <div className="w-full h-full p-2 sm:p-3 relative">
+    <div className="w-full h-full p-2 sm:p-3 2xl:p-0 relative">
       <div className="w-full h-full overflow-hidden bg-secondary py-4 relative flex flex-col items-center justify-center gap-10 md:gap-16 rounded-lg">
         <h3 className="text-neutral-content text-2xl md:text-4xl font-bold">
           Anmeldelser fra kunder

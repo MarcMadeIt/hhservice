@@ -13,14 +13,13 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-[250px] md:min-h-[600px] mt-[65px] flex items-center justify-center">
-      <div className="absolute inset-0 w-full h-full 2xl:rounded-b-lg overflow-hidden">
+    <div className="relative min-h-[250px] md:min-h-[600px] mt-[65px] flex items-center justify-center py-2">
+      <div className="absolute inset-0 w-full  h-full 2xl:rounded-b-lg overflow-hidden">
         <Image
           src={`/hero.webp?v=${imageVersion}`}
           alt="Hero baggrundsbillede"
           fill
-          sizes="100vw"
-          className="object-cover"
+          className="object-cover "
           priority
           quality={60}
         />
@@ -33,6 +32,9 @@ const Hero = () => {
         <p className="mb-5 text-lg font-medium md:text-2xl lg:text-3xl drop-shadow-lg">
           Din have, vores passion <br />
         </p>
+        <Link href="/service" className="btn btn-primary text-lg">
+          Få et tilbud
+        </Link>
 
         <div className="gap-16 md:gap-32 mt-5 hidden md:flex">
           <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">

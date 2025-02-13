@@ -14,7 +14,7 @@ const About = () => {
   }, []);
 
   return (
-    <article className="w-full h-full p-2 sm:p-3 relative">
+    <article className="w-full h-full p-2 sm:p-3 2xl:p-0 relative">
       <div className="bg-secondary py-8 w-full h-full rounded-lg flex flex-col lg:flex-row justify-between gap-6">
         <div className="flex-1 p-10 hidden lg:flex">
           <div className="relative w-full lg:h-full rounded-lg overflow-hidden">
