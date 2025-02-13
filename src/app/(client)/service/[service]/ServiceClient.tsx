@@ -51,8 +51,8 @@ const ServiceClient = ({
       />
 
       <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-16 justify-center items-center">
-        <div className=" xl:py-10 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl">
-          <div className="lg:w-2/3 p-4 lg:py-0 flex flex-col items-center justify-center bg-base-200 rounded-lg">
+        <div className=" lg:py-16 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl 2xl:max-w-full">
+          <div className="lg:w-2/3 py-4 lg:py-0 flex flex-col items-start justify-center bg-base-200 rounded-lg">
             <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
               <div>
                 <h1 className="mb-5 text-2xl md:text-4xl font-bold">
@@ -128,7 +128,7 @@ const ServiceClient = ({
               </div>
             </div>
           </div>
-          <div className="lg:w-auto flex items-center justify-center">
+          <div className="lg:w-auto flex items-start justify-center">
             <CallMeForm />
           </div>
         </div>
