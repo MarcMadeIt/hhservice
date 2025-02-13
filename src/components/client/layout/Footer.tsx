@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaRegCopyright } from "react-icons/fa6";
 import ConsentModal from "../modal/ConsentModal";
 
 const Footer = () => {
@@ -56,6 +56,12 @@ const Footer = () => {
             CVR: 44777444
             <br />
             Ellevej 55, 3300 Frederiksværk
+            <br />
+            <br />
+            <p className="text-xs pb-1 flex items-center gap-1 font-semibold">
+              <FaRegCopyright size={11} /> {new Date().getFullYear()} - Alle
+              retigheder forbeholdes
+            </p>
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
