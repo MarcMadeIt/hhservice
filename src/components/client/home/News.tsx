@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getLatestNews } from "@/lib/client/actions";
+import { FaLocationDot } from "react-icons/fa6";
 
 interface NewsItem {
   id: number;
@@ -12,6 +13,7 @@ interface NewsItem {
   image: string | null;
   imageBefore: string | null;
   imageAfter: string | null;
+  city: string;
 }
 
 const FALLBACK_IMAGE = "/demo.webp";
@@ -41,7 +43,7 @@ const News = () => {
         <h2 className="text-2xl md:text-4xl font-bold text-neutral-content">
           Seneste nyheder
         </h2>
-        <div className="flex flex-row gap-4 md:gap-10 p-4 md:p-10 carousel lg:justify-start carousel-center w-full space-x-2 overflow-x-auto ">
+        <div className="flex flex-row gap-4 md:gap-10 px-4 md:px-8 py-2 md:py-4 carousel lg:justify-start carousel-center w-full space-x-2 overflow-x-auto ">
           {loading ? (
             <div className="flex justify-center items-center gap-3 h-[208px] sm:h-[285px] md:h-[403px] w-full">
               <span className="loading loading-dots loading-lg text-neutral-content"></span>
@@ -87,10 +89,14 @@ const News = () => {
                     </div>
                   )}
                 </figure>
-                <div className="card-body">
-                  <h2 className="card-title text-sm sm:text-base md:text-xl">
+                <div className="card-body flex-row items-center justify-between ">
+                  <h3 className="card-title text-sm sm:text-base md:text-xl">
                     {item.title}
-                  </h2>
+                  </h3>
+                  <span className="text-sm sm:text-sm md:text-base flex items-center gap-1">
+                    <FaLocationDot />
+                    {item.city}
+                  </span>
                 </div>
               </article>
             ))
