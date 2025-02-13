@@ -20,11 +20,25 @@ const Header = () => {
     }
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      detailsRef.current &&
+      !detailsRef.current.contains(event.target as Node)
+    ) {
+      detailsRef.current.open = false;
+    }
+  };
+
   useEffect(() => {
     handleCloseDrawer();
     if (detailsRef.current) {
       detailsRef.current.open = false;
     }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [pathname]);
 
   return (

@@ -1,5 +1,1 @@
-{
-  "/(client)/page": "app/(client)/page.js",
-  "/(client)/nyheder/page": "app/(client)/nyheder/page.js",
-  "/(client)/service/page": "app/(client)/service/page.js"
-}
+{}

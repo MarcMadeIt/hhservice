@@ -15,6 +15,22 @@ const nextConfig = {
       bodySizeLimit: "5mb",
     },
   },
+  async redirects() {
+    return [
+      {
+        source:
+          "/snerydning-frederiksvaerk-halsnaes-haekkeklip-melby-hundested-liseleje-dronningmoelle-kulhuse-have",
+        destination: "/snerydning",
+        permanent: true, // SEO-venlig 301 redirect
+      },
+      {
+        source:
+          "/graesslaaning-kulhuse-melby-liseleje-hundested-hoejby-dronningmoelle-hornbaek-halsnaes",
+        destination: "/graesslaaning",
+        permanent: true, // SEO-venlig 301 redirect
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
