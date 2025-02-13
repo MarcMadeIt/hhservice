@@ -33,12 +33,6 @@ const Hero = () => {
         <p className="mb-5 text-lg font-medium md:text-2xl lg:text-3xl drop-shadow-lg">
           Din have, vores passion <br />
         </p>
-        <Link
-          href="/tilbud"
-          className="btn btn-primary md:text-lg hidden md:flex"
-        >
-          Få et tilbud
-        </Link>
 
         <div className="gap-16 md:gap-32 mt-5 hidden md:flex">
           <div className="flex flex-col items-center justify-center gap-2 md:gap-3 w-32 h-28 md:w-48 md:h-40 rounded-lg  p-3">
@@ -53,9 +47,9 @@ const Hero = () => {
             <FaPhone className="text-2xl md:text-4xl text-primary filter drop-shadow-[0_0_4px_rgba(150,150,150,0.7)]" />
             <div className="flex flex-col items-center gap-0">
               <h3 className="md:text-xl font-bold">Ring til os</h3>
-              <a className="md:text-xl font-bold" href="tel:+4526181201">
+              <Link className="md:text-xl font-bold" href="tel:+4526181201">
                 +45 26 18 12 01
-              </a>
+              </Link>
             </div>
           </div>
         </div>

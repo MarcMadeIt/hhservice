@@ -105,10 +105,7 @@ const Header = () => {
             <Link href="/nyheder">Nyheder</Link>
           </li>
           <li>
-            <Link
-              href="/tilbud"
-              className="btn btn-primary text-neutral-content"
-            >
+            <Link href="/tilbud" className="btn btn-primary">
               Få et tilbud
             </Link>
           </li>

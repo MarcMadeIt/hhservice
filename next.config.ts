@@ -20,13 +20,13 @@ const nextConfig = {
       {
         source:
           "/snerydning-frederiksvaerk-halsnaes-haekkeklip-melby-hundested-liseleje-dronningmoelle-kulhuse-have",
-        destination: "/snerydning",
+        destination: "/service/snerydning",
         permanent: true, // SEO-venlig 301 redirect
       },
       {
         source:
           "/graesslaaning-kulhuse-melby-liseleje-hundested-hoejby-dronningmoelle-hornbaek-halsnaes",
-        destination: "/graesslaaning",
+        destination: "/service/graesslaaning",
         permanent: true, // SEO-venlig 301 redirect
       },
     ];
