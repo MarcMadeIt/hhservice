@@ -100,8 +100,8 @@ export const services: ServiceData[] = [
     text1: "",
   },
   {
-    key: "ukrudtsfjernelse",
-    name: "Ukrudtsfjernelse",
+    key: "ukrudtfjernelse",
+    name: "Ukrudtfjernelse",
     icon: "/weeds.png",
     image1: "/weeds1.jpeg",
     image2: "/weeds2.jpeg",
