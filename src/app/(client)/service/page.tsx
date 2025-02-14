@@ -11,6 +11,11 @@ import Link from "next/link";
 const Service = () => {
   const largeIcons = ["beskaering", "haekkeklipning", "snerydning"];
 
+  // Filtrer "haekklipning" væk fra listen
+  const visibleServices = services.filter(
+    (service) => service.key !== "haekklipning"
+  );
+
   return (
     <div className="mt-[62px] md:mt-[95px] p-2 sm:p-3 w-full h-full flex flex-col gap-10 md:gap-20 xl:gap-32 justify-center items-center py-16 md:py-20 relative">
       <div className="max-w-lg md:max-w-xl">
@@ -20,7 +25,7 @@ const Service = () => {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 lg:gap-20">
-        {services.map((service) => (
+        {visibleServices.map((service) => (
           <Link
             key={service.key}
             href={`/service/${service.key}`}

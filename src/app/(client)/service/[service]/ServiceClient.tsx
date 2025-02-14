@@ -18,7 +18,10 @@ const ServiceClient = ({
     image1: string;
     image2: string;
     image3: string;
-    text1: string;
+    introText: string;
+    moreText: string;
+    outroHeader: string;
+    outroText: string;
   };
   serviceKey: string;
   cityInfo?: { name: string; kommune: string; postnummer: string };
@@ -51,7 +54,7 @@ const ServiceClient = ({
       />
 
       <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col gap-16 justify-center items-center">
-        <div className=" lg:py-16 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl 2xl:max-w-full">
+        <div className="lg:py-16 w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl 2xl:max-w-full">
           <div className="lg:w-2/3 py-4 lg:py-0 flex flex-col items-start justify-center bg-base-200 rounded-lg">
             <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
               <div>
@@ -60,30 +63,30 @@ const ServiceClient = ({
                   {cityInfo?.name || ""}
                 </h1>
                 <p className="text-base md:text-lg">
-                  Leder du efter en pålidelig løsning? <br />
-                  Vi tilbyder professionel {serviceInfo.name.toLowerCase()} i{" "}
-                  {cityInfo?.name || "Halsnæs"} og resten af{" "}
-                  {cityInfo?.kommune || "Nordsjælland"} – altid med fokus på
-                  kvalitet og omhyggeligt håndværk.
+                  {serviceInfo.introText} <br />
+                  {serviceInfo.moreText} <br />
+                  Vi tilbyder {serviceInfo.name.toLowerCase()} i{" "}
+                  <strong>{cityInfo?.name || "Halsnæs"}</strong> og resten af{" "}
+                  <strong>{cityInfo?.kommune || "Nordsjælland"}</strong>.
                 </p>
-                <p className="text-base md:text-lg">{serviceInfo.text1}</p>
+
                 <br />
                 <h4 className="text-base md:text-lg font-semibold">
-                  Fast aftale – ingen bekymringer
+                  {serviceInfo.outroHeader}
                 </h4>
-                <p className="text-base md:text-lg">
-                  Med en fast aftale sikrer du dig en velplejet ejendom året
-                  rundt – uden at løfte en finger. Kontakt os i dag, og lad os
-                  tage hånd om det for dig!
-                </p>
+                <p className="text-base md:text-lg">{serviceInfo.outroText}</p>
               </div>
-
               {cityInfo && (
-                <p className="text-lg md:text-xl">
-                  <strong>Område:</strong> {cityInfo.kommune} <br />
-                  <strong>Postnummer:</strong> {cityInfo.postnummer}
-                </p>
+                <div className="text-base md:text-lg">
+                  <p>
+                    Vi tilbyder {serviceInfo.name.toLowerCase()} i{" "}
+                    <strong>{cityInfo.name}</strong> og resten af{" "}
+                    <strong>{cityInfo.kommune}</strong>.
+                  </p>
+                  <p>Kontakt os i dag og få et uforpligtende tilbud.</p>
+                </div>
               )}
+
               <div className="flex flex-col gap-3">
                 <h2 className="text-md font-semibold">
                   Vi dækker bl.a. disse områder:
@@ -94,7 +97,7 @@ const ServiceClient = ({
                     .map(([slug, city]) => (
                       <li
                         key={slug}
-                        className="text-primary bg-base-100 shadow-md py-2 px-2 rounded-md font-semibold"
+                        className="text-primary bg-base-100 shadow-md py-1 px-2 rounded-md font-semibold"
                       >
                         <Link href={`/service/${serviceKey}/${slug}`}>
                           {city.name}
@@ -103,6 +106,7 @@ const ServiceClient = ({
                     ))}
                 </ul>
               </div>
+
               <div className="flex gap-5 max-w-full sm:max-w-xl lg:max-w-2xl xl:max-w-3xl justify-center p-4">
                 <Image
                   src={serviceInfo.image1}

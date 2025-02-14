@@ -58,10 +58,10 @@ const Footer = () => {
             Ellevej 55, 3300 Frederiksværk
             <br />
             <br />
-            <p className="text-xs pb-1 flex items-center gap-1 font-semibold">
+            <span className="text-xs pb-1 flex items-center gap-1 font-semibold">
               <FaRegCopyright size={11} /> {new Date().getFullYear()} - Alle
               retigheder forbeholdes
-            </p>
+            </span>
           </p>
         </aside>
         <nav className="md:place-self-center md:justify-self-end">
