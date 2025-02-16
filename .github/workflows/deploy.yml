@@ -12,7 +12,7 @@ jobs:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 1 # Hurtigere clone, da vi ikke behøver hele historikken
+          fetch-depth: 1
 
       - name: 🔄 Pull latest code from GitHub
         run: |
