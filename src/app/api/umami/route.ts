@@ -63,11 +63,11 @@ export async function GET() {
       totalPageViews: pageviews.value ?? 0,
       totalEvents: events.length ?? 0, // Use this for "Henvendelser"
       summarizedStats: {
-        pageviews: summarizedStats.pageviews.value ?? 0,
-        visitors: summarizedStats.visitors.value ?? 0,
-        visits: summarizedStats.visits.value ?? 0,
-        bounces: summarizedStats.bounces.value ?? 0,
-        totaltime: summarizedStats.totaltime.value ?? 0,
+        pageviews: summarizedStats?.pageviews?.value ?? 0,
+        visitors: summarizedStats?.visitors?.value ?? 0,
+        visits: summarizedStats?.visits?.value ?? 0,
+        bounces: summarizedStats?.bounces?.value ?? 0,
+        totaltime: summarizedStats?.totaltime?.value ?? 0,
       },
     });
   } catch (error) {
