@@ -98,17 +98,17 @@ const ServiceClient = ({
               <ul className="flex gap-3 flex-wrap">
                 {Object.entries(byData)
                   .filter(
-                    ([slug, city]) =>
+                    ([slug]) =>
                       slug !== cityInfo?.name.toLowerCase() &&
                       !(serviceKey === "snerydning" && slug === "hoejby")
                   )
-                  .map(([slug, city]) => (
+                  .map(([slug]) => (
                     <li
                       key={slug}
                       className="text-primary bg-base-100 shadow-md py-1 px-2 rounded-md font-semibold"
                     >
                       <Link href={`/service/${serviceKey}/${slug}`}>
-                        {city.name}
+                        {byData[slug].name}
                       </Link>
                     </li>
                   ))}
