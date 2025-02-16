@@ -43,7 +43,7 @@ jobs:
 
           if pm2 list | grep -q "hhs-app"; then
             echo "⚡ Process found! Reloading..."
-            pm2 restart nextjs-hhservice
+            pm2 restart hhs-app --update-env
           else
             echo "⚠️ Process not found! Starting a new instance..."
             pm2 start npm --name "hhs-app" -- start -- -p 3600
