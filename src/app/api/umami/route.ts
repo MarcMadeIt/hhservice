@@ -33,7 +33,7 @@ export async function GET() {
       totalPageViews: pageviews.value ?? 0,
       totalEvents: events.length ?? 0, // Use this for "Henvendelser"
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to fetch analytics" },
       { status: 500 }
