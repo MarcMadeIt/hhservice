@@ -208,15 +208,15 @@ export const services: ServiceData[] = [
       "Brug din tid på vigtigere ting! Vi henter og bortskaffer affaldet professionelt. Kontakt os, så vi kan tage os af det for dig.",
   },
   {
-    key: "ukrudtfjernelse",
-    name: "Ukrudtfjernelse",
+    key: "ukrudtsbekaempelse",
+    name: "Ukrudtsbekæmpelse",
     icon: "/weeds.png",
     image1: "/weeds1.jpeg",
     image2: "/weeds2.jpeg",
     image3: "/weeds3.jpeg",
     introText: "Slip af med ukrudtet én gang for alle!",
     moreText:
-      "Vores effektive ukrudtsfjernelse giver dig en flot, velholdt have uden uønsket vækst – uden brug af skadelige kemikalier.",
+      "Vores effektive ukrudtsbekæmpelse giver dig en flot, velholdt have uden uønsket vækst – uden brug af skadelige kemikalier.",
     outroHeader: "En ukrudtsfri have med minimal indsats",
     outroText:
       "Få fjernet ukrudt på en skånsom og effektiv måde. Vi sørger for et flot og vedligeholdelsesfrit resultat. Kontakt os for en løsning!",

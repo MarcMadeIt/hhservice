@@ -38,12 +38,13 @@ const TaskSelect = ({ onChange, isCallForm = false }: ContactSelectProps) => {
         <option value="Hækkeklipning">Hækkeklipning</option>
         <option value="Brolægning">Brolægning</option>
         <option value="Plantning">Plantning</option>
+        <option value="Ukrudtsbekæmpelse">Ukrudtsbekæmpelse</option>
         <option value="Snerydning">Snerydning</option>
-        <option value="Ukrudtfjernelse">Ukrudtfjernelse</option>
         <option value="Beskæring">Beskæring</option>
-        <option value="Plantning">Snerydning</option>
         <option value="Bortskaffelse">Bortskaffelse</option>
         <option value="Specialopgaver">Specialopgaver</option>
+        <option value="Fliserens">Fliserens</option>
+        <option value="Byggepladsservice">Byggepladsservice</option>
         <option value="Andet">Andet</option>
       </select>
     </label>

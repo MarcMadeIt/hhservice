@@ -87,25 +87,32 @@ const ServiceClient = ({
                 </div>
               )}
 
-              <div className="flex flex-col gap-3">
-                <h2 className="text-md font-semibold">
-                  Vi dækker bl.a. disse områder:
-                </h2>
-                <ul className="flex gap-3 flex-wrap">
-                  {Object.entries(byData)
-                    .filter(([slug]) => slug !== cityInfo?.name.toLowerCase())
-                    .map(([slug, city]) => (
-                      <li
-                        key={slug}
-                        className="text-primary bg-base-100 shadow-md py-1 px-2 rounded-md font-semibold"
-                      >
-                        <Link href={`/service/${serviceKey}/${slug}`}>
-                          {city.name}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
-              </div>
+              {serviceKey === "snerydning" && (
+                <p className="font-semibold text-secondary text-base md:text-lg">
+                  <strong>OPS:</strong> Denne service tilbydes kun i byer inden
+                  for en radius af <u> ca. 40 km fra Frederiksværk </u> for at
+                  sikre hurtig og effektiv betjening af vores kunder.
+                </p>
+              )}
+
+              <ul className="flex gap-3 flex-wrap">
+                {Object.entries(byData)
+                  .filter(
+                    ([slug, city]) =>
+                      slug !== cityInfo?.name.toLowerCase() &&
+                      !(serviceKey === "snerydning" && slug === "hoejby")
+                  )
+                  .map(([slug, city]) => (
+                    <li
+                      key={slug}
+                      className="text-primary bg-base-100 shadow-md py-1 px-2 rounded-md font-semibold"
+                    >
+                      <Link href={`/service/${serviceKey}/${slug}`}>
+                        {city.name}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
 
               <div className="flex gap-5 max-w-full sm:max-w-xl lg:max-w-2xl xl:max-w-3xl justify-center p-4">
                 <Image

@@ -34,17 +34,18 @@ const About = () => {
             </h3>
             <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi er Halsnæs Haveservice, og vi har hjulpet kunder med at holde
-              deres haver flotte siden 2021. Det hele startede som en lille
+              deres haver flotte siden maj 2024. Det hele startede som en lille
               sidebeskæftigelse, hvor vi hjalp et par lokale med at vedligeholde
               deres haver. Men med tiden voksede efterspørgslen, og det, der
               begyndte som en hobby, er i dag blevet til en professionel
               haveservice.
             </p>
             <p className="text-[15px] md:text-base font-medium  tracking-wide">
-              Vi hjælper både private og virksomheder i Halsnæs med alt fra
-              græsslåning og hækkeklipning til træfældning og vedligeholdelse.
-              For os handler det ikke kun om at passe en have – vi ønsker at
-              skabe uderum, som vores kunder virkelig kan nyde.
+              Vi hjælper både private og virksomheder i Halsnæs og Nordsjælland
+              med alt fra græsslåning, hækkeklipning og brolægning til
+              træfældning og vedligeholdelse. For os handler det ikke kun om at
+              passe en have – vi ønsker at skabe uderum, som vores kunder
+              virkelig kan nyde.
             </p>
             <p className="text-[15px] md:text-base font-medium tracking-wide">
               Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage

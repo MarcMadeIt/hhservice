@@ -15,6 +15,14 @@ const nextConfig = {
       bodySizeLimit: "5mb",
     },
   },
+  async rewrites() {
+    return [
+      {
+        source: "/umami.js",
+        destination: "http://46.202.175.164:3610/umami.js",
+      },
+    ];
+  },
   async redirects() {
     return [
       {

@@ -9,7 +9,7 @@ const Locations = () => {
       <div className="flex flex-col items-center justify-center h-full gap-10 text-center">
         <h3 className="max-w-sm sm:max-w-md md:max-w-lg font-semibold text-[11px] sm:text-base">
           Vi dækker hele Nordsjælland, alt fra Frederiksværk, Gilleleje, Hornbæk
-          til kulhuse og Jyllinge med mange flere endnu.
+          til Kulhuse og Jyllinge med mange flere endnu.
         </h3>
         <ul className="flex flex-wrap justify-center gap-4 max-w-sm sm:max-w-xl md:max-w-3xl">
           <li className=" w-24 sm:w-32 h-10 md:w-44 md:h-14 ring-2 ring-neutral rounded-lg md:rounded-xl flex flex-col items-center p-1 md:p-0 relative">

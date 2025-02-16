@@ -21,8 +21,7 @@ const Steps = () => {
 
           <h2 className="text-lg 2xl:text-xl font-semibold">1. Kontakt os</h2>
           <p className="text-sm 2xl:text-base">
-            Ring til os, bliv ringet op eller bed om et uforpligtende tilbud på
-            græsslåning.
+            Ring til os, bliv ringet op eller bed om et uforpligtende tilbud.
           </p>
         </li>
 

@@ -31,7 +31,7 @@ const FAQ = () => {
               <p className="tracking-wide font-medium">
                 Vi tilbyder en bred vifte af haveservices, herunder græsslåning,
                 hækkeklipning, ukrudtsbekæmpelse, træfældning, beskæring og
-                anlægning af bede samt fliserensning.
+                anlægning af bede samt fliserens.
               </p>
             </div>
           </div>
