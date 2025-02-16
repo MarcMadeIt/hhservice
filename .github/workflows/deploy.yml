@@ -41,12 +41,12 @@ jobs:
 
           cd /home/hhservice/htdocs/hhservice.dk
 
-          if pm2 list | grep -q "nextjs-hhservice"; then
+          if pm2 list | grep -q "hhs-app"; then
             echo "⚡ Process found! Reloading..."
             pm2 restart nextjs-hhservice
           else
             echo "⚠️ Process not found! Starting a new instance..."
-            pm2 start npm --name "nextjs-hhservice" -- start -- -p 3600
+            pm2 start npm --name "hhs-app" -- start -- -p 3600
           fi
 
           pm2 save
