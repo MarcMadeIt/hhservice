@@ -29,7 +29,7 @@ export default function ClientLayout({
     <div className="sm:h-lvh h-dvh max-w-screen-2xl mx-auto 2xl:px-3">
       <script
         defer
-        src="/umami.js"
+        src="/script.js"
         data-website-id="5a81c9a1-6796-43a6-8604-4278f92ff2f4"
       />
       <header>

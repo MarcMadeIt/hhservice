@@ -18,8 +18,12 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/umami.js",
-        destination: "http://46.202.175.164:3610/umami.js",
+        source: "/script.js",
+        destination: "http://46.202.175.164:3610/script.js",
+      },
+      {
+        source: "/api/send",
+        destination: "http://46.202.175.164:3610/api/send",
       },
     ];
   },
