@@ -7,6 +7,13 @@ const Overview = () => {
     activeVisitors: 0,
     totalPageViews: 0,
     totalEvents: 0,
+    summarizedStats: {
+      pageviews: 0,
+      visitors: 0,
+      visits: 0,
+      bounces: 0,
+      totaltime: 0,
+    },
   });
 
   useEffect(() => {
@@ -61,6 +68,20 @@ const Overview = () => {
           <div className="flex-1 flex flex-col gap-2 bg-base-100 rounded-lg shadow-md p-3 md:p-7">
             <h3>Anmeldelser</h3>
             <span className="text-2xl md:text-4xl font-semibold">24</span>
+          </div>
+        </div>
+
+        {/* Summarized Stats */}
+        <div className="bg-base-100 rounded-lg shadow-md p-3 md:p-7">
+          <div className="flex flex-col gap-3">
+            <h3 className="text-lg">Opsummerede statistikker</h3>
+            <div className="flex flex-col gap-2">
+              <div>Sidevisninger: {stats.summarizedStats.pageviews}</div>
+              <div>Besøgende: {stats.summarizedStats.visitors}</div>
+              <div>Besøg: {stats.summarizedStats.visits}</div>
+              <div>Afvisninger: {stats.summarizedStats.bounces}</div>
+              <div>Samlet tid: {stats.summarizedStats.totaltime} sekunder</div>
+            </div>
           </div>
         </div>
       </div>
