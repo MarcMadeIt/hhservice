@@ -76,11 +76,13 @@ const Overview = () => {
           <div className="flex flex-col gap-3">
             <h3 className="text-lg">Opsummerede statistikker</h3>
             <div className="flex flex-col gap-2">
-              <div>Sidevisninger: {stats.summarizedStats.pageviews}</div>
-              <div>Besøgende: {stats.summarizedStats.visitors}</div>
-              <div>Besøg: {stats.summarizedStats.visits}</div>
-              <div>Afvisninger: {stats.summarizedStats.bounces}</div>
-              <div>Samlet tid: {stats.summarizedStats.totaltime} sekunder</div>
+              <div>Sidevisninger: {stats.summarizedStats?.pageviews ?? 0}</div>
+              <div>Besøgende: {stats.summarizedStats?.visitors ?? 0}</div>
+              <div>Besøg: {stats.summarizedStats?.visits ?? 0}</div>
+              <div>Afvisninger: {stats.summarizedStats?.bounces ?? 0}</div>
+              <div>
+                Samlet tid: {stats.summarizedStats?.totaltime ?? 0} sekunder
+              </div>
             </div>
           </div>
         </div>
