@@ -7,7 +7,7 @@ import Steps from "@/components/client/service/Steps";
 import Link from "next/link";
 import { byData } from "@/lib/client/servicesData";
 import Locations from "@/components/client/home/Locations";
-import { FaArrowLeft, FaBackward, FaChevronLeft } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
 
 const ServiceClient = ({
   serviceInfo,
