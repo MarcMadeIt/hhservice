@@ -21,20 +21,40 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(client)/page.js"
     ],
-    "/(client)/service/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(client)/service/page.js"
+      "static/chunks/app/_not-found/page.js"
+    ],
+    "/(dashboard)/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/layout.js"
+    ],
+    "/(dashboard)/admin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/admin/page.js"
+    ],
+    "/api/umami/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/umami/route.js"
     ],
     "/(client)/service/[service]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(client)/service/[service]/page.js"
     ],
-    "/(client)/service/[service]/[by]/page": [
+    "/(client)/service/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(client)/service/[service]/[by]/page.js"
+      "static/chunks/app/(client)/service/page.js"
+    ],
+    "/(client)/nyheder/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(client)/nyheder/page.js"
     ]
   }
 }

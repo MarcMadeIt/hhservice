@@ -32,20 +32,22 @@ const NewsListClient = ({ news }: NewsListClientProps) => {
       {news.map((item) => (
         <div
           key={item.id}
-          className="card lg:card-side bg-base-100 shadow-md rounded-lg lg:h-72 xl:h-[350px]"
+          className="card lg:card-side bg-base-100 shadow-md rounded-xl sm:rounded-lg  lg:h-72 xl:h-[350px]"
         >
           <figure className="w-full lg:w-1/2">
             {item.imageBefore && item.imageAfter ? (
-              <div className="diff aspect-[16/9]">
-                <div className="diff-item-1">
+              <div className="diff aspect-[16/9] m-2 sm:m-0" tabIndex={0}>
+                <div className="diff-item-1 ">
                   <Image
                     src={item.imageBefore || ""}
                     alt={`${item.title} før`}
                     width={500}
                     height={300}
                     style={{ objectFit: "cover" }}
+                    className="rounded-lg  overflow-hidden sm:overflow-auto"
                   />
                 </div>
+
                 <div className="diff-item-2">
                   <Image
                     src={item.imageAfter || ""}
@@ -53,6 +55,7 @@ const NewsListClient = ({ news }: NewsListClientProps) => {
                     width={500}
                     height={300}
                     style={{ objectFit: "cover" }}
+                    className="rounded-lg overflow-hidden sm:overflow-auto"
                   />
                 </div>
                 <div className="diff-resizer"></div>
