@@ -15,18 +15,7 @@ const nextConfig = {
       bodySizeLimit: "5mb",
     },
   },
-  async rewrites() {
-    return [
-      {
-        source: "/umami.js",
-        destination: "https://stats.hhservice.dk/script.js",
-      },
-      {
-        source: "/api/send",
-        destination: "https://stats.hhservice.dk/api/send",
-      },
-    ];
-  },
+
   async redirects() {
     return [
       {

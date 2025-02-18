@@ -33,7 +33,7 @@ export default function ClientLayout({
         <Script
           async
           defer
-          src="/umami.js"
+          src="https://stats.hhservice.dk/script.js"
           data-website-id="92b19d71-7695-4a2a-bf87-2ab08ec7cf04"
         />
       </Head>
