@@ -18,7 +18,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/script.js",
+        source: "/umami.js",
         destination: "https://stats.hhservice.dk/script.js",
       },
       {
