@@ -28,8 +28,8 @@ const Footer = () => {
           <Link href="/service/snerydning" className="link link-hover">
             Snerydning
           </Link>
-          <Link href="/service/ukrudtfjernelse" className="link link-hover">
-            Udkrudtfjernelse
+          <Link href="/service/ukrudtbekaempelse" className="link link-hover">
+            Ukrudtbekæmpelse
           </Link>
           <Link href="/service/byggepladsservice" className="link link-hover">
             Byggepladsservice

@@ -12,12 +12,12 @@ export async function GET() {
     );
   }
 
-  const startAt = Date.now() - 30 * 24 * 60 * 60 * 1000; // 30 dage siden
-  const endAt = Date.now(); // Nu
+  const startAt = Math.floor(Date.now() / 1000) - 30 * 24 * 60 * 60;
+  const endAt = Math.floor(Date.now() / 1000);
 
   try {
     const response = await fetch(
-      `${BASE_URL}/websites/${WEBSITE_ID}/pageviews?startAt=${startAt}&endAt=${endAt}`,
+      `${BASE_URL}/api/websites/${WEBSITE_ID}/pageviews?startAt=${startAt}&endAt=${endAt}`,
       {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
@@ -27,7 +27,7 @@ export async function GET() {
     );
 
     if (!response.ok) {
-      throw new Error(`Error ${response.status}: Failed to fetch pageviews`);
+      throw new Error(`Error ${response.status}: ${await response.text()}`);
     }
 
     const data = await response.json();
@@ -38,8 +38,8 @@ export async function GET() {
       ) ?? 0;
 
     return NextResponse.json({ totalVisitors });
-  } catch (error) {
-    console.error("Umami API error:", error);
+  } catch (error: any) {
+    console.error("Umami API error:", error.message);
     return NextResponse.json(
       { error: `Failed to fetch analytics: ${error.message}` },
       { status: 500 }
