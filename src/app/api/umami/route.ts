@@ -17,7 +17,7 @@ export async function GET() {
 
   try {
     const response = await fetch(
-      `${BASE_URL}/api/websites/${WEBSITE_ID}/pageviews?startAt=${startAt}&endAt=${endAt}`,
+      `${BASE_URL}/api/websites/${WEBSITE_ID}/pageviews?startAt=${startAt}&endAt=${endAt}&unit=day`,
       {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
