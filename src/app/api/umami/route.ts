@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(request) {
   const BASE_URL = process.env.UMAMI_API_URL;
   const WEBSITE_ID = process.env.UMAMI_WEBSITE_ID;
   const API_KEY = process.env.UMAMI_API_KEY;
@@ -12,9 +12,13 @@ export async function GET() {
     );
   }
 
-  // Generér tidsstempler (seneste 30 dage)
+  const { searchParams } = new URL(request.url);
+  const period = searchParams.get("period") || "7d";
   const endAt = Date.now();
-  const startAt = endAt - 30 * 24 * 60 * 60 * 1000;
+  const startAt =
+    period === "30d"
+      ? endAt - 30 * 24 * 60 * 60 * 1000
+      : endAt - 7 * 24 * 60 * 60 * 1000;
 
   try {
     console.log(

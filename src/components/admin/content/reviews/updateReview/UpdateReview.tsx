@@ -62,6 +62,12 @@ const UpdateReview = ({ reviewId, onReviewUpdated }: UpdateReviewProps) => {
     }
   };
 
+  const handleDescChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (e.target.value.length <= 100) {
+      setDesc(e.target.value);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-3 w-full p-3">
       <span className="text-lg font-bold">Opdater anmeldelse</span>
@@ -123,13 +129,16 @@ const UpdateReview = ({ reviewId, onReviewUpdated }: UpdateReviewProps) => {
               name="desc"
               className="textarea textarea-bordered textarea-md text"
               value={desc}
-              onChange={(e) => setDesc(e.target.value)}
+              onChange={handleDescChange}
               required
               placeholder="Skriv en mindre anmeldelse..."
               style={{ resize: "none" }}
               cols={30}
               rows={8}
             ></textarea>
+            <div className="text-right text-xs font-medium text-gray-500">
+              {desc.length} / 100
+            </div>
           </label>
           {errors.desc && (
             <span className="absolute -bottom-4 text-xs text-red-500">
