@@ -5,6 +5,7 @@ import { FaPhone, FaAngleUp } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import Script from "next/script";
 
 export default function ClientLayout({
   children,
@@ -29,7 +30,7 @@ export default function ClientLayout({
   return (
     <>
       <Head>
-        <script
+        <Script
           async
           defer
           src="/umami.js"
