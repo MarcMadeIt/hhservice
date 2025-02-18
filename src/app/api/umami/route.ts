@@ -15,7 +15,6 @@ export async function GET() {
   // Generér tidsstempler (seneste 30 dage)
   const endAt = Date.now();
   const startAt = endAt - 30 * 24 * 60 * 60 * 1000;
-  const timezone = "Europe/Copenhagen";
 
   try {
     console.log(
