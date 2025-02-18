@@ -19,11 +19,11 @@ const nextConfig = {
     return [
       {
         source: "/script.js",
-        destination: "http://46.202.175.164:3610/script.js",
+        destination: "https://stats.hhservice.dk/script.js",
       },
       {
         source: "/api/send",
-        destination: "http://46.202.175.164:3610/api/send",
+        destination: "https://stats.hhservice.dk/api/send",
       },
     ];
   },

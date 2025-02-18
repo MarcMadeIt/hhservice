@@ -1,5 +1,1 @@
-{
-  "/api/umami/route": "app/api/umami/route.js",
-  "/(client)/page": "app/(client)/page.js",
-  "/(dashboard)/admin/page": "app/(dashboard)/admin/page.js"
-}
+{}
