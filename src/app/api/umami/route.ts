@@ -38,10 +38,10 @@ export async function GET() {
       ) ?? 0;
 
     return NextResponse.json({ totalVisitors });
-  } catch (error: any) {
-    console.error("Umami API error:", error.message);
+  } catch (error) {
+    console.error("Umami API error:", (error as Error).message);
     return NextResponse.json(
-      { error: `Failed to fetch analytics: ${error.message}` },
+      { error: `Failed to fetch analytics: ${(error as Error).message}` },
       { status: 500 }
     );
   }
