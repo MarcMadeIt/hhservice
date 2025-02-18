@@ -12,20 +12,19 @@ export async function GET() {
     );
   }
 
-  // Generate correct timestamps
+  // Generér tidsstempler (seneste 30 dage)
   const endAt = Date.now();
   const startAt = endAt - 30 * 24 * 60 * 60 * 1000;
   const timezone = "Europe/Copenhagen";
 
   try {
     console.log(
-      `➡️ Fetching from: ${BASE_URL}/api/websites/${WEBSITE_ID}/pageviews`
+      `➡️ Fetching stats from: ${BASE_URL}/api/websites/${WEBSITE_ID}/stats`
     );
 
-    const response = await fetch(
-      `${BASE_URL}/api/websites/${WEBSITE_ID}/pageviews?startAt=${startAt}&endAt=${endAt}&unit=day&timezone=${encodeURIComponent(
-        timezone
-      )}`,
+    // Hent statistik (pageviews, visits, visitors)
+    const statsResponse = await fetch(
+      `${BASE_URL}/api/websites/${WEBSITE_ID}/stats?startAt=${startAt}&endAt=${endAt}`,
       {
         headers: {
           Authorization: `Bearer ${API_KEY}`,
@@ -33,24 +32,51 @@ export async function GET() {
         },
       }
     );
+    const statsData = await statsResponse.json();
 
-    console.log(`➡️ Response status: ${response.status}`);
+    console.log(
+      `➡️ Fetching page metrics from: ${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?type=url`
+    );
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`Error ${response.status}: ${errorText}`);
-    }
+    // Hent de mest besøgte sider
+    const pagesResponse = await fetch(
+      `${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?startAt=${startAt}&endAt=${endAt}&type=url`,
+      {
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+          Accept: "application/json",
+        },
+      }
+    );
+    const pagesData = await pagesResponse.json();
 
-    const data = await response.json();
+    console.log(
+      `➡️ Fetching device metrics from: ${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?type=device`
+    );
+
+    // Hent enhedsstatistik
+    const devicesResponse = await fetch(
+      `${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?startAt=${startAt}&endAt=${endAt}&type=device`,
+      {
+        headers: {
+          Authorization: `Bearer ${API_KEY}`,
+          Accept: "application/json",
+        },
+      }
+    );
+    const devicesData = await devicesResponse.json();
 
     return NextResponse.json({
-      pageviews: data.pageviews || [],
-      sessions: data.sessions || [],
+      pageviews: statsData.pageviews.value || 0,
+      visitors: statsData.visitors.value || 0,
+      visits: statsData.visits.value || 0,
+      pages: pagesData || [],
+      devices: devicesData || [],
     });
   } catch (error) {
-    console.error("🚨 API Route Error:", (error as Error).message);
+    console.error("🚨 API Route Error:", error.message);
     return NextResponse.json(
-      { error: `Failed to fetch analytics: ${(error as Error).message}` },
+      { error: `Failed to fetch analytics: ${error.message}` },
       { status: 500 }
     );
   }
