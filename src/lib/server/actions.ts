@@ -356,7 +356,7 @@ export async function updateNews(
     let imageBeforeUrl: string | null = null;
     let imageAfterUrl: string | null = null;
 
-    const uploadFile = async (file: File, folder: string) => {
+    const uploadFile = async (file: File, folder: string): Promise<string> => {
       const fileExt = file.name.split(".").pop();
       const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
 
@@ -384,7 +384,7 @@ export async function updateNews(
         throw new Error("Failed to retrieve public URL");
       }
 
-      return data.publicUrl;
+      return data.publicUrl; // Returtypen er nu `string`
     };
 
     if (formType === "normal" && image) {
@@ -426,7 +426,17 @@ export async function updateNews(
       throw new Error("User not authenticated");
     }
 
-    const updateData: any = {
+    const updateData: {
+      title: string;
+      desc: string;
+      city: string;
+      formType: "normal" | "beforeAfter";
+      image: string | null;
+      imageBefore: string | null;
+      imageAfter: string | null;
+      creator_id: string;
+      created_at?: string;
+    } = {
       title,
       desc,
       city,
