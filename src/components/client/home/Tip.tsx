@@ -29,8 +29,8 @@ const Tip = () => {
           Efter du har fået en service
         </h4>
         <p className="tracking-wide">
-          Indberet beløbet på Skat.dk under "Servicefradrag" og få en del af
-          udgifterne tilbage i skat.
+          Indberet beløbet på Skat.dk under &quot;Servicefradrag&quot; og få en
+          del af udgifterne tilbage i skat.
         </p>
         <p className="text-sm text-gray-500">Kilde: Skat.dk</p>
       </div>
