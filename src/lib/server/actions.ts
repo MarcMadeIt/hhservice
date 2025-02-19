@@ -346,7 +346,8 @@ export async function updateNews(
   formType: "normal" | "beforeAfter",
   image?: File,
   imageBefore?: File,
-  imageAfter?: File
+  imageAfter?: File,
+  created_at?: string
 ): Promise<void> {
   const supabase = await createServerClientInstance();
 
@@ -425,18 +426,24 @@ export async function updateNews(
       throw new Error("User not authenticated");
     }
 
+    const updateData: any = {
+      title,
+      desc,
+      city,
+      formType,
+      image: imageUrl,
+      imageBefore: imageBeforeUrl,
+      imageAfter: imageAfterUrl,
+      creator_id: userData.user.id,
+    };
+
+    if (created_at) {
+      updateData.created_at = created_at;
+    }
+
     const { error } = await supabase
       .from("news")
-      .update({
-        title,
-        desc,
-        city,
-        formType,
-        image: imageUrl,
-        imageBefore: imageBeforeUrl,
-        imageAfter: imageAfterUrl,
-        creator_id: userData.user.id,
-      })
+      .update(updateData)
       .eq("id", id);
 
     if (error) {

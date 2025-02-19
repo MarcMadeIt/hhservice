@@ -29,22 +29,33 @@ const UpdateNews = ({
     image: "",
     imageBefore: "",
     imageAfter: "",
+    created_at: "", // Add created_at to errors object
   });
   const [loading, setLoading] = useState(false);
   const [formType, setFormType] = useState<"normal" | "beforeAfter">("normal");
   const [showToast, setShowToast] = useState(false);
+  const [createdAt, setCreatedAt] = useState<string>("");
 
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const news = await getNewsById(newsId);
-        setTitle(news.title);
-        setDesc(news.desc);
-        setCity(news.city);
-        setFormType(news.formType);
-        setExistingImage(news.image);
-        setExistingImageBefore(news.imageBefore);
-        setExistingImageAfter(news.imageAfter);
+        if (!news) {
+          console.error("News not found");
+          return;
+        }
+        setTitle(news.title || "");
+        setDesc(news.desc || "");
+        setCity(news.city || "");
+        setFormType(news.formType || "normal");
+        setExistingImage(news.image || null);
+        setExistingImageBefore(news.imageBefore || null);
+        setExistingImageAfter(news.imageAfter || null);
+        setCreatedAt(
+          news.created_at
+            ? new Date(news.created_at).toISOString().split("T")[0]
+            : ""
+        );
       } catch (error) {
         console.error("Failed to fetch news:", error);
       }
@@ -65,12 +76,25 @@ const UpdateNews = ({
         image: "",
         imageBefore: "",
         imageAfter: "",
+        created_at: "",
       });
       setLoading(false);
       return;
     }
 
     try {
+      const formData = new FormData();
+      formData.append("newsId", newsId.toString());
+      formData.append("title", title);
+      formData.append("desc", desc);
+      formData.append("city", city);
+      formData.append("formType", formType);
+      formData.append("createdAt", createdAt);
+
+      if (image) formData.append("image", image);
+      if (imageBefore) formData.append("imageBefore", imageBefore);
+      if (imageAfter) formData.append("imageAfter", imageAfter);
+
       await updateNews(
         newsId,
         title,
@@ -79,7 +103,8 @@ const UpdateNews = ({
         formType,
         image || undefined,
         imageBefore || undefined,
-        imageAfter || undefined
+        imageAfter || undefined,
+        createdAt
       );
 
       onNewsUpdated();
@@ -206,6 +231,26 @@ const UpdateNews = ({
               {errors.city && (
                 <span className="absolute -bottom-4 text-xs text-red-500">
                   {errors.city}
+                </span>
+              )}
+            </div>
+            <div className="flex flex-col gap-2 relative w-full">
+              <label className="form-control">
+                <div className="label">
+                  <span className="label-text">Oprettelsesdato</span>
+                </div>
+                <input
+                  name="createdAt"
+                  type="date"
+                  className="input input-bordered input-md"
+                  value={createdAt}
+                  onChange={(e) => setCreatedAt(e.target.value)}
+                  required
+                />
+              </label>
+              {errors.created_at && (
+                <span className="absolute -bottom-4 text-xs text-red-500">
+                  {errors.created_at}
                 </span>
               )}
             </div>

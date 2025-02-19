@@ -21,10 +21,6 @@ export async function GET(request) {
       : endAt - 7 * 24 * 60 * 60 * 1000;
 
   try {
-    console.log(
-      `➡️ Fetching stats from: ${BASE_URL}/api/websites/${WEBSITE_ID}/stats`
-    );
-
     // Hent statistik (pageviews, visits, visitors)
     const statsResponse = await fetch(
       `${BASE_URL}/api/websites/${WEBSITE_ID}/stats?startAt=${startAt}&endAt=${endAt}`,
@@ -37,10 +33,6 @@ export async function GET(request) {
     );
     const statsData = await statsResponse.json();
 
-    console.log(
-      `➡️ Fetching page metrics from: ${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?type=url`
-    );
-
     // Hent de mest besøgte sider
     const pagesResponse = await fetch(
       `${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?startAt=${startAt}&endAt=${endAt}&type=url`,
@@ -52,10 +44,6 @@ export async function GET(request) {
       }
     );
     const pagesData = await pagesResponse.json();
-
-    console.log(
-      `➡️ Fetching device metrics from: ${BASE_URL}/api/websites/${WEBSITE_ID}/metrics?type=device`
-    );
 
     // Hent enhedsstatistik
     const devicesResponse = await fetch(
