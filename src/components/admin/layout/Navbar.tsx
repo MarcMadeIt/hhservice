@@ -108,7 +108,7 @@ const Navbar = () => {
         </div>
       </div>
       <span className="text-[11px] items-center justify-center p-4 hidden sm:flex">
-        © Crafted by Marccode
+        © 2025 Crafted by Marccode
       </span>
     </div>
   );
