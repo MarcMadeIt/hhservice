@@ -183,9 +183,9 @@ export const services: ServiceData[] = [
     key: "snerydning",
     name: "Snerydning",
     icon: "/snow.png",
-    image1: "/grass1.jpeg",
-    image2: "/grass2.jpeg",
-    image3: "/grass3.jpeg",
+    image1: "/snow1.jpeg",
+    image2: "/snow2.jpeg",
+    image3: "/snow3.jpeg",
     introText: "Hold dine stier og indkørsler fri for sne – nemt og effektivt!",
     moreText:
       "Vi sørger for, at du ikke behøver bekymre dig om glatte veje og fortove i vintermånederne. Vores snerydningsservice sikrer, at du kan komme sikkert frem.",
