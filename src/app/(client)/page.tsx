@@ -17,14 +17,14 @@ const Home = () => {
       <section className="h-full md:h-[800px] ">
         <Services />
       </section>
-      <section className="h-[300px] sm:h-[380px]  md:h-[500px]">
-        <Review />
+      <section className="h-full lg:h-[800px]">
+        <About />
       </section>
       <section className="h-full md:h-[800px]">
         <Contact />
       </section>
-      <section className="h-full lg:h-[800px]">
-        <About />
+      <section className="h-[380px]  md:h-[500px]">
+        <Review />
       </section>
       <section className="h-full md:h-[800px]">
         <FAQ />

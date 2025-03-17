@@ -1,3 +1,4 @@
+import { FaCheckCircle } from "react-icons/fa";
 import { FaLightbulb } from "react-icons/fa6";
 
 const Tip = () => {
@@ -25,8 +26,8 @@ const Tip = () => {
           35.000 kr. for to voksne. Det gælder kun for arbejdsløn, ikke
           materialer.
         </p>
-        <h4 className="font-semibold tracking-wide">
-          Efter du har fået en service
+        <h4 className="font-semibold tracking-wide flex items-center gap-2">
+          <FaCheckCircle /> Når din service er udført
         </h4>
         <p className="tracking-wide">
           Indberet beløbet på Skat.dk under &quot;Servicefradrag&quot; og få en

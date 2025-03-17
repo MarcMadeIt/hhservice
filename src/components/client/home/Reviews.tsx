@@ -58,11 +58,11 @@ const Review = () => {
               {duplicatedReviews.map((item, index) => (
                 <div
                   key={index}
-                  className="card bg-base-100 card-compact shadow-lg rounded-md p-3 mx-4 min-w-[250px] md:min-w-[350px] md:h-[200px]"
+                  className="card bg-base-100 card-compact shadow-lg rounded-md p-3 mx-4 min-w-[280px] md:min-w-[350px] md:h-[200px]"
                 >
                   <div className="card-body p-5">
                     <ReviewsRating rate={item.rate} />
-                    <p className="text-xs md:text-lg">{item.desc}</p>
+                    <p className="text-xs md:text-base">{item.desc}</p>
                     <h2 className="text-xs md:text-base font-bold flex items-center gap-1">
                       {item.name} fra {item.city} <FaLocationDot />
                     </h2>
@@ -72,6 +72,9 @@ const Review = () => {
             </motion.div>
           )}
         </div>
+        <span className="absolute text-green-200 font-light bottom-4 right-4 md:bottom-6 md:right-6  text-[10px] md:text-xs ">
+          Anmeldelser fra HandyHand
+        </span>
       </div>
       <div className="absolute -top-16 right-4 md:-top-24 md:right-16 p-4 w-20 md:w-28 h-auto">
         <Image src="/grass-reviews.png" alt="græs" width={200} height={200} />
