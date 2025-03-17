@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
   try {
     const form = new IncomingForm({
       multiples: false,
-      maxFileSize: 5 * 1024 * 1024, // 5MB limit
+      maxFileSize: 5 * 1024 * 1024,
     });
 
     const incomingReq: IncomingMessage =

@@ -6,6 +6,7 @@ import {
 } from "@/utils/supabase/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import sharp from "sharp";
 
 //REGISTER
 
@@ -268,7 +269,7 @@ export async function createNews(
     let imageAfterUrl: string | null = null;
 
     const uploadFile = async (file: File, folder: string) => {
-      const fileExt = file.name.split(".").pop();
+      const fileExt = "webp"; // Force WebP format
       const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
 
       const { data: userData, error: userError } =
@@ -279,14 +280,27 @@ export async function createNews(
 
       const filePath = `${folder}/${userData.user.id}/${fileName}`;
 
+      // Read file as buffer
+      const fileBuffer = await file.arrayBuffer();
+
+      // Process the image with sharp (resize, compress, convert to WebP)
+      const optimizedImage = await sharp(Buffer.from(fileBuffer))
+        .resize(800) // Resize max width to 800px
+        .webp({ quality: 80 }) // Convert to WebP, quality 80%
+        .toBuffer();
+
+      // Upload the processed image to Supabase
       const { error: uploadError } = await supabase.storage
         .from("news-images")
-        .upload(filePath, file);
+        .upload(filePath, optimizedImage, {
+          contentType: "image/webp",
+        });
 
       if (uploadError) {
         throw new Error(`File upload failed: ${uploadError.message}`);
       }
 
+      // Retrieve the public URL of the uploaded file
       const { data } = await supabase.storage
         .from("news-images")
         .getPublicUrl(filePath);
