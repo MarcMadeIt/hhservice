@@ -12,7 +12,6 @@ export const config = {
   runtime: "nodejs",
 };
 
-// ✅ **Autentificering**
 async function isAdmin(): Promise<boolean> {
   const supabase = await createAdmin();
   const {
@@ -21,7 +20,6 @@ async function isAdmin(): Promise<boolean> {
   return !!user;
 }
 
-// ✅ **Konverter NextRequest til IncomingMessage**
 async function convertNextRequestToIncomingMessage(
   req: NextRequest
 ): Promise<IncomingMessage> {
@@ -52,7 +50,6 @@ async function convertNextRequestToIncomingMessage(
   }) as IncomingMessage;
 }
 
-// ✅ **Resize & konverter billede**
 async function processImage(
   filePath: string,
   outputPath: string,
@@ -71,13 +68,12 @@ async function processImage(
 
   await sharp(filePath)
     .resize(sizes[fileType].width, sizes[fileType].height, { fit: "cover" })
-    .toFormat("webp") // Change to webp
+    .toFormat("webp")
     .toFile(tempOutputPath);
 
   await fs.move(tempOutputPath, outputPath, { overwrite: true });
 }
 
-// ✅ **Opdater version**
 const versionFilePath = path.join(process.cwd(), "public", "version.json");
 
 async function updateVersion(fileType: string) {
@@ -87,13 +83,11 @@ async function updateVersion(fileType: string) {
     versions = await fs.readJson(versionFilePath);
   }
 
-  // Opdater kun det specifikke billede
   versions[fileType] = versions[fileType] + 1;
 
   await fs.writeJson(versionFilePath, versions);
 }
 
-// ✅ **UPLOAD HANDLER**
 export async function POST(req: NextRequest) {
   if (!(await isAdmin())) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 403 });
@@ -131,7 +125,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // ✅ **Valider filtype**
     const fileType = Array.isArray(fields.type) ? fields.type[0] : fields.type;
     const validTypes = ["hero", "about"];
 
@@ -142,11 +135,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // ✅ **Gem i `/public/` mappen**
     const appPublicDir = path.join(process.cwd(), "public");
-    await fs.ensureDir(appPublicDir); // Sørg for at `public` eksisterer
+    await fs.ensureDir(appPublicDir);
 
-    const fileName = `${fileType}.webp`; // Change to webp
+    const fileName = `${fileType}.webp`;
     const newPath = path.join(appPublicDir, fileName);
 
     await processImage(file.filepath, newPath, fileType);
