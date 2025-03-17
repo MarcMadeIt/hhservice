@@ -43,8 +43,8 @@ const About = () => {
             <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi hjælper både private og virksomheder i Halsnæs og Nordsjælland
               med alt fra græsslåning, hækkeklipning og brolægning til
-              træfældning og vedligeholdelse. For os handler det ikke kun om at
-              passe en have – vi ønsker at skabe uderum, som vores kunder
+              Ukrudtsbekæmpelse og vedligeholdelse. For os handler det ikke kun
+              om at passe en have – vi ønsker at skabe uderum, som vores kunder
               virkelig kan nyde.
             </p>
             <p className="text-[15px] md:text-base font-medium tracking-wide">
