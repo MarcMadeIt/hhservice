@@ -280,21 +280,25 @@ export async function createNews(
 
       const filePath = `${folder}/${userData.user.id}/${fileName}`;
 
-      // Read file as stream to prevent excessive memory use
+      // Read file into buffer
       const fileBuffer = await file.arrayBuffer();
-      const sharpStream = sharp(Buffer.from(fileBuffer))
+
+      // Process image with sharp
+      const optimizedImage = await sharp(Buffer.from(fileBuffer))
+        .rotate() // Fix rotation issues from Exif metadata
         .resize({
-          width: 1280, // 16:9, juster hvis nødvendigt
-          height: 720,
-          fit: "cover",
+          width: 1024, // Sæt størrelse (16:9 format)
+          height: 576,
+          fit: "cover", // Sikrer at den beskærer korrekt
+          position: "center", // Sikrer at billedet tages fra midten
         })
-        .webp({ quality: 75 })
+        .webp({ quality: 65 }) // Reducer filstørrelse
         .toBuffer();
 
-      // Upload direkte fra stream
+      // Upload the optimized image
       const { error: uploadError } = await supabase.storage
         .from("news-images")
-        .upload(filePath, await sharpStream, {
+        .upload(filePath, optimizedImage, {
           contentType: "image/webp",
         });
 
@@ -302,6 +306,7 @@ export async function createNews(
         throw new Error(`File upload failed: ${uploadError.message}`);
       }
 
+      // Retrieve public URL
       const { data } = await supabase.storage
         .from("news-images")
         .getPublicUrl(filePath);

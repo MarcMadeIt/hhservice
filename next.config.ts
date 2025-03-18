@@ -22,7 +22,7 @@ const nextConfig = {
         source:
           "/snerydning-frederiksvaerk-halsnaes-haekkeklip-melby-hundested-liseleje-dronningmoelle-kulhuse-have",
         destination: "/service/snerydning",
-        permanent: true, // SEO-venlig 301 redirect
+        permanent: true,
       },
       {
         source:
