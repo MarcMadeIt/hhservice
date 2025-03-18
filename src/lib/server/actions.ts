@@ -377,7 +377,7 @@ export async function updateNews(
     let imageAfterUrl: string | null = null;
 
     const uploadFile = async (file: File, folder: string): Promise<string> => {
-      const fileExt = file.name.split(".").pop();
+      const fileExt = "webp"; // Konverter til WebP
       const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
 
       const { data: userData, error: userError } =
@@ -388,14 +388,33 @@ export async function updateNews(
 
       const filePath = `${folder}/${userData.user.id}/${fileName}`;
 
+      // Læs fil som buffer
+      const fileBuffer = await file.arrayBuffer();
+
+      // Processér billedet med sharp
+      const optimizedImage = await sharp(Buffer.from(fileBuffer))
+        .rotate() // Fix rotation fra Exif metadata
+        .resize({
+          width: 1024, // Standard størrelse (16:9)
+          height: 576,
+          fit: "cover", // Sikrer, at billedet bliver beskåret korrekt
+          position: "center",
+        })
+        .webp({ quality: 65 }) // Reducér filstørrelse for hurtigere load
+        .toBuffer();
+
+      // Upload det optimerede billede til Supabase
       const { error: uploadError } = await supabase.storage
         .from("news-images")
-        .upload(filePath, file);
+        .upload(filePath, optimizedImage, {
+          contentType: "image/webp",
+        });
 
       if (uploadError) {
         throw new Error(`File upload failed: ${uploadError.message}`);
       }
 
+      // Hent den offentlige URL
       const { data } = await supabase.storage
         .from("news-images")
         .getPublicUrl(filePath);
@@ -404,18 +423,21 @@ export async function updateNews(
         throw new Error("Failed to retrieve public URL");
       }
 
-      return data.publicUrl; // Returtypen er nu `string`
+      return data.publicUrl;
     };
 
-    if (formType === "normal" && image) {
-      imageUrl = await uploadFile(image, "normal");
-    } else {
-      const { data: existingNews } = await supabase
-        .from("news")
-        .select("image")
-        .eq("id", id)
-        .single();
-      imageUrl = existingNews?.image || null;
+    // Håndtering af image upload (kun hvis nyt billede vælges)
+    if (formType === "normal") {
+      if (image) {
+        imageUrl = await uploadFile(image, "normal");
+      } else {
+        const { data: existingNews } = await supabase
+          .from("news")
+          .select("image")
+          .eq("id", id)
+          .single();
+        imageUrl = existingNews?.image || null;
+      }
     }
 
     if (formType === "beforeAfter") {
