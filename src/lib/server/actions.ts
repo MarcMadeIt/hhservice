@@ -285,8 +285,12 @@ export async function createNews(
 
       // Process the image with sharp (resize, compress, convert to WebP)
       const optimizedImage = await sharp(Buffer.from(fileBuffer))
-        .resize(800) // Resize max width to 800px
-        .webp({ quality: 80 }) // Convert to WebP, quality 80%
+        .resize({
+          width: 1280, // Ensures 16:9 aspect ratio (1280x720)
+          height: 720,
+          fit: "cover", // Crops or scales image to fit exactly 16:9
+        })
+        .webp({ quality: 75, effort: 6 }) // Reduce quality slightly for better compression
         .toBuffer();
 
       // Upload the processed image to Supabase
