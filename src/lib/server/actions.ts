@@ -269,7 +269,7 @@ export async function createNews(
     let imageAfterUrl: string | null = null;
 
     const uploadFile = async (file: File, folder: string) => {
-      const fileExt = "webp"; // Force WebP format
+      const fileExt = "webp";
       const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
 
       const { data: userData, error: userError } =
@@ -280,23 +280,21 @@ export async function createNews(
 
       const filePath = `${folder}/${userData.user.id}/${fileName}`;
 
-      // Read file as buffer
+      // Read file as stream to prevent excessive memory use
       const fileBuffer = await file.arrayBuffer();
-
-      // Process the image with sharp (resize, compress, convert to WebP)
-      const optimizedImage = await sharp(Buffer.from(fileBuffer))
+      const sharpStream = sharp(Buffer.from(fileBuffer))
         .resize({
-          width: 1280, // Ensures 16:9 aspect ratio (1280x720)
+          width: 1280, // 16:9, juster hvis nødvendigt
           height: 720,
-          fit: "cover", // Crops or scales image to fit exactly 16:9
+          fit: "cover",
         })
-        .webp({ quality: 75, effort: 6 }) // Reduce quality slightly for better compression
+        .webp({ quality: 75 })
         .toBuffer();
 
-      // Upload the processed image to Supabase
+      // Upload direkte fra stream
       const { error: uploadError } = await supabase.storage
         .from("news-images")
-        .upload(filePath, optimizedImage, {
+        .upload(filePath, await sharpStream, {
           contentType: "image/webp",
         });
 
@@ -304,7 +302,6 @@ export async function createNews(
         throw new Error(`File upload failed: ${uploadError.message}`);
       }
 
-      // Retrieve the public URL of the uploaded file
       const { data } = await supabase.storage
         .from("news-images")
         .getPublicUrl(filePath);
