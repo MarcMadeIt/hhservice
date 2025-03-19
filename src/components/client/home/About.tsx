@@ -8,9 +8,13 @@ import { FaLeaf, FaSeedling, FaTree } from "react-icons/fa6";
 
 const About = () => {
   const [imageVersion, setImageVersion] = useState(1);
+  const [clientTimestamp, setClientTimestamp] = useState(""); // Avoids mismatch during SSR
 
   useEffect(() => {
     getImageVersion("about").then(setImageVersion);
+
+    // Add timestamp only on the client
+    setClientTimestamp(`&t=${Date.now()}`);
   }, []);
 
   return (
@@ -19,7 +23,7 @@ const About = () => {
         <div className="flex-1 p-10 hidden lg:flex">
           <div className="relative w-full lg:h-full rounded-lg overflow-hidden">
             <Image
-              src={`/about.webp?v=${imageVersion}`}
+              src={`/about.webp?v=${imageVersion}${clientTimestamp}`}
               alt="Beskrivelse af billedet"
               fill
               className="absolute object-cover"
@@ -55,7 +59,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 flex flex-col gap-3 items-start">
               <ul className="flex flex-col gap-3 list-none font-medium ">
-                <li className="flex items-center gap-2 text-  v md:text-lg tracking-wide">
+                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaLeaf /> Græsslåning & plænepleje
                 </li>
                 <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">

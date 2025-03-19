@@ -16,6 +16,15 @@ const nextConfig = {
     },
   },
 
+  async headers() {
+    return [
+      {
+        source: "/about.webp",
+        headers: [{ key: "Cache-Control", value: "no-store, must-revalidate" }],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       {

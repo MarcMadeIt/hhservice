@@ -64,6 +64,11 @@ async function processImage(
     throw new Error("Invalid file type");
   }
 
+  // Check if an old image exists and delete it
+  if (await fs.pathExists(outputPath)) {
+    await fs.remove(outputPath);
+  }
+
   const tempOutputPath = `${outputPath}.tmp`;
 
   await sharp(filePath)
