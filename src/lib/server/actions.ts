@@ -287,8 +287,8 @@ export async function createNews(
       const optimizedImage = await sharp(Buffer.from(fileBuffer))
         .rotate() // Fix rotation issues from Exif metadata
         .resize({
-          width: 1024, // Sæt størrelse (16:9 format)
-          height: 576,
+          width: 1024, // Beholder bredde
+          height: 768, // Ændrer højde til 4:3 format
           fit: "cover", // Sikrer at den beskærer korrekt
           position: "center", // Sikrer at billedet tages fra midten
         })

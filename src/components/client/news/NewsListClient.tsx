@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
+import ReactCompareImage from "react-compare-image";
 
 interface NewsItem {
   id: string;
@@ -32,42 +33,30 @@ const NewsListClient = ({ news }: NewsListClientProps) => {
       {news.map((item) => (
         <div
           key={item.id}
-          className="card lg:card-side bg-base-100 shadow-md rounded-xl sm:rounded-lg  lg:h-72 xl:h-[350px]"
+          className="card lg:card-side bg-base-100 shadow-md rounded-xl sm:rounded-lg lg:h-72 xl:h-[330px]"
         >
-          <figure className="w-full lg:w-1/2">
+          <figure className="relative w-full lg:w-1/2 h-56 lg:h-full">
             {item.imageBefore && item.imageAfter ? (
-              <div className="diff aspect-[16/9] m-2 sm:m-0" tabIndex={0}>
-                <div className="diff-item-1 ">
-                  <Image
-                    src={item.imageBefore || ""}
-                    alt={`${item.title} før`}
-                    width={500}
-                    height={300}
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg  overflow-hidden sm:overflow-auto"
-                  />
-                </div>
-
-                <div className="diff-item-2">
-                  <Image
-                    src={item.imageAfter || ""}
-                    alt={`${item.title} efter`}
-                    width={500}
-                    height={300}
-                    style={{ objectFit: "cover" }}
-                    className="rounded-lg overflow-hidden sm:overflow-auto"
-                  />
-                </div>
-                <div className="diff-resizer"></div>
+              <div className="w-full h-auto">
+                <ReactCompareImage
+                  leftImage={item.imageAfter}
+                  rightImage={item.imageBefore}
+                  sliderPositionPercentage={0.9}
+                  sliderLineColor="#ffffff"
+                  leftImageAlt="Efter billede"
+                  rightImageAlt="Før billede"
+                  handleSize={45}
+                  sliderLineWidth={2}
+                />
               </div>
             ) : (
-              <div className="relative w-full h-full pb-[56.25%] overflow-hidden">
+              <div className="relative w-full h-full">
                 <Image
                   src={item.image || ""}
                   alt={item.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: "cover" }}
+                  className="object-cover"
                 />
               </div>
             )}

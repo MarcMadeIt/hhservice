@@ -28,20 +28,3 @@ a {
   text-decoration: none;
 
 }
-
-.diff {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.diff-item-1,
-.diff-item-2 {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-.diff-resizer {
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: none;
-}

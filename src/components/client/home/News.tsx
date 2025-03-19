@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getLatestNews } from "@/lib/client/actions";
 import { FaLocationDot } from "react-icons/fa6";
+import ReactCompareImage from "react-compare-image";
 
 interface NewsItem {
   id: number;
@@ -54,28 +55,19 @@ const News = () => {
                 key={item.id}
                 className="card card-compact h-auto w-[270px] sm:w-[400px] md:w-[600px] text-neutral-content carousel-item"
               >
-                <figure className="rounded-md  ring-1 md:ring-2 ring-neutral-content">
+                <figure className="rounded-md  ring-1 md:ring-2 ring-neutral-content h-44 sm:h-56 md:h-80 w-full">
                   {item.formType === "beforeAfter" ? (
-                    <div className="diff aspect-[16/9]">
-                      <div className="diff-item-1">
-                        <Image
-                          src={item.imageBefore || FALLBACK_IMAGE}
-                          alt={`${item.title} før`}
-                          width={500}
-                          height={300}
-                          style={{ objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="diff-item-2">
-                        <Image
-                          src={item.imageAfter || FALLBACK_IMAGE}
-                          alt={`${item.title} efter`}
-                          width={500}
-                          height={300}
-                          style={{ objectFit: "cover" }}
-                        />
-                      </div>
-                      <div className="diff-resizer"></div>
+                    <div className="w-full h-auto">
+                      <ReactCompareImage
+                        leftImage={item.imageAfter}
+                        rightImage={item.imageBefore}
+                        sliderPositionPercentage={0.9}
+                        sliderLineColor="#ffffff"
+                        leftImageAlt="Efter billede"
+                        rightImageAlt="Før billede"
+                        handleSize={35}
+                        sliderLineWidth={2}
+                      />
                     </div>
                   ) : (
                     <div className="relative w-full h-0 pb-[56.25%] overflow-hidden">

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FaPen, FaTrash } from "react-icons/fa6";
 import { getAllNews, deleteNews } from "@/lib/server/actions";
 import UpdateNews from "./updateNews/UpdateNews";
+import ReactCompareImage from "react-compare-image";
 
 interface NewsListProps {
   view: "cards" | "list";
@@ -102,37 +103,28 @@ const NewsList = ({ view, page, setTotal, onEditNews }: NewsListProps) => {
                   key={item.id}
                   className="card card-compact shadow-lg rounded-md"
                 >
-                  <figure>
+                  <figure className="relative w-full aspect-[4/3] h-56 md:h-40 xl:h-56 overflow-hidden">
                     {item.formType === "beforeAfter" ? (
-                      <div className="diff aspect-[16/9]">
-                        <div className="diff-item-1">
-                          <Image
-                            src={item.imageBefore || FALLBACK_IMAGE}
-                            alt={`${item.title} før`}
-                            width={500}
-                            height={300}
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div className="diff-item-2">
-                          <Image
-                            src={item.imageAfter || FALLBACK_IMAGE}
-                            alt={`${item.title} efter`}
-                            width={500}
-                            height={300}
-                            style={{ objectFit: "cover" }}
-                          />
-                        </div>
-                        <div className="diff-resizer"></div>
+                      <div className=" w-full h-auto">
+                        <ReactCompareImage
+                          leftImage={item.imageAfter}
+                          rightImage={item.imageBefore}
+                          sliderPositionPercentage={0.9}
+                          sliderLineColor="#ffffff"
+                          leftImageAlt="Efter billede"
+                          rightImageAlt="Før billede"
+                          handleSize={35}
+                          sliderLineWidth={2}
+                        />
                       </div>
                     ) : (
-                      <div className="relative w-full h-0 pb-[56.25%] overflow-hidden">
+                      <div className="relative w-full h-full">
                         <Image
                           src={item.image || FALLBACK_IMAGE}
                           alt={item.title}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          style={{ objectFit: "cover" }}
+                          className="object-cover"
                         />
                       </div>
                     )}
