@@ -5,7 +5,7 @@ import fs from "fs-extra";
 import sharp from "sharp";
 import { Readable } from "stream";
 import { IncomingMessage } from "http";
-import { createServerClientInstance } from "@/utils/supabase/server"; // Ensure this import is correct
+import { createAdmin } from "@/utils/supabase/server";
 
 export const config = {
   api: { bodyParser: false },
@@ -13,8 +13,11 @@ export const config = {
 };
 
 async function isAdmin(req: NextRequest): Promise<boolean> {
-  const supabase = await createServerClientInstance();
+  console.log("🔍 Checking Admin Authentication...");
 
+  const supabase = await createAdmin(); // ✅ Uses Service Role
+
+  // ✅ Get token manually from Authorization header
   const authHeader = req.headers.get("authorization");
 
   if (!authHeader) {
@@ -22,19 +25,22 @@ async function isAdmin(req: NextRequest): Promise<boolean> {
     return false;
   }
 
-  const token = authHeader.replace("Bearer ", "");
+  const token = authHeader.replace("Bearer ", "").trim();
+  console.log("🟢 Token received:", token);
 
+  // ✅ Verify the user with the token
   const {
     data: { user },
     error,
   } = await supabase.auth.getUser(token);
 
-  if (error) {
-    console.error("🔴 Supabase Auth error:", error.message);
+  if (error || !user) {
+    console.error("🔴 Authentication Failed: ", error?.message);
     return false;
   }
 
-  return !!user;
+  console.log("✅ User Authenticated:", user.email);
+  return true;
 }
 
 async function convertNextRequestToIncomingMessage(
@@ -55,6 +61,7 @@ async function convertNextRequestToIncomingMessage(
   }
 
   const buffer = Buffer.concat(chunks);
+
   const stream = new Readable();
   stream.push(buffer);
   stream.push(null);
@@ -80,18 +87,7 @@ async function processImage(
     throw new Error("Invalid file type");
   }
 
-  console.log(`🟢 Processing image: ${filePath} -> ${outputPath}`);
-
-  if (await fs.pathExists(outputPath)) {
-    console.log(`🟠 Deleting old file: ${outputPath}`);
-    await fs.remove(outputPath);
-  } else {
-    console.log(`🟢 No existing file found, skipping delete.`);
-  }
-
   const tempOutputPath = `${outputPath}.tmp`;
-
-  console.log(`🟢 Resizing and converting image to WebP: ${tempOutputPath}`);
 
   await sharp(filePath)
     .resize(sizes[fileType].width, sizes[fileType].height, { fit: "cover" })
@@ -99,8 +95,6 @@ async function processImage(
     .toFile(tempOutputPath);
 
   await fs.move(tempOutputPath, outputPath, { overwrite: true });
-
-  console.log(`✅ Image successfully saved: ${outputPath}`);
 }
 
 const versionFilePath = path.join(process.cwd(), "public", "version.json");
@@ -119,21 +113,14 @@ async function updateVersion(fileType: string) {
 
 export async function POST(req: NextRequest) {
   if (!(await isAdmin(req))) {
-    // ✅ Pass `req` to `isAdmin()`
     return NextResponse.json({ message: "Unauthorized" }, { status: 403 });
   }
 
   try {
-    console.log("🟢 Upload request received");
-
     const form = new IncomingForm({
       multiples: false,
       maxFileSize: 5 * 1024 * 1024,
-      uploadDir: path.join(process.cwd(), "public/uploads"), // ✅ Fix: Explicit upload directory
-      keepExtensions: true,
     });
-
-    console.log("🟢 Parsing request...");
 
     const incomingReq: IncomingMessage =
       await convertNextRequestToIncomingMessage(req);
@@ -142,37 +129,29 @@ export async function POST(req: NextRequest) {
       await new Promise((resolve, reject) => {
         form.parse(incomingReq, (err, fields, files) => {
           if (err) {
-            console.error("🔴 Formidable parsing error:", err);
             reject(err);
           } else {
-            console.log("🟢 Parsed fields:", fields);
-            console.log("🟢 Parsed files:", files);
             resolve({ fields, files });
           }
         });
       });
 
     if (!files.file) {
-      console.error("🔴 No file received.");
       return NextResponse.json({ message: "No file found" }, { status: 400 });
     }
 
     const file = Array.isArray(files.file) ? files.file[0] : files.file;
     if (!file.filepath) {
-      console.error("🔴 File upload failed - missing filepath");
       return NextResponse.json(
-        { message: "File upload failed - missing filepath" },
+        { message: "File upload failed" },
         { status: 400 }
       );
     }
-
-    console.log(`🟢 Received file at: ${file.filepath}`);
 
     const fileType = Array.isArray(fields.type) ? fields.type[0] : fields.type;
     const validTypes = ["hero", "about"];
 
     if (!fileType || !validTypes.includes(fileType)) {
-      console.error("🔴 Invalid file type:", fileType);
       return NextResponse.json(
         { message: "Invalid file type. Use 'hero' or 'about'." },
         { status: 400 }
@@ -185,24 +164,18 @@ export async function POST(req: NextRequest) {
     const fileName = `${fileType}.webp`;
     const newPath = path.join(appPublicDir, fileName);
 
-    console.log(`🟢 Saving processed image to: ${newPath}`);
-
     await processImage(file.filepath, newPath, fileType);
     await updateVersion(fileType);
-
-    console.log("✅ Upload successful!");
 
     return NextResponse.json({
       message: "Upload successful!",
       filePath: `/${fileName}`,
     });
   } catch (error) {
-    console.error("🔴 Upload failed:", error);
-
     return NextResponse.json(
       {
         message: "Upload failed",
-        error: error instanceof Error ? error.message : JSON.stringify(error),
+        error: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 }
     );

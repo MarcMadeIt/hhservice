@@ -279,23 +279,19 @@ export async function createNews(
       }
 
       const filePath = `${folder}/${userData.user.id}/${fileName}`;
-
-      // Read file into buffer
       const fileBuffer = await file.arrayBuffer();
 
-      // Process image with sharp
       const optimizedImage = await sharp(Buffer.from(fileBuffer))
-        .rotate() // Fix rotation issues from Exif metadata
+        .rotate()
         .resize({
-          width: 1024, // Beholder bredde
-          height: 768, // Ændrer højde til 4:3 format
-          fit: "cover", // Sikrer at den beskærer korrekt
-          position: "center", // Sikrer at billedet tages fra midten
+          width: 1024,
+          height: 768,
+          fit: "cover",
+          position: "center",
         })
-        .webp({ quality: 65 }) // Reducer filstørrelse
+        .webp({ quality: 65 })
         .toBuffer();
 
-      // Upload the optimized image
       const { error: uploadError } = await supabase.storage
         .from("news-images")
         .upload(filePath, optimizedImage, {
