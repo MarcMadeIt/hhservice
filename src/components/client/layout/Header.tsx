@@ -90,7 +90,9 @@ const Header = () => {
                 </li>
                 <li>
                   {" "}
-                  <Link href="/service/ukrudtfjernelse">Udkrudtfjernelse</Link>
+                  <Link href="/service/ukrudtsbekaempelse">
+                    Ukrudtbekæmpelse
+                  </Link>
                 </li>
                 <li>
                   {" "}

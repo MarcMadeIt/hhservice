@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "⚠️ Installing dependencies..."
           cd /home/hhservice/htdocs/hhservice.dk
-          npm ci  # Hurtigere end "npm install" og sikrer stabilitet
+          npm ci
 
       - name: 🔧 Build Next.js project
         run: |

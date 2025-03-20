@@ -54,7 +54,7 @@ const ServiceClient = ({
         }}
       />
 
-      <div className="mt-[62px] md:mt-[95px] p-4 w-full h-full flex flex-col justify-center">
+      <div className="mt-[62px] md:mt-[110px] p-4 w-full h-full flex flex-col justify-center">
         <Link
           href="/service"
           className="flex md:hidden items-center gap-2 py-6"
@@ -62,8 +62,8 @@ const ServiceClient = ({
           <FaChevronLeft /> Alle Services
         </Link>
 
-        <div className="flex flex-col gap-16">
-          <div className=" w-full flex justify-between flex-col lg:flex-row gap-10 lg:gap-4 max-w-7xl 2xl:max-w-full">
+        <div className="flex flex-col gap-16 items-center">
+          <div className=" w-full flex justify-between flex-col lg:flex-row gap-16 lg:gap-4 max-w-7xl 2xl:max-w-full">
             <div className="lg:w-2/3 py-4 lg:py-0 flex flex-col items-start justify-center bg-base-200 rounded-lg">
               <div className="flex flex-col max-w-full lg:max-w-2xl xl:max-w-3xl gap-4">
                 <div>

@@ -11,7 +11,6 @@ import Link from "next/link";
 const Service = () => {
   const largeIcons = ["beskaering", "haekkeklipning", "snerydning"];
 
-  // Filtrer "haekklipning" væk fra listen
   const visibleServices = services.filter(
     (service) => service.key !== "haekklipning"
   );
