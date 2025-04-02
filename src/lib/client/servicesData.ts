@@ -197,9 +197,9 @@ export const services: ServiceData[] = [
     key: "bortskaffelse",
     name: "Bortskaffelse",
     icon: "/reno.png",
-    image1: "/grass1.jpeg",
-    image2: "/grass2.jpeg",
-    image3: "/grass3.jpeg",
+    image1: "/remove1.webp",
+    image2: "/remove2.webp",
+    image3: "/remove3.webp",
     introText: "Slip af med have- og byggeaffald uden besvær!",
     moreText:
       "Vi sørger for, at affaldet forsvinder hurtigt og effektivt. Hvad enten det er grene, jord, gamle materialer eller andet, så klarer vi det for dig.",
@@ -225,14 +225,14 @@ export const services: ServiceData[] = [
     key: "byggepladsservice",
     name: "Byggepladsservice",
     icon: "/construction.png",
-    image1: "/grass1.jpeg",
-    image2: "/grass2.jpeg",
-    image3: "/grass3.jpeg",
+    image1: "/bygge1.webp",
+    image2: "/bygge2.webp",
+    image3: "/bygge3.webp",
     introText: "Hold din byggeplads ryddelig og sikker!",
     moreText:
-      "Vi sørger for, at din byggeplads forbliver ren og organiseret, så arbejdet kan forløbe effektivt og sikkert.",
+      "Vi sørger for, at din byggeplads forbliver ren og organiseret, så arbejdet kan forløbe effektivt og sikkert. Vi har desuden teleskoplæsser-certifikat, hvilket betyder, at vi lovligt og sikkert kan betjene maskiner på pladsen, hvis det kræves.",
     outroHeader: "Vi sørger for orden på din byggeplads",
     outroText:
-      "Lad os tage os af oprydningen, så du kan fokusere på byggeriet. Kontakt os i dag for en professionel løsning!",
+      "Lad os tage os af oprydningen, så du kan fokusere på byggeriet. Kontakt os i dag for en professionel løsning med certificeret mandskab!",
   },
 ];

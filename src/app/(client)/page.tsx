@@ -29,7 +29,7 @@ const Home = () => {
       <section className="h-full md:h-[800px]">
         <FAQ />
       </section>
-      <section className="h-[380px] sm:h-[500px] md:h-[670px]">
+      <section className="h-[720px] min-[500px]:h-[500px] md:h-[670px]">
         <News />
       </section>
       <section className="h-full md:h-[500px] mt-10">

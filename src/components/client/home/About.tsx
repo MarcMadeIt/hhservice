@@ -3,17 +3,18 @@
 import { getImageVersion } from "@/lib/server/getImageVersion";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { FaCut, FaTools } from "react-icons/fa";
-import { FaLeaf, FaSeedling, FaTree } from "react-icons/fa6";
+import { FaCut } from "react-icons/fa";
+import { FaSeedling, FaSprayCan } from "react-icons/fa6";
+import { MdGrass } from "react-icons/md";
+import { PiWallFill } from "react-icons/pi";
 
 const About = () => {
   const [imageVersion, setImageVersion] = useState(1);
-  const [clientTimestamp, setClientTimestamp] = useState(""); // Avoids mismatch during SSR
+  const [clientTimestamp, setClientTimestamp] = useState("");
 
   useEffect(() => {
     getImageVersion("about").then(setImageVersion);
 
-    // Add timestamp only on the client
     setClientTimestamp(`&t=${Date.now()}`);
   }, []);
 
@@ -51,28 +52,28 @@ const About = () => {
               om at passe en have – vi ønsker at skabe uderum, som vores kunder
               virkelig kan nyde.
             </p>
-            <p className="text-[15px] md:text-base font-medium tracking-wide hidden md:block">
-              Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage
-              fat i os – vi står klar til at hjælpe!
+            <p className="text-[15px] md:text-base font-medium tracking-wide ">
+              Har du brug for en hjælpende hånd i haven? <br></br> Vi udføre
+              stort set alt indenfor havearbejde
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
             <div className="flex-1 flex flex-col gap-3 items-start">
-              <ul className="flex flex-col gap-3 list-none font-medium ">
-                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaLeaf /> Græsslåning & plænepleje
+              <ul className="flex flex-col gap-5 list-none font-medium ">
+                <li className="flex items-center gap-2 text-base sm:text-lg tracking-wide">
+                  <MdGrass size={21} /> Græsslåning & plænepleje
                 </li>
-                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaCut /> Hækkeklipning & beskæring
+                <li className="flex items-center gap-2 text-base sm:text-lg tracking-wide">
+                  <FaCut size={18} /> Hækkeklipning & beskæring
                 </li>
-                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaTree /> Brolægning & bedafgrænsning
+                <li className="flex items-center gap-2 text-base sm:text-lg tracking-wide">
+                  <PiWallFill size={20} /> Brolægning & bedafgrænsning
                 </li>
-                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaSeedling /> Ukrudtsbekæmpelse & lugning
+                <li className="flex items-center gap-2 text-base sm:text-lg tracking-wide">
+                  <FaSeedling size={18} /> Ukrudtsbekæmpelse & lugning
                 </li>
-                <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaTools /> Fliserens & vedligeholdelse
+                <li className="flex items-center gap-2 text-base sm:text-lg tracking-wide">
+                  <FaSprayCan size={18} /> Fliserens & vedligeholdelse
                 </li>
               </ul>
             </div>

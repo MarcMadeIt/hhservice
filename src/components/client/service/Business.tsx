@@ -30,7 +30,7 @@ const Business = () => {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div className="w-full h-full flex flex-col gap-10 justify-center items-center xl:gap-28 relative">
+      <div className="w-full h-full flex px-4 flex-col gap-10 justify-center items-center xl:gap-28 relative">
         <article className="bg-secondary shadow-lg rounded-lg p-2 py-4 md:p-8 flex flex-col lg:flex-row gap-5 md:gap-10 justify-center items-center relative overflow-hidden max-w-3xl">
           <div className="h-full w-full absolute opacity-15 md:opacity-50">
             <Image

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const FAQ = () => {
@@ -31,7 +32,10 @@ const FAQ = () => {
               <p className="tracking-wide font-medium">
                 Vi tilbyder en bred vifte af haveservices, herunder græsslåning,
                 hækkeklipning, ukrudtsbekæmpelse, brolægning, beskæring og
-                anlægning af bede samt fliserens.
+                anlægning af bede samt fliserens. Vi har også{" "}
+                <Link href="/service/#erhverv" className="link link-primary">
+                  Haveservice til Erhverv
+                </Link>
               </p>
             </div>
           </div>
