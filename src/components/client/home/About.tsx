@@ -52,9 +52,9 @@ const About = () => {
               om at passe en have – vi ønsker at skabe uderum, som vores kunder
               virkelig kan nyde.
             </p>
-            <p className="text-[15px] md:text-base font-medium tracking-wide ">
-              Har du brug for en hjælpende hånd i haven? <br></br> Vi udføre
-              stort set alt indenfor havearbejde
+            <p className="text-[15px] md:text-base font-medium tracking-wide">
+              Trænger haven til lidt ekstra opmærksomhed? Vi er klar til at
+              hjælpe dig godt i mål med dit næste haveprojekt.
             </p>
           </div>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12">
