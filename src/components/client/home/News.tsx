@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { getLatestNews } from "@/lib/client/actions";
-import { FaArrowRight, FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
 import ReactCompareImage from "react-compare-image";
 import Link from "next/link";
 
