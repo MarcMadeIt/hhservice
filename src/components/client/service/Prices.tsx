@@ -8,7 +8,7 @@ const Prices = () => {
       title: "Græsslåning – fast aftale",
       price: "Fra 249 kr. pr. gang",
       description:
-        "Perfekt til dig, der ønsker en velplejet græsplæne uden besvær. Prisen på 249 kr. gælder for en lille have op til 300 m². For større arealer som sommerhushaver (300-1000 m²) er prisen fra 299 kr. Vi slår græsset efter aftale, f.eks. hver 14. dag i sæsonen.",
+        "Perfekt til dig, der ønsker en velplejet græsplæne uden besvær. Prisen på 249 kr. gælder for en lille have op til 300 m². For større arealer som sommerhushaver (300-1000 m²) er prisen fra 349 kr. Vi slår græsset efter aftale, f.eks. hver 14. dag i sæsonen.",
     },
     {
       title: "Hækkeklipning – fast aftale",

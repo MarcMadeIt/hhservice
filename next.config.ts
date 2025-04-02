@@ -37,7 +37,7 @@ const nextConfig = {
         source:
           "/graesslaaning-kulhuse-melby-liseleje-hundested-hoejby-dronningmoelle-hornbaek-halsnaes",
         destination: "/service/graesslaaning",
-        permanent: true, // SEO-venlig 301 redirect
+        permanent: true,
       },
     ];
   },

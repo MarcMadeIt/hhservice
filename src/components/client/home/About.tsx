@@ -38,11 +38,11 @@ const About = () => {
             </h3>
             <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi er Halsnæs Haveservice, og vi har hjulpet kunder med at holde
-              deres haver flotte siden maj 2024. Det hele startede som en lille
-              sidebeskæftigelse, hvor vi hjalp et par lokale med at vedligeholde
-              deres haver. Men med tiden voksede efterspørgslen, og det, der
-              begyndte som en hobby, er i dag blevet til en professionel
-              haveservice.
+              deres haver flotte siden April 2024. Det hele startede som en
+              lille sidebeskæftigelse, hvor vi hjalp et par lokale med at
+              vedligeholde deres haver. Men med tiden voksede efterspørgslen, og
+              det, der begyndte som en hobby, er i dag blevet til en
+              professionel haveservice.
             </p>
             <p className="text-[15px] md:text-base font-medium  tracking-wide">
               Vi hjælper både private og virksomheder i Halsnæs og Nordsjælland
@@ -51,7 +51,7 @@ const About = () => {
               om at passe en have – vi ønsker at skabe uderum, som vores kunder
               virkelig kan nyde.
             </p>
-            <p className="text-[15px] md:text-base font-medium tracking-wide">
+            <p className="text-[15px] md:text-base font-medium tracking-wide hidden md:block">
               Har du brug for en hjælpende hånd i haven? Så tøv ikke med at tage
               fat i os – vi står klar til at hjælpe!
             </p>
@@ -66,7 +66,7 @@ const About = () => {
                   <FaCut /> Hækkeklipning & beskæring
                 </li>
                 <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
-                  <FaTree /> Træfældning & stubfræsning
+                  <FaTree /> Brolægning & bedafgrænsning
                 </li>
                 <li className="flex items-center gap-2 text-base md:text-lg tracking-wide">
                   <FaSeedling /> Ukrudtsbekæmpelse & lugning

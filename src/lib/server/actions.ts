@@ -510,7 +510,7 @@ export async function getAllNews(page: number = 1, limit: number = 6) {
   try {
     const { data, count, error } = await supabase
       .from("news")
-      .select("*", { count: "exact" }) // Sørg for at tælle det totale antal
+      .select("*", { count: "exact" })
       .order("created_at", { ascending: false })
       .range(offset, offset + limit - 1);
 
