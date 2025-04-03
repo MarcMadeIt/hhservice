@@ -211,9 +211,9 @@ export const services: ServiceData[] = [
     key: "ukrudtsbekaempelse",
     name: "Ukrudtsbekæmpelse",
     icon: "/weeds.png",
-    image1: "/weeds1.jpeg",
-    image2: "/weeds2.jpeg",
-    image3: "/weeds3.jpeg",
+    image1: "/weeds1.webp",
+    image2: "/weeds2.webp",
+    image3: "/weeds3.webp",
     introText: "Slip af med ukrudtet én gang for alle!",
     moreText:
       "Vores effektive ukrudtsbekæmpelse giver dig en flot, velholdt have uden uønsket vækst – uden brug af skadelige kemikalier.",
