@@ -219,7 +219,7 @@ export const services: ServiceData[] = [
       "Vores effektive ukrudtsbekæmpelse giver dig en flot, velholdt have uden uønsket vækst – uden brug af skadelige kemikalier.",
     outroHeader: "En ukrudtsfri have med minimal indsats",
     outroText:
-      "Få fjernet ukrudt på en skånsom og effektiv måde. Vi sørger for et flot og vedligeholdelsesfrit resultat. Kontakt os for en løsning!",
+      "Få fjernet ukrudt på en skånsom og effektiv måde. Vi sørger for et flot og vedligeholdelsesfrit resultat. Kontakt os for en god løsning!",
   },
   {
     key: "byggepladsservice",
