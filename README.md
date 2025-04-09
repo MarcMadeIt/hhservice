@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Halsnæs Haveservice 🌿
 
-## Getting Started
+A modern, SEO-optimized website for **Halsnæs Haveservice**, a Danish gardening service provider. Built with [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/), this site is designed for performance, scalability, and conversion.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ⚡️ **Next.js 14** - App Router architecture for fast, scalable web applications
+- 🛠️ **Supabase** - Secure backend for authentication and data (e.g. contact form submissions)
+- 🌐 **SEO Optimized** - Dynamic city-specific landing pages and meta tags for better Google rankings
+- 📱 **Responsive Design** - Mobile-first UI for an optimal experience across all devices
+- 🗺️ **Local SEO** - Individual pages for key cities in Halsnæs Kommune
+- 📩 **Contact Form** - Integrated with Supabase for real-time form submissions
+- 🔒 **Auth (Optional)** - Supabase Auth (Magic Link, Google OAuth) ready
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏡 Pages and Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/` - Homepage with hero section, services, testimonials, and contact
+- `/service/[slug]` - Service-specific landing pages (e.g. Lawn mowing, Hedge trimming)
+- `/service/[slug]/[city]` - City-specific SEO landing pages (e.g. `graesslaaning/frederiksværk`)
+- `/kontakt` - Contact page with form
+- `/login` (Optional) - Admin login for client dashboard (if needed)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Tech Stack
 
-## Learn More
+| Technology     | Purpose                                |
+|----------------|----------------------------------------|
+| Next.js        | Frontend Framework                     |
+| Supabase       | Backend (Auth, DB, API)                |
+| Tailwind CSS   | Styling                                |
+| Vercel / VPS   | Deployment (depending on hosting plan) |
+| PostgreSQL     | Database (via Supabase)                |
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Setup Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/your-org/halsnaes-haveservice.git
+   cd halsnaes-haveservice
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
