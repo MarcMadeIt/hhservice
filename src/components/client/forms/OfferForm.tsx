@@ -62,6 +62,9 @@ const OfferForm = () => {
 
       setIsSuccess(true);
       setSuccessText("Henvendelsen er sendt.");
+
+      // 👉 Scroll to top when form is successfully submitted
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
       console.error("Failed to send email:", error);
       setErrorText("Noget gik galt. Prøv igen senere.");
@@ -96,11 +99,20 @@ const OfferForm = () => {
   return (
     <div className="lg:max-w-2xl max-w-md w-full">
       {isSuccess ? (
-        <div className="flex flex-col gap-4 bg-base-100 p-10 h-[600px]">
-          <h2 className="text-xl font-bold">Tak for din henvendelse!</h2>
-          <p>Vi vender tilbage til dig hurtigst muligt.</p>
-          <button onClick={handleClose} className="btn btn-primary mt-5">
-            Luk
+        <div className="flex flex-col gap-4 bg-base-100 p-10 h-full md:h-[600px] rounded-lg shadow-md border-l-4 border-primary animate-fade-in">
+          <h2 className="text-2xl font-bold text-primary">
+            Tak for din henvendelse!
+          </h2>
+          <p className="text-base">
+            Vi har modtaget din besked og vender tilbage hurtigst muligt. Du vil
+            høre fra os inden for 24 timer.
+          </p>
+
+          <button
+            onClick={handleClose}
+            className="btn btn-primary mt-5 self-start"
+          >
+            Luk besked
           </button>
         </div>
       ) : (
