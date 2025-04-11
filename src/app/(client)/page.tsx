@@ -20,7 +20,7 @@ const Home = () => {
       <section className="h-full lg:h-[800px]">
         <About />
       </section>
-      <section className="h-[800px]">
+      <section className="h-[700px] md:h-[800px]">
         <Contact />
       </section>
       <section className="h-[380px]  md:h-[500px]">
