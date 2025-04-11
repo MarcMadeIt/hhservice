@@ -76,7 +76,7 @@ const CallMeForm = () => {
   return (
     <div>
       {isSuccess ? (
-        <div className="flex flex-col gap-4 bg-base-100 p-8 h-[600px] rounded-lg shadow-md border-l-4 border-primary animate-fade-in">
+        <div className="flex flex-col gap-4 bg-base-100 p-8 h-full md:h-[600px] rounded-lg shadow-md border-l-4 border-primary animate-fade-in">
           <h2 className="text-2xl font-bold text-primary">
             Tak for din henvendelse!
           </h2>
