@@ -76,11 +76,20 @@ const CallMeForm = () => {
   return (
     <div>
       {isSuccess ? (
-        <div className="flex flex-col gap-4 bg-base-100 p-8 md:p-10">
-          <h2 className="text-xl font-bold">Tak for din henvendelse!</h2>
-          <p>Vi vender tilbage til dig hurtigst muligt.</p>
-          <button onClick={handleClose} className="btn btn-primary mt-5">
-            Luk
+        <div className="flex flex-col gap-4 bg-base-100 p-8 h-[600px] rounded-lg shadow-md border-l-4 border-primary animate-fade-in">
+          <h2 className="text-2xl font-bold text-primary">
+            Tak for din henvendelse!
+          </h2>
+          <p className="text-base">
+            Vi har modtaget din besked og vender tilbage hurtigst muligt –
+            typisk inden for 24 timer.
+          </p>
+
+          <button
+            onClick={handleClose}
+            className="btn btn-primary mt-5 self-start"
+          >
+            Luk besked
           </button>
         </div>
       ) : (

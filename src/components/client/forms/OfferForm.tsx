@@ -104,8 +104,8 @@ const OfferForm = () => {
             Tak for din henvendelse!
           </h2>
           <p className="text-base">
-            Vi har modtaget din besked og vender tilbage hurtigst muligt. Du vil
-            høre fra os inden for 24 timer.
+            Vi har modtaget din besked og vender tilbage hurtigst muligt –
+            typisk inden for 24 timer.
           </p>
 
           <button
