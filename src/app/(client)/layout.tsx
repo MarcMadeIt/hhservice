@@ -32,7 +32,7 @@ export default function ClientLayout({
         async
         defer
         src="https://stats.hhservice.dk/script.js"
-        data-website-id="92b19d71-7695-4a2a-bf87-2ab08ec7cf04"
+        data-website-id="90baaf27-8ec1-4066-987c-3d0248522b13"
       />
       <div className="sm:h-lvh h-dvh max-w-screen-2xl mx-auto 2xl:px-3">
         <header>
