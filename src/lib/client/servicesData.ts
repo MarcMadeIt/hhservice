@@ -233,6 +233,6 @@ export const services: ServiceData[] = [
       "Vi sørger for, at din byggeplads forbliver ren og organiseret, så arbejdet kan forløbe effektivt og sikkert. Vi har desuden teleskoplæsser-certifikat, hvilket betyder, at vi lovligt og sikkert kan betjene maskiner på pladsen, hvis det kræves.",
     outroHeader: "Vi sørger for orden på din byggeplads",
     outroText:
-      "Lad os tage os af oprydningen, så du kan fokusere på byggeriet. Kontakt os i dag for en professionel løsning med certificeret mandskab!",
+      "Lad os tage os af oprydningen, så du kan fokusere på byggeriet. Kontakt os i dag for en professionel løsning!",
   },
 ];
