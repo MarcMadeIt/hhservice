@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 
@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     icon: "/favicon1.png",
     apple: "/favicon1.png",
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#1a4f2b",
 };
 
