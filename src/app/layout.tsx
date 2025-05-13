@@ -7,8 +7,41 @@ const ralewaySans = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Halsnæs Haveservice",
-  description: "Professionel haveservice i Halsnæs",
+  title: {
+    default: "Halsnæs Haveservice",
+    template: "%s | Halsnæs Haveservice",
+  },
+  description:
+    "Professionel haveservice i Halsnæs og Nordsjælland. Vi tilbyder græsslåning, hækkeklipning, brolægning, ukrudtsbekæmpelse og vedligeholdelse for private og erhverv.",
+  metadataBase: new URL("https://hhservice.dk"),
+  openGraph: {
+    title: "Halsnæs Haveservice",
+    description:
+      "Få hjælp til din have i Halsnæs og Nordsjælland – vi tilbyder alt fra græsslåning til fliserens og vedligeholdelse.",
+    url: "https://hhservice.dk",
+    siteName: "Halsnæs Haveservice",
+    images: [
+      {
+        url: "/hero.webp",
+        width: 1200,
+        height: 630,
+        alt: "Halsnæs Haveservice – Professionel haveservice i Halsnæs",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Halsnæs Haveservice",
+    description:
+      "Professionel haveservice og vedligeholdelse i Halsnæs og Nordsjælland. Græsslåning, hækkeklipning, brolægning og mere.",
+    images: ["/hero.webp"],
+  },
+  icons: {
+    icon: "/favicon1.png",
+    apple: "/favicon1.png",
+  },
+  themeColor: "#1a4f2b",
 };
 
 export default function RootLayout({
@@ -17,10 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" href="/favicon1.png" />
-      </head>
+    <html lang="da">
       <body className={ralewaySans.className}>{children}</body>
     </html>
   );
