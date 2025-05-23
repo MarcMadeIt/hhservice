@@ -5,12 +5,8 @@ import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 import { notFound } from "next/navigation";
 
-// ✅ generateMetadata bruger params som IKKE er en Promise
-export async function generateMetadata({
-  params,
-}: {
-  params: { service: string; by: string };
-}): Promise<Metadata> {
+// 🚀 No explicit typing of props — Next infers { params: { service: string; by: string } }
+export async function generateMetadata({ params }): Promise<Metadata> {
   const { service, by } = params;
 
   const serviceInfo = await getServiceInfo(service);
@@ -30,9 +26,7 @@ export async function generateMetadata({
     },
     description: `Få professionel ${serviceInfo.name.toLowerCase()} i ${
       cityInfo.name
-    } (${
-      cityInfo.kommune
-    }). Halsnæs Haveservice tilbyder kvalitetsservice i Nordsjælland.`,
+    } (${cityInfo.kommune}).`,
     alternates: {
       canonical: `https://hhservice.dk/service/${service}/${by}`,
     },
@@ -46,12 +40,7 @@ export async function generateMetadata({
   };
 }
 
-// ✅ Page-komponenten
-const Page = async ({
-  params,
-}: {
-  params: { service: string; by: string };
-}) => {
+const Page = async ({ params }) => {
   const { service, by } = params;
 
   const serviceInfo = await getServiceInfo(service);
