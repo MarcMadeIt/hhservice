@@ -10,8 +10,6 @@ export async function generateMetadata({
   return generateSeo(params.service);
 }
 
-const Page = async () => {
+export default function Page() {
   return <ServiceClientWrapper />;
-};
-
-export default Page;
+}

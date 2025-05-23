@@ -3,8 +3,15 @@ import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({ params }): Promise<Metadata> {
-  const { service, by } = params;
+type Params = { service: string; by: string };
+
+// 1) Await params here
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  const { service, by } = await params;
 
   const serviceInfo = await getServiceInfo(service);
   const cityInfo = await getCityInfo(by);
@@ -37,8 +44,9 @@ export async function generateMetadata({ params }): Promise<Metadata> {
   };
 }
 
-const Page = async ({ params }) => {
-  const { service, by } = params;
+// 2) And here too
+export default async function Page({ params }: { params: Promise<Params> }) {
+  const { service, by } = await params;
 
   const serviceInfo = await getServiceInfo(service);
   const cityInfo = await getCityInfo(by);
@@ -54,6 +62,4 @@ const Page = async ({ params }) => {
       cityInfo={cityInfo}
     />
   );
-};
-
-export default Page;
+}
