@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { createRequest } from "@/lib/client/actions";
-import TaskSelect from "./TaskSelect";
 import ConsentModal from "../modal/ConsentModal";
+import TaskSelect from "./TaskSelect";
 
 const CallMeForm = () => {
   const [name, setName] = useState("");
@@ -37,27 +36,25 @@ const CallMeForm = () => {
     setMessage("");
 
     try {
-      // 1. Gem kundehenvendelsen i databasen
-      await createRequest(name, mobile, "", category, isChecked, "");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: "", // tom fordi callme ikke bruger email
+          phone: mobile,
+          category,
+          message: "", // valgfri besked
+          consent: isChecked,
+        }),
+      });
 
-      // 2. Send e-mail til virksomheden via EmailJS
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: name,
-        },
-        publicKey
-      );
+      if (!response.ok) throw new Error("Fejl i serverkald");
 
       setIsSuccess(true);
-      setMessage("Henvendelsen er sendt.");
+      setMessage("Tak for din henvendelse!");
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Fejl ved afsendelse:", error);
       setMessage("Noget gik galt. Prøv igen senere.");
     } finally {
       setIsLoading(false);
@@ -81,10 +78,8 @@ const CallMeForm = () => {
             Tak for din henvendelse!
           </h2>
           <p className="text-base">
-            Vi har modtaget din besked og vender tilbage hurtigst muligt –
-            typisk inden for 24 timer.
+            Vi har modtaget dine oplysninger og kontakter dig hurtigst muligt.
           </p>
-
           <button
             onClick={handleClose}
             className="btn btn-primary mt-5 self-start"

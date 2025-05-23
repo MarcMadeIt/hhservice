@@ -1,11 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
-
 import { createRequest } from "@/lib/client/actions";
-import TaskSelect from "./TaskSelect";
 import ConsentModal from "../modal/ConsentModal";
+import TaskSelect from "./TaskSelect";
 
 const OfferForm = () => {
   const [name, setName] = useState("");
@@ -15,12 +13,12 @@ const OfferForm = () => {
   const [message, setMessage] = useState("");
   const [charCount, setCharCount] = useState(0);
   const [hasTyped, setHasTyped] = useState(false);
-  const charLimit = 200;
   const [isChecked, setIsChecked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorText, setErrorText] = useState("");
   const [successText, setSuccessText] = useState("");
+  const charLimit = 200;
 
   const validatePhoneNumber = (phoneNumber: string) => {
     const danishPhoneRegex = /^(?:\+45\d{8}|\d{8})$/;
@@ -45,28 +43,26 @@ const OfferForm = () => {
     setSuccessText("");
 
     try {
-      await createRequest(name, mobile, mail, category, isChecked, message);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: mail,
+          phone: mobile,
+          category,
+          message,
+          consent: isChecked,
+        }),
+      });
 
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: name,
-        },
-        publicKey
-      );
+      if (!response.ok) throw new Error("Fejl i serverkald");
 
       setIsSuccess(true);
       setSuccessText("Henvendelsen er sendt.");
-
-      // 👉 Scroll to top when form is successfully submitted
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (error) {
-      console.error("Failed to send email:", error);
+      console.error("Fejl ved afsendelse:", error);
       setErrorText("Noget gik galt. Prøv igen senere.");
     } finally {
       setIsLoading(false);
@@ -78,9 +74,7 @@ const OfferForm = () => {
     if (value.length <= charLimit) {
       setMessage(value);
       setCharCount(value.length);
-      if (!hasTyped) {
-        setHasTyped(true);
-      }
+      if (!hasTyped) setHasTyped(true);
     }
   };
 
@@ -107,7 +101,6 @@ const OfferForm = () => {
             Vi har modtaget din besked og vender tilbage hurtigst muligt –
             typisk inden for 24 timer.
           </p>
-
           <button
             onClick={handleClose}
             className="btn btn-primary mt-5 self-start"
@@ -183,8 +176,8 @@ const OfferForm = () => {
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Beskriv dit evt. behov, tidspunkt, adresse, osv."
-                  className="textarea textarea-bordered textarea-md text-base  w-full max-w-xs resize-none"
+                  placeholder="Beskriv dit behov, tidspunkt, adresse, osv."
+                  className="textarea textarea-bordered textarea-md text-base w-full max-w-xs resize-none"
                   rows={5}
                   value={message}
                   onChange={handleMessageChange}
@@ -208,10 +201,9 @@ const OfferForm = () => {
                 required
               />
             </label>
-
-            <span className="label-text text-xs max-w-60 ">
-              Jeg accepterer opbevaring af mine oplysninger i op til 30 dage
-              &nbsp;
+            <span className="label-text text-xs max-w-60">
+              Jeg accepterer opbevaring af mine oplysninger i op til 30
+              dage&nbsp;
               <ConsentModal buttonText="Læs mere" variant="primary" />
             </span>
           </div>
