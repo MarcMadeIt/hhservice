@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   description:
     "Professionel haveservice i Halsnæs og Nordsjælland. Vi tilbyder græsslåning, hækkeklipning, brolægning, ukrudtsbekæmpelse og vedligeholdelse for private og erhverv.",
   metadataBase: new URL("https://hhservice.dk"),
+  manifest: "/manifest.json",
   openGraph: {
     title: "Halsnæs Haveservice",
     description:
