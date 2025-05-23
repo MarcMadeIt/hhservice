@@ -57,7 +57,7 @@ export function generateMetadata(slug: string): Metadata {
         absolute: "Halsnæs Haveservice – Din lokale havespecialist",
       },
       description:
-        "Vi tilbyder haveservice i hele Halsnæs – fra græsslåning og beskæring til brolægning og snerydning. Kontakt os for en skræddersyet løsning.",
+        "Vi tilbyder haveservice i hele Halsnæs – fra græsslåning og beskæring til brolægning og snerydning.",
     };
   }
 
