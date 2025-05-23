@@ -1,17 +1,12 @@
-// src/app/(client)/service/[service]/[by]/page.tsx
-
 import { Metadata } from "next";
 import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 import { notFound } from "next/navigation";
 
-// Metadata generator
-export async function generateMetadata({
-  params,
-}: {
+export async function generateMetadata(props: {
   params: { service: string; by: string };
 }): Promise<Metadata> {
-  const { service, by } = params;
+  const { service, by } = props.params;
 
   const serviceInfo = await getServiceInfo(service);
   const cityInfo = await getCityInfo(by);
@@ -46,7 +41,6 @@ export async function generateMetadata({
   };
 }
 
-// Page component
 const Page = async ({
   params,
 }: {
