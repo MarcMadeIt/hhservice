@@ -2,15 +2,17 @@ import { Metadata } from "next";
 import ServiceClientWrapper from "./ServiceClientWrapper";
 import { generateMetadata as generateSeo } from "@/lib/client/seoData";
 
+type PageProps = {
+  params: { service: string };
+};
+
 export async function generateMetadata({
   params,
-}: {
-  params: { service: string };
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
   return generateSeo(params.service);
 }
 
-const Page = async () => {
+const Page = async ({ params }: PageProps) => {
   return <ServiceClientWrapper />;
 };
 
