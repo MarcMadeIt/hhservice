@@ -6,12 +6,10 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ service: string; by: string }>;
+  params: { service: string; by: string };
 }): Promise<Metadata> {
-  const { service, by } = await params;
-
-  const serviceInfo = await getServiceInfo(service);
-  const cityInfo = await getCityInfo(by);
+  const serviceInfo = await getServiceInfo(params.service);
+  const cityInfo = await getCityInfo(params.by);
 
   if (!serviceInfo || !cityInfo) {
     return {
@@ -31,14 +29,14 @@ export async function generateMetadata({
       cityInfo.kommune
     }). Halsnæs Haveservice tilbyder kvalitetsservice i Nordsjælland.`,
     alternates: {
-      canonical: `https://hhservice.dk/service/${service}/${by}`,
+      canonical: `https://hhservice.dk/service/${params.service}/${params.by}`,
     },
     openGraph: {
       title: `${serviceInfo.name} i ${cityInfo.name} – Halsnæs Haveservice`,
       description: `Professionel ${serviceInfo.name.toLowerCase()} i ${
         cityInfo.name
       }.`,
-      url: `https://hhservice.dk/service/${service}/${by}`,
+      url: `https://hhservice.dk/service/${params.service}/${params.by}`,
     },
   };
 }
