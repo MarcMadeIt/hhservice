@@ -72,11 +72,6 @@ export const byData: ByData = {
     kommune: "Helsingør",
     postnummer: "3140",
   },
-  hoejby: {
-    name: "Højby",
-    kommune: "Odsherred",
-    postnummer: "4573",
-  },
   dronningmolle: {
     name: "Dronningmølle",
     kommune: "Gribskov",

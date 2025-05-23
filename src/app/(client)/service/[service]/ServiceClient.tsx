@@ -1,6 +1,5 @@
 "use client";
 
-import { NextSeo } from "next-seo";
 import Image from "next/image";
 import CallMeForm from "@/components/client/forms/CallMeForm";
 import Steps from "@/components/client/service/Steps";
@@ -29,31 +28,6 @@ const ServiceClient = ({
 }) => {
   return (
     <>
-      {/* <NextSeo
-        title={`${serviceInfo.name} i ${
-          cityInfo?.name || "Halsnæs"
-        } | Professionel Service`}
-        description={`Få professionel ${serviceInfo.name.toLowerCase()} i ${
-          cityInfo?.name || "Halsnæs"
-        }. Vi tilbyder kvalitetsservice i ${
-          cityInfo?.kommune || "Nordsjælland"
-        }.`}
-        canonical={`https://hhservice.dk/service/${serviceKey}${
-          cityInfo ? `/${cityInfo.name.toLowerCase()}` : ""
-        }`}
-        openGraph={{
-          url: `https://hhservice.dk/service/${serviceKey}${
-            cityInfo ? `/${cityInfo.name.toLowerCase()}` : ""
-          }`,
-          title: `${serviceInfo.name} i ${
-            cityInfo?.name || "Halsnæs"
-          } | Professionel Service`,
-          description: `Halsnæs Haveservice tilbyder professionel ${serviceInfo.name.toLowerCase()} i ${
-            cityInfo?.name || "Halsnæs"
-          }.`,
-        }}
-      /> */}
-
       <div className="mt-[62px] md:mt-[110px] p-4 w-full h-full flex flex-col justify-center">
         <Link
           href="/service"
