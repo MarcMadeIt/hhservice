@@ -1,12 +1,17 @@
+// src/app/(client)/service/[service]/[by]/page.tsx
+
 import { Metadata } from "next";
 import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata(props: {
+// ✅ generateMetadata bruger params som IKKE er en Promise
+export async function generateMetadata({
+  params,
+}: {
   params: { service: string; by: string };
 }): Promise<Metadata> {
-  const { service, by } = props.params;
+  const { service, by } = params;
 
   const serviceInfo = await getServiceInfo(service);
   const cityInfo = await getCityInfo(by);
@@ -41,6 +46,7 @@ export async function generateMetadata(props: {
   };
 }
 
+// ✅ Page-komponenten
 const Page = async ({
   params,
 }: {
