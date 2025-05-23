@@ -9,7 +9,7 @@ const ralewaySans = Raleway({
 export const metadata: Metadata = {
   title: {
     default: "Halsnæs Haveservice",
-    template: "%s | Halsnæs Haveservice",
+    template: "%s - Halsnæs Haveservice",
   },
   description:
     "Professionel haveservice i Halsnæs og Nordsjælland. Vi tilbyder græsslåning, hækkeklipning, brolægning, ukrudtsbekæmpelse og vedligeholdelse for private og erhverv.",

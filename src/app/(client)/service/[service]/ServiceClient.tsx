@@ -29,7 +29,7 @@ const ServiceClient = ({
 }) => {
   return (
     <>
-      <NextSeo
+      {/* <NextSeo
         title={`${serviceInfo.name} i ${
           cityInfo?.name || "Halsnæs"
         } | Professionel Service`}
@@ -52,7 +52,7 @@ const ServiceClient = ({
             cityInfo?.name || "Halsnæs"
           }.`,
         }}
-      />
+      /> */}
 
       <div className="mt-[62px] md:mt-[110px] p-4 w-full h-full flex flex-col justify-center">
         <Link

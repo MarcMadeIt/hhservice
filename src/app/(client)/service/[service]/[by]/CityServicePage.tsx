@@ -10,7 +10,7 @@ const CityServicePage = ({ params }: CityServicePageProps) => {
     return <div>Fejl: Ingen parametre fundet</div>;
   }
 
-  const { service, by } = params; // Destructure for at sikre korrekt datatype
+  const { service, by } = params;
   const serviceInfo = getServiceInfo(service);
   const cityInfo = getCityInfo(by);
 
