@@ -1,11 +1,8 @@
-// src/app/(client)/service/[service]/[by]/page.tsx
-
 import { Metadata } from "next";
 import { getCityInfo, getServiceInfo } from "@/lib/client/fetchData";
 import ServiceClient from "../ServiceClient";
 import { notFound } from "next/navigation";
 
-// 🚀 No explicit typing of props — Next infers { params: { service: string; by: string } }
 export async function generateMetadata({ params }): Promise<Metadata> {
   const { service, by } = params;
 
