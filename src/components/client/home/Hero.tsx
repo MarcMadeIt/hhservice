@@ -30,7 +30,7 @@ const Hero = () => {
           Professionel Haveservice
         </h1>
         <p className="mb-5 text-lg font-medium md:text-2xl lg:text-3xl drop-shadow-lg">
-          Din have, vores passion <br />
+          Din have, vores passion! <br />
         </p>
         <Link href="/tilbud" className="btn btn-primary text-lg">
           Få et tilbud
